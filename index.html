@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/info-modal.css">
+    <link rel="stylesheet" href="styles/language-popup.css">
     <title>The game of Wither</title>
 </head>
 <body>
@@ -22,13 +23,14 @@
 
                 <div class="header__tools__box">
                     <img src="media/icons/info_icon.png" id="infoBtn" alt="info" title="Information about game">
-                    <img src="media/icons/language_icon.png" alt="language" title="Change language">
+                    <img src="media/icons/language_icon.png" id="languageBtn" alt="language" title="Change language">
                 </div>
 
 
             </div>
         </header>
 
+        <!--INFO POPUP-->
         <div class="info-popup-fade">
             <div class="info-popup">
                 <a class="info-popup-close" href="#">Close</a>
@@ -49,6 +51,27 @@
             </div>		
         </div>
       
+        <!--LANGUAGE POPUP-->
+        <div class="language-popup-fade">
+            <div class="language-popup">
+
+                <div class="english-language-box">
+                    <img src="media/icons/england-flag.png" alt="England flag">
+                    <div class="english-language-box-title">
+                        <p>English</p>
+                    </div>
+                </div>
+
+                <div class="russian-language-box">
+                    <img src="media/icons/russian-icon.png" alt="Российский флаг">
+                    <div class="russian-language-box-title">
+                        <p>Русский</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <main></main>
 
         <footer>     
