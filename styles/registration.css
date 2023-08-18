@@ -9,6 +9,7 @@
     box-shadow: 0 0 25px rgb(112, 112, 112);
     z-index: 0;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -24,11 +25,14 @@
 .registration-form {
     width: 100%;
     height: 100%;
+
 }
 .registration-form-contain {
     width: 90%;
     height: inherit;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 .registration-form-title {
     width: 100%;
@@ -88,4 +92,27 @@
     border-radius: 50%;
     margin-right: 10px;
     text-align: center;
+}
+
+.registration-form-footer {
+    width: 100%;
+    height: 50px;
+    margin-top: 170px;
+    display: flex;
+    align-items: flex-end;
+}
+.registration-form-footer-signatuer-box {
+    width: 300px;
+}
+.registration-form-footer-start-btn {
+
+}
+#startBtn {
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
