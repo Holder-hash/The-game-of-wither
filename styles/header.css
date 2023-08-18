@@ -1,0 +1,33 @@
+header {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(194, 194, 194);
+    box-shadow: 0 0 25px rgb(112, 112, 112);
+}
+
+.header_contain {
+    width: 80%;
+    margin: 0 auto;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__title__box {
+    color: black;
+}
+
+.header__tools__box {
+    width: 100px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header__tools__box img {
+    width: 35px;
+    height: 35px; 
+    cursor: pointer;
+}
