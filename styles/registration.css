@@ -44,3 +44,12 @@
     border-bottom: 1px solid black;
     background: none;
 }
+.registration-form-name-box legend{
+    transform: translate(0,20px);
+    transition: .5s ease;
+    width: 170px;
+    pointer-events: none;
+}
+.registration-form-name-box:hover legend{
+    transform: translate(0,15px); 
+}
