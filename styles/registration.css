@@ -7,7 +7,7 @@
     height: 550px;
     background-color: rgb(194, 194, 194);
     box-shadow: 0 0 25px rgb(112, 112, 112);
-    z-index: -1;
+    z-index: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -29,4 +29,18 @@
     width: 90%;
     height: inherit;
     margin: 0 auto;
+}
+.registration-form-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.registration-form-name-box input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
 }
