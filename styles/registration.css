@@ -1,0 +1,32 @@
+.registration-window {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 550px;
+    background-color: rgb(194, 194, 194);
+    box-shadow: 0 0 25px rgb(112, 112, 112);
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration-pictuer {
+    width: 450px;
+    height: inherit;
+}
+.registration-pictuer img {
+    width: 450px;
+    height: inherit;
+}
+
+.registration-form {
+    width: 100%;
+    height: 100%;
+}
+.registration-form-contain {
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+}
