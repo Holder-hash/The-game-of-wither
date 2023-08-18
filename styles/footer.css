@@ -1,0 +1,13 @@
+footer {
+    height: 25px;
+    background-color: rgb(194, 194, 194);
+    box-shadow: 0 0 25px rgb(112, 112, 112);
+}
+
+.footer_contain {
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
