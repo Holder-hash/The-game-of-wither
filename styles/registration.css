@@ -103,10 +103,19 @@
 }
 .registration-form-footer-signatuer-box {
     width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
 }
-.registration-form-footer-start-btn {
+#signatureCanvas {
+    width: 200px;
+    height: 50px;
+    border-bottom: 1px solid black;
+}
 
-}
+/* .registration-form-footer-start-btn {
+
+} */
 #startBtn {
     width: 200px;
     height: 50px;
