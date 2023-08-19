@@ -9,7 +9,7 @@ $(document).ready(function($) {
         if (!$('#registrationNameInput').val()) {
             $('.registration-form-name-box legend').css('transform', 'translate(0,20px)')
         }
-        else {
+        if ($('#registrationNameInput').val() && $('#registrationNameInput').val().length >= 2 ) {
             haveName = true;
         }
     })
