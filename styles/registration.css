@@ -42,6 +42,10 @@
     font-weight: 900;
 }
 
+.registration-form-name-contain {
+    display: flex;
+    align-items: center;
+}
 .registration-form-name-box input{
     outline: none;
     border: none;
@@ -56,6 +60,13 @@
 }
 .registration-form-name-box:hover legend{
     transform: translate(0,15px); 
+}
+.name-requirements-box span {
+    color: black;
+}
+.name-requirements-box {
+    height: 15px;
+    cursor: help;
 }
 
 .registration-form-class-box {
@@ -131,6 +142,9 @@
 .jerking-animation-class {
     animation: .5s jerking;
 }
+.name-box-validation {
+    animation: 2s nameValidation;
+}
 
 @keyframes jerking {
     0% {
@@ -147,5 +161,17 @@
     }
     100% {
         transform: translate(0px,0);
+    }
+}
+
+@keyframes nameValidation {
+    0% {
+        color: black;
+    }
+    50% {
+        color: red;
+    }
+    100% {
+        color: black;
     }
 }

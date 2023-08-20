@@ -45,14 +45,16 @@ $(document).ready(function($) {
         }
     });
     
-    //startBtn
+    //validation
     
     $('#startBtn').click(function() {
-        if (haveName == true && haveSignature == true) {
+        if (haveName == true && haveSignature == true &&
+             /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == false) {
             $('.registration-window').fadeOut()
         }
-        if (haveName == false) {
-            $('.registration-form-name-box').toggleClass('jerking-animation-class')
+        if (haveName == false || /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == true) {
+            $('.registration-form-name-box').toggleClass('jerking-animation-class');
+            $('.name-requirements-box span').toggleClass('name-box-validation')
         }
         if (haveSignature == false) {
             $('.registration-form-footer-signatuer-box').toggleClass('jerking-animation-class')
