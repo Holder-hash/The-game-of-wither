@@ -123,6 +123,7 @@
     height: 50px;
     border-bottom: 1px solid black;
     display: block;
+    cursor: crosshair;
 }
 
 /* .registration-form-footer-start-btn {
