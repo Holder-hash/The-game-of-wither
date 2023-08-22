@@ -66,6 +66,7 @@ $(document).ready(function($) {
 
 
 // game
+
 var personCardName = document.querySelector('#personCardName')
 var personLevelText = document.querySelector('#personLevelText')
 const enemyContainArea = document.querySelector('.enemy-contain-area')
@@ -101,9 +102,9 @@ function game() {
     for (let i = 1; i < 10; i++) {
         const enemyMan = {
             'lvl': 0,
-            'pic': 'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Enemy_logo.svg/1200px-Enemy_logo.svg.png'
+            'pic': 'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Enemy_logo.svg/1200px-Enemy_logo.svg.png',
+            'destroyed': false
         }
-
         //items
         if (person.item == 'Пожиратель опыта') {
             enemy.lvl = i - 0.5;
@@ -186,12 +187,15 @@ function game() {
 
 
         enemy.onclick = function(value) {
+            
             return function() {
-                if (value < person.level) {
+                if (value < person.level && enemyMan.destroyed == false) {
+                    enemyMan.destroyed = true;
                     enemyPic.src = 'https://media.istockphoto.com/id/901964114/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BD%D0%B0%D0%B4%D0%B3%D1%80%D0%BE%D0%B1%D0%B8%D0%B5-rip.jpg?s=612x612&w=0&k=20&c=a1CxXKdGhUpl4s-B0FA_T6_2_gQuZmxb1NaN-r60Ia4=';
                     person.level += Number(value) / person.level;
                     personLevelText.innerHTML = person.level.toFixed(2);
                     enemy.style = `cursor: not-allowed; `
+                    
                 }
             };
         }(enemy.lvl);
