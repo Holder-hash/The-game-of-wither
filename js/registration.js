@@ -99,17 +99,75 @@ function game() {
     const buttons = [];
 
     for (let i = 1; i < 10; i++) {
-        let enemy = document.createElement('div');
-        let enemyPic = document.createElement('p');
-        enemyPic.innerHTML = 'f'
-        enemy.classList.toggle('enemy-card');
-        enemy.value = i;
-        if (person.item == 'Пожиратель опыта') {
-            enemy.value = i - 0.5;
+        const enemyMan = {
+            'lvl': 0,
+            'pic': 'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Enemy_logo.svg/1200px-Enemy_logo.svg.png'
         }
-        enemy.innerHTML = enemy.value;
+
+        //items
+        if (person.item == 'Пожиратель опыта') {
+            enemy.lvl = i - 0.5;
+        }
+
+        switch (i) {
+            case 1:
+                enemyMan.pic = 'https://www.clipartmax.com/png/middle/77-777818_enemy-esports.png'
+                break;
+
+            case 2:
+                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/2828/2828492.png'
+                break;
+            
+            case 3:
+                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                break;
+
+            case 4:
+                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                break;
+
+            case 5:
+                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                break;
+
+            case 6:
+                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                break;
+
+            case 7:
+                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                break;
+
+            case 8:
+                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                break;
+
+            case 9:
+                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                break;
+        
+            default:
+                break;
+        }
+
+        let enemy = document.createElement('div');
+        let enemyPic = document.createElement('img');
+
+        enemyPic.src = enemyMan.pic
+        enemyPic.style = `
+        width: 100%;
+        height: 180px;
+        `
+
+        
+        enemy.lvl = i;
+        enemy.innerHTML = enemy.lvl;
+
+        enemy.classList.toggle('enemy-card');
         buttons.push(enemy);
         enemy.appendChild(enemyPic)
+
+
 
         enemy.onclick = function(value) {
             return function() {
@@ -119,7 +177,7 @@ function game() {
                     personLevelText.innerHTML = person.level.toFixed(2);
                 }
             };
-        }(enemy.value);
+        }(enemy.lvl);
     }
 
     // Перестановка кнопок в случайном порядке
