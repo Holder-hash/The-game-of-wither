@@ -96,7 +96,7 @@ function game() {
     }
 
 
-    const buttons = [];
+    var buttons = [];
 
     for (let i = 1; i < 10; i++) {
         const enemyMan = {
@@ -193,6 +193,7 @@ function game() {
                 }
             };
         }(enemy.lvl);
+
     }
 
     // Перестановка кнопок в случайном порядке
@@ -205,6 +206,5 @@ function game() {
     buttons.forEach(button => {
         enemyContainArea.appendChild(button);
     });
-    
 
-    }
+}
