@@ -66,14 +66,16 @@ $(document).ready(function($) {
 
 
 // game
-const nameInp = document.querySelector('#nameInput')
+var personCardName = document.querySelector('#personCardName')
+var personLevelText = document.querySelector('#personLevelText')
+const enemyContainArea = document.querySelector('.enemy-contain-area')
 const doneBtn = document.querySelector('#doneBtn')
-const regBox = document.querySelector('.reg-box')
+
 const itemSelector = document.querySelector('#itemSelector')
 const classSelector = document.querySelector('#classSelector')
 
 const gameArea = document.querySelector('.game-area')
-var playerStats = document.querySelector('#playerStats')
+
 
 
 const person = {
@@ -86,19 +88,19 @@ const person = {
 function game() {
     gameArea.style.display = 'flex';
 
+    personCardName.innerHTML = person.name
+    personLevelText.innerHTML = person.level
+    
     if (person.item == 'Эрудит') {
         person.level = 4
     }
 
-    playerStats.innerHTML = `name: ${person.name}<br>
-    item: ${person.item}<br>
-    class: ${person.class}<br>
-    level: ${person.level}<br>`;
 
     const buttons = [];
 
     for (let i = 1; i < 10; i++) {
-        let enemy = document.createElement('button');
+        let enemy = document.createElement('div');
+        enemy.classList.toggle('enemy-card')
         enemy.value = i;
         if (person.item == 'Пожиратель опыта') {
             enemy.value = i - 0.5;
@@ -128,7 +130,7 @@ function game() {
 
     // Добавление кнопок на страницу в новом порядке
     buttons.forEach(button => {
-        gameArea.appendChild(button);
+        enemyContainArea.appendChild(button);
     });
     
 

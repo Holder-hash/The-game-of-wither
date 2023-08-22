@@ -13,12 +13,6 @@
     align-items: center;
     justify-content: center;
 }
-.enemy-contain {
-    width: 100%;
-    height: inherit;
-    border: 1px solid orange;
-    display: flex;
-}
 
 .person-card {
     width: 300px;
@@ -88,4 +82,30 @@
     height: 50px;
     border: 1px solid black;
     border-radius: 50%;
+}
+
+/*enemy area*/
+.enemy-contain {
+    width: 100%;
+    height: inherit;
+    border: 1px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.enemy-contain-area {
+    width: 90%;
+    height: 80%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.enemy-card {
+    width: 200px;
+    height: 250px;
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
