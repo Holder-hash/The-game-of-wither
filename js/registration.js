@@ -100,13 +100,16 @@ function game() {
 
     for (let i = 1; i < 10; i++) {
         let enemy = document.createElement('div');
-        enemy.classList.toggle('enemy-card')
+        let enemyPic = document.createElement('p');
+        enemyPic.innerHTML = 'f'
+        enemy.classList.toggle('enemy-card');
         enemy.value = i;
         if (person.item == 'Пожиратель опыта') {
             enemy.value = i - 0.5;
         }
         enemy.innerHTML = enemy.value;
         buttons.push(enemy);
+        enemy.appendChild(enemyPic)
 
         enemy.onclick = function(value) {
             return function() {
