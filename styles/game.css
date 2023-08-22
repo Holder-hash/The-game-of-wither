@@ -1,0 +1,86 @@
+.game-area {
+    display: none;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.person-contain {
+    width: 500px;
+    height: inherit;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.enemy-contain {
+    width: 100%;
+    height: inherit;
+    border: 1px solid orange;
+    display: flex;
+}
+
+.person-card {
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.person-card-name {
+    width: 100%;
+    height: 30px;
+    border: 1px solid rgb(0, 0, 0);
+
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person-card-img {
+    width: 95%;
+    height: 300px;
+    margin: 2% auto 2%;
+    border: 1px solid black;
+}
+.person-card-img img{
+    width: 100%;
+    min-height: 300px;
+}
+
+.person-card-stats {
+    width: 100%;
+    height: 50px;
+
+
+    display: flex;
+    align-items: center;
+}
+.person-level-box {
+    width: 180px;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+}
+
+.person-card-skills-box {
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.person-card-item-contain {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.person-card-class-contain {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+}

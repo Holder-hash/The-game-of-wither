@@ -51,6 +51,8 @@ $(document).ready(function($) {
         if (haveName == true && haveSignature == true &&
              /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == false) {
             $('.registration-window').fadeOut()
+            person.name = registrationNameInput.value
+            game()
         }
         if (haveName == false || /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == true) {
             $('.registration-form-name-box').toggleClass('jerking-animation-class');
@@ -61,3 +63,73 @@ $(document).ready(function($) {
         }
     })
 });	
+
+
+// game
+const nameInp = document.querySelector('#nameInput')
+const doneBtn = document.querySelector('#doneBtn')
+const regBox = document.querySelector('.reg-box')
+const itemSelector = document.querySelector('#itemSelector')
+const classSelector = document.querySelector('#classSelector')
+
+const gameArea = document.querySelector('.game-area')
+var playerStats = document.querySelector('#playerStats')
+
+
+const person = {
+    'name': 'none',
+    'item': 'none',
+    'class': 'none',
+    'level': 3
+}
+
+function game() {
+    gameArea.style.display = 'flex';
+
+    if (person.item == 'Эрудит') {
+        person.level = 4
+    }
+
+    playerStats.innerHTML = `name: ${person.name}<br>
+    item: ${person.item}<br>
+    class: ${person.class}<br>
+    level: ${person.level}<br>`;
+
+    const buttons = [];
+
+    for (let i = 1; i < 10; i++) {
+        let enemy = document.createElement('button');
+        enemy.value = i;
+        if (person.item == 'Пожиратель опыта') {
+            enemy.value = i - 0.5;
+        }
+        enemy.innerHTML = enemy.value;
+        buttons.push(enemy);
+
+        enemy.onclick = function(value) {
+            return function() {
+                if (value < person.level) {
+                    enemy.innerHTML = 'DESTROYED';
+                    person.level += Number(value) / person.level;
+                    playerStats.innerHTML = `name: ${person.name}<br>
+                        item: ${person.item}<br>
+                        class: ${person.class}<br>
+                        level: ${person.level}<br>`;
+                }
+            };
+        }(enemy.value);
+    }
+
+    // Перестановка кнопок в случайном порядке
+    for (let i = buttons.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [buttons[i], buttons[j]] = [buttons[j], buttons[i]];  
+    }
+
+    // Добавление кнопок на страницу в новом порядке
+    buttons.forEach(button => {
+        gameArea.appendChild(button);
+    });
+    
+
+    }
