@@ -96,7 +96,6 @@
 .enemy-contain-area {
     width: 90%;
     height: 80%;
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

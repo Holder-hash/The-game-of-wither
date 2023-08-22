@@ -113,10 +113,7 @@ function game() {
                 if (value < person.level) {
                     enemy.innerHTML = 'DESTROYED';
                     person.level += Number(value) / person.level;
-                    playerStats.innerHTML = `name: ${person.name}<br>
-                        item: ${person.item}<br>
-                        class: ${person.class}<br>
-                        level: ${person.level}<br>`;
+                    personLevelText.innerHTML = person.level.toFixed(2);
                 }
             };
         }(enemy.value);
