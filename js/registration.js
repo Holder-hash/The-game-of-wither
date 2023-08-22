@@ -111,39 +111,39 @@ function game() {
 
         switch (i) {
             case 1:
-                enemyMan.pic = 'https://www.clipartmax.com/png/middle/77-777818_enemy-esports.png'
+                enemyMan.pic = 'https://cdnb.artstation.com/p/assets/images/images/021/716/453/large/juan-miguel-lopez-barea-guardainfante1.jpg?1572693826'
                 break;
 
             case 2:
-                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/2828/2828492.png'
+                enemyMan.pic = 'https://i.pinimg.com/1200x/bb/d6/cc/bbd6ccc7dc33efe1e2cabb40d43495ca.jpg'
                 break;
             
             case 3:
-                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                enemyMan.pic = 'https://i.pinimg.com/originals/38/fa/f2/38faf25df595e369724567982c45a1e7.jpg'
                 break;
 
             case 4:
-                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                enemyMan.pic = 'https://cdna.artstation.com/p/assets/images/images/034/004/754/large/tomasz-ryger-enemy-min.jpg?1611147762'
                 break;
 
             case 5:
-                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                enemyMan.pic = 'https://sm.ign.com/t/ign_in/gallery/f/frosthaven/frosthaven-enemy-artwork-and-mini-sculpts_eb9c.1080.jpg'
                 break;
 
             case 6:
-                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                enemyMan.pic = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXS5HrBzg1bs_Tis4ykCjlKzgZtcNTnY1hVzRcMSZEcEQ4byoHOLqD5WPdYShVtas25BQ&usqp=CAU'
                 break;
 
             case 7:
-                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                enemyMan.pic = 'https://i.pinimg.com/1200x/57/ce/4d/57ce4dc228fd823c162bbb6a2906b867.jpg'
                 break;
 
             case 8:
-                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                enemyMan.pic = 'https://cdna.artstation.com/p/assets/images/images/005/177/014/large/shiro-artwork-monster-000.jpg?1500108164'
                 break;
 
             case 9:
-                enemyMan.pic = 'https://cdn-icons-png.flaticon.com/512/1477/1477179.png'
+                enemyMan.pic = 'https://i.pinimg.com/1200x/d2/e6/f4/d2e6f4a195ac1f4fd6aa0a0cda500d3d.jpg'
                 break;
         
             default:
@@ -153,26 +153,41 @@ function game() {
         let enemy = document.createElement('div');
         let enemyPic = document.createElement('img');
 
+        enemy.style = `
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        `
+
         enemyPic.src = enemyMan.pic
         enemyPic.style = `
         width: 100%;
-        height: 180px;
+        height: 200px;
+        border: 1px solid black
         `
 
+        let enemyLevelText = document.createElement('p');
+
+        enemyLevelText.style = `
+        font-size: 26px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        `
         
         enemy.lvl = i;
-        enemy.innerHTML = enemy.lvl;
+        enemyLevelText.innerHTML = enemy.lvl;
 
         enemy.classList.toggle('enemy-card');
         buttons.push(enemy);
         enemy.appendChild(enemyPic)
+        enemy.appendChild(enemyLevelText)
 
 
 
         enemy.onclick = function(value) {
             return function() {
                 if (value < person.level) {
-                    enemy.innerHTML = 'DESTROYED';
+                    enemyPic.src = 'https://media.istockphoto.com/id/901964114/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BD%D0%B0%D0%B4%D0%B3%D1%80%D0%BE%D0%B1%D0%B8%D0%B5-rip.jpg?s=612x612&w=0&k=20&c=a1CxXKdGhUpl4s-B0FA_T6_2_gQuZmxb1NaN-r60Ia4=';
                     person.level += Number(value) / person.level;
                     personLevelText.innerHTML = person.level.toFixed(2);
                 }
