@@ -65,18 +65,15 @@ $(document).ready(function($) {
 });	
 
 
+
+
 // game
 
+
+const gameArea = document.querySelector('.game-area')
 var personCardName = document.querySelector('#personCardName')
 var personLevelText = document.querySelector('#personLevelText')
 const enemyContainArea = document.querySelector('.enemy-contain-area')
-const doneBtn = document.querySelector('#doneBtn')
-
-const itemSelector = document.querySelector('#itemSelector')
-const classSelector = document.querySelector('#classSelector')
-
-const gameArea = document.querySelector('.game-area')
-
 
 
 const person = {
