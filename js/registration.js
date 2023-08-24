@@ -1,3 +1,13 @@
+//class boxes
+var mainerClassImg = document.getElementById('mainerClassImg');
+var mainerClassLocker = document.getElementById('mainerClassLocker');
+
+if (localStorage.getItem('gameLevel') == 2) {
+    mainerClassLocker.style = 'display: none';
+    mainerClassImg.src = 'https://www.artmajeur.com/medias/standard/p/i/pilacadena/artwork/3300101_Miner_48x72.jpg';
+}
+
+
 var haveName = false;
 var haveSignature = false;
 
@@ -69,7 +79,6 @@ $(document).ready(function($) {
 
 // game
 
-
 const gameArea = document.querySelector('.game-area')
 var personCardName = document.querySelector('#personCardName')
 var personLevelText = document.querySelector('#personLevelText')
@@ -79,8 +88,8 @@ const enemyContainArea = document.querySelector('.enemy-contain-area')
 const person = {
     'name': 'none',
     'item': 'none',
-    'class': 'none',
-    'level': 3
+    'class': 'default',
+    'level': 10
 }
 
 function game() {
@@ -100,7 +109,8 @@ function game() {
         const enemyMan = {
             'lvl': 0,
             'pic': 'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Enemy_logo.svg/1200px-Enemy_logo.svg.png',
-            'destroyed': false
+            'destroyed': false,
+            'boss': false
         }
         //items
         if (person.item == 'Пожиратель опыта') {
@@ -141,6 +151,7 @@ function game() {
                 break;
 
             case 9:
+                enemyMan.boss = true
                 enemyMan.pic = 'https://i.pinimg.com/1200x/d2/e6/f4/d2e6f4a195ac1f4fd6aa0a0cda500d3d.jpg'
                 break;
         
@@ -191,12 +202,21 @@ function game() {
                     enemyPic.src = 'https://media.istockphoto.com/id/901964114/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BD%D0%B0%D0%B4%D0%B3%D1%80%D0%BE%D0%B1%D0%B8%D0%B5-rip.jpg?s=612x612&w=0&k=20&c=a1CxXKdGhUpl4s-B0FA_T6_2_gQuZmxb1NaN-r60Ia4=';
                     person.level += Number(value) / person.level;
                     personLevelText.innerHTML = person.level.toFixed(2);
-                    enemy.style = `cursor: not-allowed; `
-                    
+                    enemy.style = `cursor: not-allowed;`
+
+                    //win
+                    if (enemyMan.boss == true) {
+                        win()
+                    }
+                }
+
+                //lose
+                else if (value > person.level) {
+                    lose()
+                    location.reload()
                 }
             };
         }(enemy.lvl);
-
     }
 
     // Перестановка кнопок в случайном порядке
@@ -209,5 +229,30 @@ function game() {
     buttons.forEach(button => {
         enemyContainArea.appendChild(button);
     });
+}
 
+// win
+function win() {
+    alert('You win!')
+        
+    if (localStorage.getItem('gameLevel') < 1) {
+        localStorage.gameLevel = 2;
+    
+        location.reload();
+    }
+    else if (localStorage.getItem('gameLevel') == 2) {
+        localStorage.gameLevel = 3;
+
+        location.reload();
+    }
+    else if (localStorage.getItem('gameLevel') == 3) {
+        localStorage.gameLevel = 4;
+
+        location.reload();
+    }
+}
+
+// lose
+function lose() {
+    alert('You lose!')
 }
