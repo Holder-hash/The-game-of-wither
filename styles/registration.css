@@ -92,6 +92,9 @@
     height: 50px;
     border-radius: 50%;
 }
+.class-item img:not(:first-child) {
+    display: none;
+}
 
 .registration-form-starting-item-box {
     margin-top: 50px;

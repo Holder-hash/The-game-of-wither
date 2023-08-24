@@ -2,9 +2,26 @@
 var mainerClassImg = document.getElementById('mainerClassImg');
 var mainerClassLocker = document.getElementById('mainerClassLocker');
 
-if (localStorage.getItem('gameLevel') == 2) {
+var witchClassImg = document.getElementById('witchClassImg');
+var witchClassLocker = document.getElementById('witchClassLocker');
+
+var vampirClassImg = document.getElementById('vampirClassImg');
+var vampirClassLocker = document.getElementById('vampirClassLocker');
+
+if (localStorage.getItem('gameLevel') >= 2) {
     mainerClassLocker.style = 'display: none';
+    mainerClassImg.style = 'display: block';
     mainerClassImg.src = 'https://www.artmajeur.com/medias/standard/p/i/pilacadena/artwork/3300101_Miner_48x72.jpg';
+}
+if (localStorage.getItem('gameLevel') >= 3) {
+    witchClassLocker.style = 'display: none';
+    witchClassImg.style = 'display: block';
+    witchClassImg.src = 'https://phonoteka.org/uploads/posts/2021-07/1625629689_5-phonoteka-org-p-mag-art-krasivo-7.jpg';
+}
+if (localStorage.getItem('gameLevel') == 4) {
+    vampirClassLocker.style = 'display: none';
+    vampirClassImg.style = 'display: block';
+    vampirClassImg.src = 'https://storage.googleapis.com/pod_public/1300/149993.jpg';
 }
 
 
@@ -248,6 +265,9 @@ function win() {
     else if (localStorage.getItem('gameLevel') == 3) {
         localStorage.gameLevel = 4;
 
+        location.reload();
+    }
+    else if (localStorage.getItem('gameLevel') == 4) {
         location.reload();
     }
 }
