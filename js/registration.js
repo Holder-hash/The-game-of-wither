@@ -226,23 +226,12 @@ function win() {
     alert('You win!')
         
     if (localStorage.getItem('gameLevel') < 1) {
-        localStorage.gameLevel = 2;
+        localStorage.gameLevel = 1;
     
         location.reload();
     }
-    else if (localStorage.getItem('gameLevel') == 2) {
-        localStorage.gameLevel = 3;
-
-        location.reload();
-    }
-    else if (localStorage.getItem('gameLevel') == 3) {
-        localStorage.gameLevel = 4;
-
-        location.reload();
-    }
-    else if (localStorage.getItem('gameLevel') == 4) {
-        location.reload();
-    }
+    localStorage.gameLevel++;
+    location.reload();
 }
 
 // lose
@@ -316,11 +305,41 @@ defaultClassImg.onclick = () => {
 
 }
 
+//remove item selector shadow
+function removeSelectorShadow() {
+    document.querySelectorAll('.items').forEach(ItemEl => {
+        ItemEl.classList.remove('selectedShadow')
+    })
+}
+
+//remove class selector shadow
+function removeClassSelectorShadow() {
+    document.querySelectorAll('.ClassElement').forEach(ClassEl => {
+        ClassEl.classList.remove('selectedShadow')
+    })
+}
+
+defaultClassImg.onclick = () => {
+    removeClassSelectorShadow();
+    defaultClassImg.classList.toggle('selectedShadow')
+
+    defaultItem.forEach(defaultItem => {
+        defaultItem.style = 'display: block'
+    })
+    mainerItem.forEach(mainer => {
+        mainer.style = 'display: none'
+    })
+    witchItem.forEach(witch => {
+        witch.style = 'display: none'
+    })
+    vampirItem.forEach(vampir => {
+        vampir.style = 'display: none'
+    })
+}
+
 mainerClassImg.onclick = () => {
-    defaultClassImg.style = 'box-shadow: 0'
-    mainerClassImg.style = 'box-shadow: 0 0 20px yellow'
-    witchClassImg.style = 'box-shadow: 0'
-    vampirClassImg.style = 'box-shadow: 0'
+    removeClassSelectorShadow();
+    mainerClassImg.classList.toggle('selectedShadow')
 
     defaultItem.forEach(defaultClass => {
         defaultClass.style = 'display: none'
@@ -354,11 +373,6 @@ if (localStorage.getItem('gameLevel') >= 4) {
 
 
 //item selector
-function removeSelectorShadow() {
-    document.querySelectorAll('.items').forEach(ItemEl => {
-        ItemEl.classList.remove('selectedShadow')
-    })
-}
 
 //default
 defaultItemImg1.classList.toggle('selectedShadow')
@@ -381,8 +395,9 @@ defaultItemImg4.onclick = () => {
 }
 
 //miner
-mainerItemImg1.onclick = () => {
-
+mainerItemImg1.onclick = (e) => {
+    removeSelectorShadow()
+    mainerItemImg1.classList.toggle('selectedShadow')
 }
 mainerItemImg2.onclick = () => {
     
@@ -393,3 +408,12 @@ mainerItemImg3.onclick = () => {
 mainerItemImg4.onclick = () => {
     
 }
+
+
+//open a class img
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('gameLevel') >= 5) {
+        ClassLockerImg2.style = 'display: none';
+        mainerClassImg.style = 'display: block';
+    }
+})

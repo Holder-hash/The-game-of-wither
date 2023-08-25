@@ -194,7 +194,7 @@
 
 /*Class img*/
 #defaultClassImg {
-    box-shadow: 0 0 20px yellow;
+    display: block;
 }
 #mainerClassImg {
     display: none;
