@@ -1,24 +1,3 @@
-//class boxes
-var mainerClassImg = document.getElementById('mainerClassImg');
-
-var witchClassImg = document.getElementById('witchClassImg');
-
-var vampirClassImg = document.getElementById('vampirClassImg');
-
-if (localStorage.getItem('gameLevel') >= 2) {
-    mainerClassImg.style = 'display: block';
-    mainerClassImg.src = 'https://www.artmajeur.com/medias/standard/p/i/pilacadena/artwork/3300101_Miner_48x72.jpg';
-}
-if (localStorage.getItem('gameLevel') >= 3) {
-    witchClassImg.style = 'display: block';
-    witchClassImg.src = 'https://phonoteka.org/uploads/posts/2021-07/1625629689_5-phonoteka-org-p-mag-art-krasivo-7.jpg';
-}
-if (localStorage.getItem('gameLevel') == 4) {
-    vampirClassImg.style = 'display: block';
-    vampirClassImg.src = 'https://storage.googleapis.com/pod_public/1300/149993.jpg';
-}
-
-
 var haveName = false;
 var haveSignature = false;
 
@@ -275,6 +254,8 @@ function lose() {
 //class & items select
 var defaultItem = document.querySelectorAll('.defaultItem');
 var mainerItem = document.querySelectorAll('.mainerItem');
+var witchItem = document.querySelectorAll('.witchItem');
+var vampirItem = document.querySelectorAll('.vampirItem');
 
 //default
 var defaultClassImg = document.getElementById('defaultClassImg');
@@ -308,9 +289,15 @@ var vampirItemImg2 = document.getElementById('vampirItemImg2');
 var vampirItemImg3 = document.getElementById('vampirItemImg3');
 var vampirItemImg4 = document.getElementById('vampirItemImg4');
 
+var ItemLockerImg2 = document.getElementById('ItemLockerImg2');
+var ItemLockerImg3 = document.getElementById('ItemLockerImg3');
+var ItemLockerImg4 = document.getElementById('ItemLockerImg4');
+
 defaultClassImg.onclick = () => {
     defaultClassImg.style = 'box-shadow: 0 0 20px yellow'
     mainerClassImg.style = 'box-shadow: 0'
+    witchClassImg.style = 'box-shadow: 0'
+    vampirClassImg.style = 'box-shadow: 0'
 
     defaultItem.forEach(defaultClass => {
         defaultClass.style = 'display: block'
@@ -318,11 +305,19 @@ defaultClassImg.onclick = () => {
     mainerItem.forEach(mainer => {
         mainer.style = 'display: none'
     })
+    witchItem.forEach(witch => {
+        witch.style = 'display: none'
+    })
+    vampirItem.forEach(vampir => {
+        vampir.style = 'display: none'
+    })
 }
 
 mainerClassImg.onclick = () => {
     defaultClassImg.style = 'box-shadow: 0'
     mainerClassImg.style = 'box-shadow: 0 0 20px yellow'
+    witchClassImg.style = 'box-shadow: 0'
+    vampirClassImg.style = 'box-shadow: 0'
 
     defaultItem.forEach(defaultClass => {
         defaultClass.style = 'display: none'
@@ -330,4 +325,30 @@ mainerClassImg.onclick = () => {
     mainerItem.forEach(mainer => {
         mainer.style = 'display: block'
     })
+    witchItem.forEach(witch => {
+        witch.style = 'display: none'
+    })
+    vampirItem.forEach(vampir => {
+        vampir.style = 'display: none'
+    })
+}
+
+
+//class boxes
+var mainerClassImg = document.getElementById('mainerClassImg');
+
+var witchClassImg = document.getElementById('witchClassImg');
+
+var vampirClassImg = document.getElementById('vampirClassImg');
+
+if (localStorage.getItem('gameLevel') >= 2) {
+    ItemLockerImg2.style = 'display: none'
+    defaultItemImg2.style = 'display: block'
+}
+if (localStorage.getItem('gameLevel') >= 3) {
+
+}
+if (localStorage.getItem('gameLevel') == 4) {
+
+
 }

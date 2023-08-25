@@ -192,10 +192,24 @@
     }
 }
 
+/*Class img*/
+#defaultClassImg {
+    box-shadow: 0 0 20px yellow;
+}
+#mainerClassImg {
+    display: none;
+}
+#witchClassImg {
+    display: none;
+}
+#vampirClassImg {
+    display: none;
+}
 
 /*Start items*/
 #defaultItemImg1 {
     display: block;
+    box-shadow: 0 0 20px yellow;
 }
 #mainerItemImg1 {
     display: none;
@@ -209,7 +223,7 @@
 
 
 #defaultItemImg2 {
-    display: block;
+    display: none;
 }
 #mainerItemImg2 {
     display: none;
@@ -223,7 +237,7 @@
 
 
 #defaultItemImg3 {
-    display: block;
+    display: none;
 }
 #mainerItemImg3 {
     display: none;
@@ -237,7 +251,7 @@
 
 
 #defaultItemImg4 {
-    display: block;
+    display: none;
 }
 #mainerItemImg4 {
     display: none;
