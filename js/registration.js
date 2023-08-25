@@ -309,6 +309,9 @@ var vampirItemImg3 = document.getElementById('vampirItemImg3');
 var vampirItemImg4 = document.getElementById('vampirItemImg4');
 
 defaultClassImg.onclick = () => {
+    defaultClassImg.style = 'box-shadow: 0 0 20px yellow'
+    mainerClassImg.style = 'box-shadow: 0'
+
     defaultItem.forEach(defaultClass => {
         defaultClass.style = 'display: block'
     })
@@ -318,6 +321,9 @@ defaultClassImg.onclick = () => {
 }
 
 mainerClassImg.onclick = () => {
+    defaultClassImg.style = 'box-shadow: 0'
+    mainerClassImg.style = 'box-shadow: 0 0 20px yellow'
+
     defaultItem.forEach(defaultClass => {
         defaultClass.style = 'display: none'
     })
