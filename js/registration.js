@@ -413,6 +413,53 @@ witchClassImg.onclick = () => {
     }
 }
 
+vampirClassImg.onclick = () => {
+    person.class = 'vampir';
+
+    removeClassSelectorShadow();
+    vampirClassImg.classList.toggle('selectedShadow')
+
+    defaultItem.forEach(defaultClass => {
+        defaultClass.style = 'display: none'
+    })
+    mainerItem.forEach(mainer => {
+        mainer.style = 'display: none'
+    })
+    witchItem.forEach(witch => {
+        witch.style = 'display: none'
+    })
+    vampirItem.forEach(vampir => {
+        vampir.style = 'display: block'
+    })
+
+    if (person.class == 'vampir') {
+        if (localStorage.getItem('gameLevel') < 11) {
+            ItemLockerImg2.style = 'display: block'
+            vampirItemImg2.style = 'display: none'
+        }
+        else {
+            ItemLockerImg2.style = 'display: none'
+            vampirItemImg2.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 12) {
+            ItemLockerImg3.style = 'display: block'
+            vampirItemImg3.style = 'display: none'
+        }
+        else {
+            ItemLockerImg3.style = 'display: none'
+            vampirItemImg3.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 13) {
+            ItemLockerImg4.style = 'display: block'
+            vampirItemImg4.style = 'display: none'
+        }
+        else {
+            ItemLockerImg4.style = 'display: none'
+            vampirItemImg4.style = 'display: block'
+        }
+    }
+}
+
 
 //item boxes
 
