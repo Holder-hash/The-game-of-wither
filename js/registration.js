@@ -517,6 +517,24 @@ mainerItemImg4.onclick = () => {
     mainerItemImg4.classList.toggle('selectedShadow')
 }
 
+//witch
+witchItemImg1.onclick = () => {
+    removeSelectorShadow()
+    witchItemImg1.classList.toggle('selectedShadow')
+}
+witchItemImg2.onclick = () => {
+    removeSelectorShadow()
+    witchItemImg2.classList.toggle('selectedShadow')
+}
+witchItemImg3.onclick = () => {
+    removeSelectorShadow()
+    witchItemImg3.classList.toggle('selectedShadow')
+}
+witchItemImg4.onclick = () => {
+    removeSelectorShadow()
+    witchItemImg4.classList.toggle('selectedShadow')
+}
+
 
 //open a class img
 document.addEventListener('DOMContentLoaded', () => {
