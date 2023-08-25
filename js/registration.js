@@ -337,12 +337,7 @@ mainerClassImg.onclick = () => {
 }
 
 
-//class boxes
-var mainerClassImg = document.getElementById('mainerClassImg');
-
-var witchClassImg = document.getElementById('witchClassImg');
-
-var vampirClassImg = document.getElementById('vampirClassImg');
+//item boxes
 
 if (localStorage.getItem('gameLevel') >= 2) {
     ItemLockerImg2.style = 'display: none'
@@ -353,6 +348,48 @@ if (localStorage.getItem('gameLevel') >= 3) {
     defaultItemImg3.style = 'display: block'
 }
 if (localStorage.getItem('gameLevel') >= 4) {
+    ItemLockerImg4.style = 'display: none'
+    defaultItemImg4.style = 'display: block'
+}
 
 
+//item selector
+function removeSelectorShadow() {
+    document.querySelectorAll('.items').forEach(ItemEl => {
+        ItemEl.classList.remove('selectedShadow')
+    })
+}
+
+//default
+defaultItemImg1.classList.toggle('selectedShadow')
+
+defaultItemImg1.onclick = () => {
+    removeSelectorShadow()
+    defaultItemImg1.classList.toggle('selectedShadow')
+}
+defaultItemImg2.onclick = () => {
+    removeSelectorShadow()
+    defaultItemImg2.classList.toggle('selectedShadow')
+}
+defaultItemImg3.onclick = () => {
+    removeSelectorShadow()
+    defaultItemImg3.classList.toggle('selectedShadow')
+}
+defaultItemImg4.onclick = () => {
+    removeSelectorShadow()
+    defaultItemImg4.classList.toggle('selectedShadow')
+}
+
+//miner
+mainerItemImg1.onclick = () => {
+
+}
+mainerItemImg2.onclick = () => {
+    
+}
+mainerItemImg3.onclick = () => {
+    
+}
+mainerItemImg4.onclick = () => {
+    
 }

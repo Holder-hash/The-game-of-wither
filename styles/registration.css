@@ -209,7 +209,6 @@
 /*Start items*/
 #defaultItemImg1 {
     display: block;
-    box-shadow: 0 0 20px yellow;
 }
 #mainerItemImg1 {
     display: none;
@@ -261,4 +260,8 @@
 }
 #vampirItemImg4 {
     display: none;
+}
+
+.selectedShadow {
+    box-shadow: 0 0 25px yellow;
 }
