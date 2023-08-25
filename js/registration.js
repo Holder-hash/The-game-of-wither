@@ -294,23 +294,26 @@ var ItemLockerImg3 = document.getElementById('ItemLockerImg3');
 var ItemLockerImg4 = document.getElementById('ItemLockerImg4');
 
 defaultClassImg.onclick = () => {
-    defaultClassImg.style = 'box-shadow: 0 0 20px yellow'
-    mainerClassImg.style = 'box-shadow: 0'
-    witchClassImg.style = 'box-shadow: 0'
-    vampirClassImg.style = 'box-shadow: 0'
+    if (person.class != 'default') {
+        defaultClassImg.style = 'box-shadow: 0 0 20px yellow'
+        mainerClassImg.style = 'box-shadow: 0'
+        witchClassImg.style = 'box-shadow: 0'
+        vampirClassImg.style = 'box-shadow: 0'
+    
+        defaultItem.forEach(defaultClass => {
+            defaultClass.style = 'display: block'
+        })
+        mainerItem.forEach(mainer => {
+            mainer.style = 'display: none'
+        })
+        witchItem.forEach(witch => {
+            witch.style = 'display: none'
+        })
+        vampirItem.forEach(vampir => {
+            vampir.style = 'display: none'
+        })
+    }
 
-    defaultItem.forEach(defaultClass => {
-        defaultClass.style = 'display: block'
-    })
-    mainerItem.forEach(mainer => {
-        mainer.style = 'display: none'
-    })
-    witchItem.forEach(witch => {
-        witch.style = 'display: none'
-    })
-    vampirItem.forEach(vampir => {
-        vampir.style = 'display: none'
-    })
 }
 
 mainerClassImg.onclick = () => {
@@ -346,9 +349,10 @@ if (localStorage.getItem('gameLevel') >= 2) {
     defaultItemImg2.style = 'display: block'
 }
 if (localStorage.getItem('gameLevel') >= 3) {
-
+    ItemLockerImg3.style = 'display: none'
+    defaultItemImg3.style = 'display: block'
 }
-if (localStorage.getItem('gameLevel') == 4) {
+if (localStorage.getItem('gameLevel') >= 4) {
 
 
 }
