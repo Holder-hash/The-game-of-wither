@@ -366,6 +366,53 @@ mainerClassImg.onclick = () => {
     }
 }
 
+witchClassImg.onclick = () => {
+    person.class = 'witch';
+
+    removeClassSelectorShadow();
+    witchClassImg.classList.toggle('selectedShadow')
+
+    defaultItem.forEach(defaultClass => {
+        defaultClass.style = 'display: none'
+    })
+    mainerItem.forEach(mainer => {
+        mainer.style = 'display: none'
+    })
+    witchItem.forEach(witch => {
+        witch.style = 'display: block'
+    })
+    vampirItem.forEach(vampir => {
+        vampir.style = 'display: none'
+    })
+
+    if (person.class == 'witch') {
+        if (localStorage.getItem('gameLevel') < 11) {
+            ItemLockerImg2.style = 'display: block'
+            witchItemImg2.style = 'display: none'
+        }
+        else {
+            ItemLockerImg2.style = 'display: none'
+            witchItemImg2.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 12) {
+            ItemLockerImg3.style = 'display: block'
+            witchItemImg3.style = 'display: none'
+        }
+        else {
+            ItemLockerImg3.style = 'display: none'
+            witchItemImg3.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 13) {
+            ItemLockerImg4.style = 'display: block'
+            witchItemImg4.style = 'display: none'
+        }
+        else {
+            ItemLockerImg4.style = 'display: none'
+            witchItemImg4.style = 'display: block'
+        }
+    }
+}
+
 
 //item boxes
 
@@ -431,5 +478,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ClassLockerImg2.style = 'display: none';
         mainerClassImg.style = 'display: block';
     }
-    
+    if (localStorage.getItem('gameLevel') >= 9) {
+        ClassLockerImg3.style = 'display: none';
+        witchClassImg.style = 'display: block';
+    }
+    if (localStorage.getItem('gameLevel') >= 14) {
+        ClassLockerImg4.style = 'display: none';
+        vampirClassImg.style = 'display: block';
+    }
 })
