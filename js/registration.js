@@ -535,6 +535,23 @@ witchItemImg4.onclick = () => {
     witchItemImg4.classList.toggle('selectedShadow')
 }
 
+//vampir
+vampirItemImg1.onclick = () => {
+    removeSelectorShadow()
+    vampirItemImg1.classList.toggle('selectedShadow')
+}
+vampirItemImg2.onclick = () => {
+    removeSelectorShadow()
+    vampirItemImg2.classList.toggle('selectedShadow')
+}
+vampirItemImg3.onclick = () => {
+    removeSelectorShadow()
+    vampirItemImg3.classList.toggle('selectedShadow')
+}
+vampirItemImg4.onclick = () => {
+    removeSelectorShadow()
+    vampirItemImg4.classList.toggle('selectedShadow')
+}
 
 //open a class img
 document.addEventListener('DOMContentLoaded', () => {
