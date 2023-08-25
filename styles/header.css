@@ -19,7 +19,7 @@ header {
 }
 
 .header__tools__box {
-    width: 100px;
+    width: 135px;
     height: inherit;
     display: flex;
     align-items: center;
