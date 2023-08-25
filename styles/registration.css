@@ -191,3 +191,60 @@
         color: black;
     }
 }
+
+
+/*Start items*/
+#defaultItemImg1 {
+    display: block;
+}
+#mainerItemImg1 {
+    display: none;
+}
+#witchItemImg1 {
+    display: none;
+}
+#vampirItemImg1 {
+    display: none;
+}
+
+
+#defaultItemImg2 {
+    display: block;
+}
+#mainerItemImg2 {
+    display: none;
+}
+#witchItemImg2 {
+    display: none;
+}
+#vampirItemImg2 {
+    display: none;
+}
+
+
+#defaultItemImg3 {
+    display: block;
+}
+#mainerItemImg3 {
+    display: none;
+}
+#witchItemImg3 {
+    display: none;
+}
+#vampirItemImg3 {
+    display: none;
+}
+
+
+#defaultItemImg4 {
+    display: block;
+}
+#mainerItemImg4 {
+    display: none;
+}
+#witchItemImg4 {
+    display: none;
+}
+#vampirItemImg4 {
+    display: none;
+}

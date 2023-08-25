@@ -270,3 +270,58 @@ function win() {
 function lose() {
     alert('You lose!')
 }
+
+
+//class & items select
+var defaultItem = document.querySelectorAll('.defaultItem');
+var mainerItem = document.querySelectorAll('.mainerItem');
+
+//default
+var defaultClassImg = document.getElementById('defaultClassImg');
+
+var defaultItemImg1 = document.getElementById('defaultItemImg1');
+var defaultItemImg2 = document.getElementById('defaultItemImg2');
+var defaultItemImg3 = document.getElementById('defaultItemImg3');
+var defaultItemImg4 = document.getElementById('defaultItemImg4');
+
+//mainer
+var mainerClassImg = document.getElementById('mainerClassImg');
+
+var mainerItemImg1 = document.getElementById('mainerItemImg1');
+var mainerItemImg2 = document.getElementById('mainerItemImg2');
+var mainerItemImg3 = document.getElementById('mainerItemImg3');
+var mainerItemImg4 = document.getElementById('mainerItemImg4');
+
+//witch
+var witchClassImg = document.getElementById('witchClassImg');
+
+var witchItemImg1 = document.getElementById('witchItemImg1');
+var witchItemImg2 = document.getElementById('witchItemImg2');
+var witchItemImg3 = document.getElementById('witchItemImg3');
+var witchItemImg4 = document.getElementById('witchItemImg4');
+
+//vampir
+var vampirClassImg = document.getElementById('vampirClassImg');
+
+var vampirItemImg1 = document.getElementById('vampirItemImg1');
+var vampirItemImg2 = document.getElementById('vampirItemImg2');
+var vampirItemImg3 = document.getElementById('vampirItemImg3');
+var vampirItemImg4 = document.getElementById('vampirItemImg4');
+
+defaultClassImg.onclick = () => {
+    defaultItem.forEach(defaultClass => {
+        defaultClass.style = 'display: block'
+    })
+    mainerItem.forEach(mainer => {
+        mainer.style = 'display: none'
+    })
+}
+
+mainerClassImg.onclick = () => {
+    defaultItem.forEach(defaultClass => {
+        defaultClass.style = 'display: none'
+    })
+    mainerItem.forEach(mainer => {
+        mainer.style = 'display: block'
+    })
+}
