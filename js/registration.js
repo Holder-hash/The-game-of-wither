@@ -282,28 +282,6 @@ var ItemLockerImg2 = document.getElementById('ItemLockerImg2');
 var ItemLockerImg3 = document.getElementById('ItemLockerImg3');
 var ItemLockerImg4 = document.getElementById('ItemLockerImg4');
 
-defaultClassImg.onclick = () => {
-    if (person.class != 'default') {
-        defaultClassImg.style = 'box-shadow: 0 0 20px yellow'
-        mainerClassImg.style = 'box-shadow: 0'
-        witchClassImg.style = 'box-shadow: 0'
-        vampirClassImg.style = 'box-shadow: 0'
-    
-        defaultItem.forEach(defaultClass => {
-            defaultClass.style = 'display: block'
-        })
-        mainerItem.forEach(mainer => {
-            mainer.style = 'display: none'
-        })
-        witchItem.forEach(witch => {
-            witch.style = 'display: none'
-        })
-        vampirItem.forEach(vampir => {
-            vampir.style = 'display: none'
-        })
-    }
-
-}
 
 //remove item selector shadow
 function removeSelectorShadow() {
@@ -319,7 +297,11 @@ function removeClassSelectorShadow() {
     })
 }
 
+// class selector
+
 defaultClassImg.onclick = () => {
+    person.class = 'default';
+
     removeClassSelectorShadow();
     defaultClassImg.classList.toggle('selectedShadow')
 
@@ -338,6 +320,8 @@ defaultClassImg.onclick = () => {
 }
 
 mainerClassImg.onclick = () => {
+    person.class = 'miner';
+
     removeClassSelectorShadow();
     mainerClassImg.classList.toggle('selectedShadow')
 
@@ -353,6 +337,33 @@ mainerClassImg.onclick = () => {
     vampirItem.forEach(vampir => {
         vampir.style = 'display: none'
     })
+
+    if (person.class == 'miner') {
+        if (localStorage.getItem('gameLevel') < 6) {
+            ItemLockerImg2.style = 'display: block'
+            mainerItemImg2.style = 'display: none'
+        }
+        else {
+            ItemLockerImg2.style = 'display: none'
+            mainerItemImg2.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 7) {
+            ItemLockerImg3.style = 'display: block'
+            mainerItemImg3.style = 'display: none'
+        }
+        else {
+            ItemLockerImg3.style = 'display: none'
+            mainerItemImg3.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 8) {
+            ItemLockerImg4.style = 'display: block'
+            mainerItemImg4.style = 'display: none'
+        }
+        else {
+            ItemLockerImg4.style = 'display: none'
+            mainerItemImg4.style = 'display: block'
+        }
+    }
 }
 
 
@@ -395,25 +406,30 @@ defaultItemImg4.onclick = () => {
 }
 
 //miner
-mainerItemImg1.onclick = (e) => {
+mainerItemImg1.onclick = () => {
     removeSelectorShadow()
     mainerItemImg1.classList.toggle('selectedShadow')
 }
 mainerItemImg2.onclick = () => {
-    
+    removeSelectorShadow()
+    mainerItemImg2.classList.toggle('selectedShadow')
 }
 mainerItemImg3.onclick = () => {
-    
+    removeSelectorShadow()
+    mainerItemImg3.classList.toggle('selectedShadow')
 }
 mainerItemImg4.onclick = () => {
-    
+    removeSelectorShadow()
+    mainerItemImg4.classList.toggle('selectedShadow')
 }
 
 
 //open a class img
 document.addEventListener('DOMContentLoaded', () => {
+    //mainer
     if (localStorage.getItem('gameLevel') >= 5) {
         ClassLockerImg2.style = 'display: none';
         mainerClassImg.style = 'display: block';
     }
+    
 })
