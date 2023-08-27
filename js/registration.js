@@ -78,19 +78,17 @@ const person = {
     'name': 'none',
     'item': 'defaultItem1',
     'class': 'default',
-    'level': 10
+    'level': 3
 }
+
+var personLevelUp;
+var personSave;
 
 function game() {
     gameArea.style.display = 'flex';
 
     personCardName.innerHTML = person.name
     personLevelText.innerHTML = person.level
-    
-    if (person.item == 'Эрудит') {
-        person.level = 4
-    }
-
 
     var buttons = [];
 
@@ -303,6 +301,7 @@ defaultClassImg.classList.toggle('selectedShadow')
 
 defaultClassImg.onclick = () => {
     person.class = 'default';
+    person.level = 3;
     personCardClassImg.src = defaultClassImg.src
 
     removeClassSelectorShadow();
@@ -324,6 +323,7 @@ defaultClassImg.onclick = () => {
 
 mainerClassImg.onclick = () => {
     person.class = 'miner';
+    person.level = 10;
     personCardClassImg.src = mainerClassImg.src
 
     removeClassSelectorShadow();
@@ -372,6 +372,7 @@ mainerClassImg.onclick = () => {
 
 witchClassImg.onclick = () => {
     person.class = 'witch';
+    person.level = 25;
     personCardClassImg.src = witchClassImg.src
 
 
@@ -421,6 +422,7 @@ witchClassImg.onclick = () => {
 
 vampirClassImg.onclick = () => {
     person.class = 'vampir';
+    person.level = 30;
     personCardClassImg.src = vampirClassImg.src
 
 
