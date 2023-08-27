@@ -301,6 +301,7 @@ function removeClassSelectorShadow() {
 
 defaultClassImg.onclick = () => {
     person.class = 'default';
+    personCardClassImg.src = defaultClassImg.src
 
     removeClassSelectorShadow();
     defaultClassImg.classList.toggle('selectedShadow')
@@ -321,6 +322,7 @@ defaultClassImg.onclick = () => {
 
 mainerClassImg.onclick = () => {
     person.class = 'miner';
+    personCardClassImg.src = mainerClassImg.src
 
     removeClassSelectorShadow();
     mainerClassImg.classList.toggle('selectedShadow')
@@ -368,6 +370,8 @@ mainerClassImg.onclick = () => {
 
 witchClassImg.onclick = () => {
     person.class = 'witch';
+    personCardClassImg.src = witchClassImg.src
+
 
     removeClassSelectorShadow();
     witchClassImg.classList.toggle('selectedShadow')
@@ -415,6 +419,8 @@ witchClassImg.onclick = () => {
 
 vampirClassImg.onclick = () => {
     person.class = 'vampir';
+    personCardClassImg.src = vampirClassImg.src
+
 
     removeClassSelectorShadow();
     vampirClassImg.classList.toggle('selectedShadow')
@@ -460,7 +466,6 @@ vampirClassImg.onclick = () => {
     }
 }
 
-
 //item boxes
 
 if (localStorage.getItem('gameLevel') >= 2) {
@@ -478,6 +483,7 @@ if (localStorage.getItem('gameLevel') >= 4) {
 
 
 //item selector
+var personCardClassImg = document.getElementById('personCardClassImg');
 
 //default
 defaultItemImg1.classList.toggle('selectedShadow')
