@@ -299,6 +299,8 @@ function removeClassSelectorShadow() {
 // class selector
 var personCardClassImg = document.getElementById('personCardClassImg');
 
+defaultClassImg.classList.toggle('selectedShadow')
+
 defaultClassImg.onclick = () => {
     person.class = 'default';
     personCardClassImg.src = defaultClassImg.src
