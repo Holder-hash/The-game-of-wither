@@ -298,6 +298,7 @@ function removeClassSelectorShadow() {
 }
 
 // class selector
+var personCardClassImg = document.getElementById('personCardClassImg');
 
 defaultClassImg.onclick = () => {
     person.class = 'default';
@@ -483,80 +484,116 @@ if (localStorage.getItem('gameLevel') >= 4) {
 
 
 //item selector
-var personCardClassImg = document.getElementById('personCardClassImg');
+var personCardItemImg = document.getElementById('personCardItemImg')
 
 //default
 defaultItemImg1.classList.toggle('selectedShadow')
 
 defaultItemImg1.onclick = () => {
+    person.item = 'defaultItem1'
     removeSelectorShadow()
     defaultItemImg1.classList.toggle('selectedShadow')
+    personCardItemImg.src = defaultItemImg1.src
 }
 defaultItemImg2.onclick = () => {
+    person.item = 'defaultItem2'
     removeSelectorShadow()
     defaultItemImg2.classList.toggle('selectedShadow')
+    personCardItemImg.src = defaultItemImg2.src
 }
 defaultItemImg3.onclick = () => {
+    person.item = 'defaultItem3'
     removeSelectorShadow()
     defaultItemImg3.classList.toggle('selectedShadow')
+    personCardItemImg.src = defaultItemImg3.src
 }
 defaultItemImg4.onclick = () => {
+    person.item = 'defaultItem4'
     removeSelectorShadow()
     defaultItemImg4.classList.toggle('selectedShadow')
+    personCardItemImg.src = defaultItemImg4.src
 }
 
 //miner
 mainerItemImg1.onclick = () => {
+    person.item = 'mainerItem1'
     removeSelectorShadow()
     mainerItemImg1.classList.toggle('selectedShadow')
+    mainerItemImg1.src = mainerItemImg1.src
+    personCardItemImg.src = mainerItemImg1.src
 }
 mainerItemImg2.onclick = () => {
+    person.item = 'mainerItem2'
     removeSelectorShadow()
     mainerItemImg2.classList.toggle('selectedShadow')
+    personCardItemImg.src = mainerItemImg2.src
 }
 mainerItemImg3.onclick = () => {
+    person.item = 'mainerItem3'
     removeSelectorShadow()
     mainerItemImg3.classList.toggle('selectedShadow')
+        personCardItemImg.src = mainerItemImg3.src
 }
 mainerItemImg4.onclick = () => {
+    person.item = 'mainerItem4'
     removeSelectorShadow()
     mainerItemImg4.classList.toggle('selectedShadow')
+    personCardItemImg.src = mainerItemImg4.src
 }
 
 //witch
 witchItemImg1.onclick = () => {
+    person.item = 'witchItem1'
     removeSelectorShadow()
     witchItemImg1.classList.toggle('selectedShadow')
+    personCardItemImg.src = witchItemImg1.src
 }
 witchItemImg2.onclick = () => {
+    person.item = 'witchItem2'
     removeSelectorShadow()
     witchItemImg2.classList.toggle('selectedShadow')
+    personCardItemImg.src = witchItemImg2.src
 }
 witchItemImg3.onclick = () => {
+    person.item = 'witchItem3'
     removeSelectorShadow()
     witchItemImg3.classList.toggle('selectedShadow')
+    personCardItemImg.src = witchItemImg3.src
+
 }
 witchItemImg4.onclick = () => {
+    person.item = 'witchItem4'
     removeSelectorShadow()
     witchItemImg4.classList.toggle('selectedShadow')
+    personCardItemImg.src = witchItemImg4.src
+
 }
 
 //vampir
 vampirItemImg1.onclick = () => {
+    person.item = 'vampirItem1'
     removeSelectorShadow()
     vampirItemImg1.classList.toggle('selectedShadow')
+    personCardItemImg.src = vampirItemImg1.src
+
 }
 vampirItemImg2.onclick = () => {
+    person.item = 'vampirItem2'
     removeSelectorShadow()
     vampirItemImg2.classList.toggle('selectedShadow')
+    personCardItemImg.src = vampirItemImg2.src
 }
 vampirItemImg3.onclick = () => {
+    person.item = 'vampirItem3'
     removeSelectorShadow()
     vampirItemImg3.classList.toggle('selectedShadow')
+    personCardItemImg.src = vampirItemImg3.src
 }
 vampirItemImg4.onclick = () => {
+    person.item = 'vampirItem4'
     removeSelectorShadow()
     vampirItemImg4.classList.toggle('selectedShadow')
+    personCardItemImg.src = vampirItemImg4.src
 }
 
 //open a class img
