@@ -48,6 +48,7 @@ $(document).ready(function($) {
     //validation
     
     $('#startBtn').click(function() {
+
         if (haveName == true && haveSignature == true &&
              /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == false) {
             $('.registration-window').fadeOut()
@@ -65,8 +66,6 @@ $(document).ready(function($) {
 });	
 
 
-
-
 // game
 
 const gameArea = document.querySelector('.game-area')
@@ -77,7 +76,7 @@ const enemyContainArea = document.querySelector('.enemy-contain-area')
 
 const person = {
     'name': 'none',
-    'item': 'none',
+    'item': 'defaultItem1',
     'class': 'default',
     'level': 10
 }
@@ -467,6 +466,10 @@ vampirClassImg.onclick = () => {
     }
 }
 
+if (person.class == 'default') {
+    personCardClassImg.src = defaultClassImg.src
+}
+
 //item boxes
 
 if (localStorage.getItem('gameLevel') >= 2) {
@@ -594,6 +597,10 @@ vampirItemImg4.onclick = () => {
     removeSelectorShadow()
     vampirItemImg4.classList.toggle('selectedShadow')
     personCardItemImg.src = vampirItemImg4.src
+}
+
+if (person.item == 'defaultItem1') {
+    personCardItemImg.src = defaultItemImg1.src
 }
 
 //open a class img
