@@ -96,10 +96,25 @@ function game() {
         personLevelUp = 0.25;
     }
     else if (person.item == 'defaultItem3') {
-        person.level += 0.25;
+        person.level = 3.25;
         personLevelUp = 0.25
     }
     else if (person.item == 'defaultItem4') {
+        personSave = true
+    }
+
+    //mainer
+    else if (person.item == 'mainerItem1') {
+        personLevelUp = 0;
+    }
+    else if (person.item == 'mainerItem2') {
+        personLevelUp = 0.50;
+    }
+    else if (person.item == 'mainerItem3') {
+        person.level = 10;
+        personLevelUp = 0.25
+    }
+    else if (person.item == 'mainerItem4') {
         personSave = true
     }
 
