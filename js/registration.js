@@ -1,24 +1,3 @@
-//class boxes
-var mainerClassImg = document.getElementById('mainerClassImg');
-
-var witchClassImg = document.getElementById('witchClassImg');
-
-var vampirClassImg = document.getElementById('vampirClassImg');
-
-if (localStorage.getItem('gameLevel') >= 2) {
-    mainerClassImg.style = 'display: block';
-    mainerClassImg.src = 'https://www.artmajeur.com/medias/standard/p/i/pilacadena/artwork/3300101_Miner_48x72.jpg';
-}
-if (localStorage.getItem('gameLevel') >= 3) {
-    witchClassImg.style = 'display: block';
-    witchClassImg.src = 'https://phonoteka.org/uploads/posts/2021-07/1625629689_5-phonoteka-org-p-mag-art-krasivo-7.jpg';
-}
-if (localStorage.getItem('gameLevel') == 4) {
-    vampirClassImg.style = 'display: block';
-    vampirClassImg.src = 'https://storage.googleapis.com/pod_public/1300/149993.jpg';
-}
-
-
 var haveName = false;
 var haveSignature = false;
 
@@ -69,6 +48,7 @@ $(document).ready(function($) {
     //validation
     
     $('#startBtn').click(function() {
+
         if (haveName == true && haveSignature == true &&
              /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == false) {
             $('.registration-window').fadeOut()
@@ -86,8 +66,6 @@ $(document).ready(function($) {
 });	
 
 
-
-
 // game
 
 const gameArea = document.querySelector('.game-area')
@@ -98,21 +76,19 @@ const enemyContainArea = document.querySelector('.enemy-contain-area')
 
 const person = {
     'name': 'none',
-    'item': 'none',
+    'item': 'defaultItem1',
     'class': 'default',
-    'level': 10
+    'level': 3
 }
+
+var personLevelUp;
+var personSave;
 
 function game() {
     gameArea.style.display = 'flex';
 
     personCardName.innerHTML = person.name
     personLevelText.innerHTML = person.level
-    
-    if (person.item == 'Эрудит') {
-        person.level = 4
-    }
-
 
     var buttons = [];
 
@@ -247,26 +223,403 @@ function win() {
     alert('You win!')
         
     if (localStorage.getItem('gameLevel') < 1) {
-        localStorage.gameLevel = 2;
+        localStorage.gameLevel = 1;
     
         location.reload();
     }
-    else if (localStorage.getItem('gameLevel') == 2) {
-        localStorage.gameLevel = 3;
-
-        location.reload();
-    }
-    else if (localStorage.getItem('gameLevel') == 3) {
-        localStorage.gameLevel = 4;
-
-        location.reload();
-    }
-    else if (localStorage.getItem('gameLevel') == 4) {
-        location.reload();
-    }
+    localStorage.gameLevel++;
+    location.reload();
 }
 
 // lose
 function lose() {
     alert('You lose!')
 }
+
+
+//class & items select
+var defaultItem = document.querySelectorAll('.defaultItem');
+var mainerItem = document.querySelectorAll('.mainerItem');
+var witchItem = document.querySelectorAll('.witchItem');
+var vampirItem = document.querySelectorAll('.vampirItem');
+
+//default
+var defaultClassImg = document.getElementById('defaultClassImg');
+
+var defaultItemImg1 = document.getElementById('defaultItemImg1');
+var defaultItemImg2 = document.getElementById('defaultItemImg2');
+var defaultItemImg3 = document.getElementById('defaultItemImg3');
+var defaultItemImg4 = document.getElementById('defaultItemImg4');
+
+//mainer
+var mainerClassImg = document.getElementById('mainerClassImg');
+
+var mainerItemImg1 = document.getElementById('mainerItemImg1');
+var mainerItemImg2 = document.getElementById('mainerItemImg2');
+var mainerItemImg3 = document.getElementById('mainerItemImg3');
+var mainerItemImg4 = document.getElementById('mainerItemImg4');
+
+//witch
+var witchClassImg = document.getElementById('witchClassImg');
+
+var witchItemImg1 = document.getElementById('witchItemImg1');
+var witchItemImg2 = document.getElementById('witchItemImg2');
+var witchItemImg3 = document.getElementById('witchItemImg3');
+var witchItemImg4 = document.getElementById('witchItemImg4');
+
+//vampir
+var vampirClassImg = document.getElementById('vampirClassImg');
+
+var vampirItemImg1 = document.getElementById('vampirItemImg1');
+var vampirItemImg2 = document.getElementById('vampirItemImg2');
+var vampirItemImg3 = document.getElementById('vampirItemImg3');
+var vampirItemImg4 = document.getElementById('vampirItemImg4');
+
+var ItemLockerImg2 = document.getElementById('ItemLockerImg2');
+var ItemLockerImg3 = document.getElementById('ItemLockerImg3');
+var ItemLockerImg4 = document.getElementById('ItemLockerImg4');
+
+
+//remove item selector shadow
+function removeSelectorShadow() {
+    document.querySelectorAll('.items').forEach(ItemEl => {
+        ItemEl.classList.remove('selectedShadow')
+    })
+}
+
+//remove class selector shadow
+function removeClassSelectorShadow() {
+    document.querySelectorAll('.ClassElement').forEach(ClassEl => {
+        ClassEl.classList.remove('selectedShadow')
+    })
+}
+
+// class selector
+var personCardClassImg = document.getElementById('personCardClassImg');
+
+defaultClassImg.classList.toggle('selectedShadow')
+
+defaultClassImg.onclick = () => {
+    person.class = 'default';
+    person.level = 3;
+    personCardClassImg.src = defaultClassImg.src
+
+    removeClassSelectorShadow();
+    defaultClassImg.classList.toggle('selectedShadow')
+
+    defaultItem.forEach(defaultItem => {
+        defaultItem.style = 'display: block'
+    })
+    mainerItem.forEach(mainer => {
+        mainer.style = 'display: none'
+    })
+    witchItem.forEach(witch => {
+        witch.style = 'display: none'
+    })
+    vampirItem.forEach(vampir => {
+        vampir.style = 'display: none'
+    })
+}
+
+mainerClassImg.onclick = () => {
+    person.class = 'miner';
+    person.level = 10;
+    personCardClassImg.src = mainerClassImg.src
+
+    removeClassSelectorShadow();
+    mainerClassImg.classList.toggle('selectedShadow')
+
+    defaultItem.forEach(defaultClass => {
+        defaultClass.style = 'display: none'
+    })
+    mainerItem.forEach(mainer => {
+        mainer.style = 'display: block'
+    })
+    witchItem.forEach(witch => {
+        witch.style = 'display: none'
+    })
+    vampirItem.forEach(vampir => {
+        vampir.style = 'display: none'
+    })
+
+    if (person.class == 'miner') {
+        if (localStorage.getItem('gameLevel') < 6) {
+            ItemLockerImg2.style = 'display: block'
+            mainerItemImg2.style = 'display: none'
+        }
+        else {
+            ItemLockerImg2.style = 'display: none'
+            mainerItemImg2.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 7) {
+            ItemLockerImg3.style = 'display: block'
+            mainerItemImg3.style = 'display: none'
+        }
+        else {
+            ItemLockerImg3.style = 'display: none'
+            mainerItemImg3.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 8) {
+            ItemLockerImg4.style = 'display: block'
+            mainerItemImg4.style = 'display: none'
+        }
+        else {
+            ItemLockerImg4.style = 'display: none'
+            mainerItemImg4.style = 'display: block'
+        }
+    }
+}
+
+witchClassImg.onclick = () => {
+    person.class = 'witch';
+    person.level = 25;
+    personCardClassImg.src = witchClassImg.src
+
+
+    removeClassSelectorShadow();
+    witchClassImg.classList.toggle('selectedShadow')
+
+    defaultItem.forEach(defaultClass => {
+        defaultClass.style = 'display: none'
+    })
+    mainerItem.forEach(mainer => {
+        mainer.style = 'display: none'
+    })
+    witchItem.forEach(witch => {
+        witch.style = 'display: block'
+    })
+    vampirItem.forEach(vampir => {
+        vampir.style = 'display: none'
+    })
+
+    if (person.class == 'witch') {
+        if (localStorage.getItem('gameLevel') < 11) {
+            ItemLockerImg2.style = 'display: block'
+            witchItemImg2.style = 'display: none'
+        }
+        else {
+            ItemLockerImg2.style = 'display: none'
+            witchItemImg2.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 12) {
+            ItemLockerImg3.style = 'display: block'
+            witchItemImg3.style = 'display: none'
+        }
+        else {
+            ItemLockerImg3.style = 'display: none'
+            witchItemImg3.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 13) {
+            ItemLockerImg4.style = 'display: block'
+            witchItemImg4.style = 'display: none'
+        }
+        else {
+            ItemLockerImg4.style = 'display: none'
+            witchItemImg4.style = 'display: block'
+        }
+    }
+}
+
+vampirClassImg.onclick = () => {
+    person.class = 'vampir';
+    person.level = 30;
+    personCardClassImg.src = vampirClassImg.src
+
+
+    removeClassSelectorShadow();
+    vampirClassImg.classList.toggle('selectedShadow')
+
+    defaultItem.forEach(defaultClass => {
+        defaultClass.style = 'display: none'
+    })
+    mainerItem.forEach(mainer => {
+        mainer.style = 'display: none'
+    })
+    witchItem.forEach(witch => {
+        witch.style = 'display: none'
+    })
+    vampirItem.forEach(vampir => {
+        vampir.style = 'display: block'
+    })
+
+    if (person.class == 'vampir') {
+        if (localStorage.getItem('gameLevel') < 11) {
+            ItemLockerImg2.style = 'display: block'
+            vampirItemImg2.style = 'display: none'
+        }
+        else {
+            ItemLockerImg2.style = 'display: none'
+            vampirItemImg2.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 12) {
+            ItemLockerImg3.style = 'display: block'
+            vampirItemImg3.style = 'display: none'
+        }
+        else {
+            ItemLockerImg3.style = 'display: none'
+            vampirItemImg3.style = 'display: block'
+        }
+        if (localStorage.getItem('gameLevel') < 13) {
+            ItemLockerImg4.style = 'display: block'
+            vampirItemImg4.style = 'display: none'
+        }
+        else {
+            ItemLockerImg4.style = 'display: none'
+            vampirItemImg4.style = 'display: block'
+        }
+    }
+}
+
+if (person.class == 'default') {
+    personCardClassImg.src = defaultClassImg.src
+}
+
+//item boxes
+
+if (localStorage.getItem('gameLevel') >= 2) {
+    ItemLockerImg2.style = 'display: none'
+    defaultItemImg2.style = 'display: block'
+}
+if (localStorage.getItem('gameLevel') >= 3) {
+    ItemLockerImg3.style = 'display: none'
+    defaultItemImg3.style = 'display: block'
+}
+if (localStorage.getItem('gameLevel') >= 4) {
+    ItemLockerImg4.style = 'display: none'
+    defaultItemImg4.style = 'display: block'
+}
+
+
+//item selector
+var personCardItemImg = document.getElementById('personCardItemImg')
+
+//default
+defaultItemImg1.classList.toggle('selectedShadow')
+
+defaultItemImg1.onclick = () => {
+    person.item = 'defaultItem1'
+    removeSelectorShadow()
+    defaultItemImg1.classList.toggle('selectedShadow')
+    personCardItemImg.src = defaultItemImg1.src
+}
+defaultItemImg2.onclick = () => {
+    person.item = 'defaultItem2'
+    removeSelectorShadow()
+    defaultItemImg2.classList.toggle('selectedShadow')
+    personCardItemImg.src = defaultItemImg2.src
+}
+defaultItemImg3.onclick = () => {
+    person.item = 'defaultItem3'
+    removeSelectorShadow()
+    defaultItemImg3.classList.toggle('selectedShadow')
+    personCardItemImg.src = defaultItemImg3.src
+}
+defaultItemImg4.onclick = () => {
+    person.item = 'defaultItem4'
+    removeSelectorShadow()
+    defaultItemImg4.classList.toggle('selectedShadow')
+    personCardItemImg.src = defaultItemImg4.src
+}
+
+//miner
+mainerItemImg1.onclick = () => {
+    person.item = 'mainerItem1'
+    removeSelectorShadow()
+    mainerItemImg1.classList.toggle('selectedShadow')
+    mainerItemImg1.src = mainerItemImg1.src
+    personCardItemImg.src = mainerItemImg1.src
+}
+mainerItemImg2.onclick = () => {
+    person.item = 'mainerItem2'
+    removeSelectorShadow()
+    mainerItemImg2.classList.toggle('selectedShadow')
+    personCardItemImg.src = mainerItemImg2.src
+}
+mainerItemImg3.onclick = () => {
+    person.item = 'mainerItem3'
+    removeSelectorShadow()
+    mainerItemImg3.classList.toggle('selectedShadow')
+        personCardItemImg.src = mainerItemImg3.src
+}
+mainerItemImg4.onclick = () => {
+    person.item = 'mainerItem4'
+    removeSelectorShadow()
+    mainerItemImg4.classList.toggle('selectedShadow')
+    personCardItemImg.src = mainerItemImg4.src
+}
+
+//witch
+witchItemImg1.onclick = () => {
+    person.item = 'witchItem1'
+    removeSelectorShadow()
+    witchItemImg1.classList.toggle('selectedShadow')
+    personCardItemImg.src = witchItemImg1.src
+}
+witchItemImg2.onclick = () => {
+    person.item = 'witchItem2'
+    removeSelectorShadow()
+    witchItemImg2.classList.toggle('selectedShadow')
+    personCardItemImg.src = witchItemImg2.src
+}
+witchItemImg3.onclick = () => {
+    person.item = 'witchItem3'
+    removeSelectorShadow()
+    witchItemImg3.classList.toggle('selectedShadow')
+    personCardItemImg.src = witchItemImg3.src
+
+}
+witchItemImg4.onclick = () => {
+    person.item = 'witchItem4'
+    removeSelectorShadow()
+    witchItemImg4.classList.toggle('selectedShadow')
+    personCardItemImg.src = witchItemImg4.src
+
+}
+
+//vampir
+vampirItemImg1.onclick = () => {
+    person.item = 'vampirItem1'
+    removeSelectorShadow()
+    vampirItemImg1.classList.toggle('selectedShadow')
+    personCardItemImg.src = vampirItemImg1.src
+
+}
+vampirItemImg2.onclick = () => {
+    person.item = 'vampirItem2'
+    removeSelectorShadow()
+    vampirItemImg2.classList.toggle('selectedShadow')
+    personCardItemImg.src = vampirItemImg2.src
+}
+vampirItemImg3.onclick = () => {
+    person.item = 'vampirItem3'
+    removeSelectorShadow()
+    vampirItemImg3.classList.toggle('selectedShadow')
+    personCardItemImg.src = vampirItemImg3.src
+}
+vampirItemImg4.onclick = () => {
+    person.item = 'vampirItem4'
+    removeSelectorShadow()
+    vampirItemImg4.classList.toggle('selectedShadow')
+    personCardItemImg.src = vampirItemImg4.src
+}
+
+if (person.item == 'defaultItem1') {
+    personCardItemImg.src = defaultItemImg1.src
+}
+
+//open a class img
+document.addEventListener('DOMContentLoaded', () => {
+    //mainer
+    if (localStorage.getItem('gameLevel') >= 5) {
+        ClassLockerImg2.style = 'display: none';
+        mainerClassImg.style = 'display: block';
+    }
+    if (localStorage.getItem('gameLevel') >= 9) {
+        ClassLockerImg3.style = 'display: none';
+        witchClassImg.style = 'display: block';
+    }
+    if (localStorage.getItem('gameLevel') >= 14) {
+        ClassLockerImg4.style = 'display: none';
+        vampirClassImg.style = 'display: block';
+    }
+})

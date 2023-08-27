@@ -191,3 +191,77 @@
         color: black;
     }
 }
+
+/*Class img*/
+#defaultClassImg {
+    display: block;
+}
+#mainerClassImg {
+    display: none;
+}
+#witchClassImg {
+    display: none;
+}
+#vampirClassImg {
+    display: none;
+}
+
+/*Start items*/
+#defaultItemImg1 {
+    display: block;
+}
+#mainerItemImg1 {
+    display: none;
+}
+#witchItemImg1 {
+    display: none;
+}
+#vampirItemImg1 {
+    display: none;
+}
+
+
+#defaultItemImg2 {
+    display: none;
+}
+#mainerItemImg2 {
+    display: none;
+}
+#witchItemImg2 {
+    display: none;
+}
+#vampirItemImg2 {
+    display: none;
+}
+
+
+#defaultItemImg3 {
+    display: none;
+}
+#mainerItemImg3 {
+    display: none;
+}
+#witchItemImg3 {
+    display: none;
+}
+#vampirItemImg3 {
+    display: none;
+}
+
+
+#defaultItemImg4 {
+    display: none;
+}
+#mainerItemImg4 {
+    display: none;
+}
+#witchItemImg4 {
+    display: none;
+}
+#vampirItemImg4 {
+    display: none;
+}
+
+.selectedShadow {
+    box-shadow: 0 0 25px yellow;
+}
