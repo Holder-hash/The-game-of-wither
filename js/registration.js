@@ -86,6 +86,25 @@ var person = {
 
 function game() {
 
+    //class effects
+    if (person.class == 'default') {
+        person.level = 3;
+    }
+    else if (person.class == 'mainer') {
+        person.level = 10;
+        enemyStartLevel = 9;
+    }
+    else if (person.class == 'witch') {
+        person.level = 25;
+        enemyStartLevel = 24;
+    }
+    else if (person.class == 'vampir') {
+        person.level = 30;
+        enemyStartLevel = 29;
+    }
+
+
+
     //item effects
 
     //default
@@ -339,7 +358,6 @@ defaultClassImg.classList.toggle('selectedShadow')
 
 defaultClassImg.onclick = () => {
     person.class = 'default';
-    person.level = 3;
     personCardClassImg.src = defaultClassImg.src
 
     removeClassSelectorShadow();
@@ -360,9 +378,7 @@ defaultClassImg.onclick = () => {
 }
 
 mainerClassImg.onclick = () => {
-    enemyStartLevel = 9;
-    person.class = 'miner';
-    person.level = 10;
+    person.class = 'mainer';
     personCardClassImg.src = mainerClassImg.src
 
     removeClassSelectorShadow();
@@ -411,7 +427,6 @@ mainerClassImg.onclick = () => {
 
 witchClassImg.onclick = () => {
     person.class = 'witch';
-    person.level = 25;
     personCardClassImg.src = witchClassImg.src
 
 
@@ -461,7 +476,6 @@ witchClassImg.onclick = () => {
 
 vampirClassImg.onclick = () => {
     person.class = 'vampir';
-    person.level = 30;
     personCardClassImg.src = vampirClassImg.src
 
 
