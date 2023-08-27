@@ -67,9 +67,6 @@ $(document).ready(function($) {
 
 
 // game
-
-
-
 const gameArea = document.querySelector('.game-area')
 var personCardName = document.querySelector('#personCardName')
 var personLevelText = document.querySelector('#personLevelText')
@@ -89,12 +86,21 @@ var person = {
 function game() {
 
     //item effects
+
+    //default
     if (person.item == 'defaultItem1') {
         personCardItemImg.src = defaultItemImg1.src
         personLevelUp = 0;
     }
     else if (person.item == 'defaultItem2') {
         personLevelUp = 0.25;
+    }
+    else if (person.item == 'defaultItem3') {
+        person.level += 0.25;
+        personLevelUp = 0.25
+    }
+    else if (person.item == 'defaultItem4') {
+        personSave = true
     }
 
     //game process
@@ -201,7 +207,7 @@ function game() {
                 if (value < person.level && enemyMan.destroyed == false) {
                     enemyMan.destroyed = true;
                     enemyPic.src = 'https://media.istockphoto.com/id/901964114/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BD%D0%B0%D0%B4%D0%B3%D1%80%D0%BE%D0%B1%D0%B8%D0%B5-rip.jpg?s=612x612&w=0&k=20&c=a1CxXKdGhUpl4s-B0FA_T6_2_gQuZmxb1NaN-r60Ia4=';
-                    person.level += Number(value) / person.level + personLevelUp;
+                    person.level += (Number(value) / person.level) + personLevelUp;
                     personLevelText.innerHTML = person.level.toFixed(2);
                     enemy.style = `cursor: not-allowed;`
 
@@ -213,8 +219,14 @@ function game() {
 
                 //lose
                 else if (value > person.level) {
-                    lose()
-                    location.reload()
+                    if (personSave == false) {
+                        lose()
+                        location.reload()
+                    }
+                    else {
+                        personSave = false;
+                        alert('save')
+                    }
                 }
             };
         }(enemy.lvl);
