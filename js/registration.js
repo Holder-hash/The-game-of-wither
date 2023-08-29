@@ -615,7 +615,7 @@ vampirClassImg.onclick = () => {
         vampir.style = 'display: block'
     })
 
-        if (localStorage.getItem('gameLevel') < 13) {
+        if (localStorage.getItem('gameLevel') < 14) {
             ItemLockerImg2.style = 'display: block'
             vampirItemImg2.style = 'display: none'
         }
@@ -623,7 +623,7 @@ vampirClassImg.onclick = () => {
             ItemLockerImg2.style = 'display: none'
             vampirItemImg2.style = 'display: block'
         }
-        if (localStorage.getItem('gameLevel') < 14) {
+        if (localStorage.getItem('gameLevel') < 15) {
             ItemLockerImg3.style = 'display: block'
             vampirItemImg3.style = 'display: none'
         }
@@ -631,7 +631,7 @@ vampirClassImg.onclick = () => {
             ItemLockerImg3.style = 'display: none'
             vampirItemImg3.style = 'display: block'
         }
-        if (localStorage.getItem('gameLevel') < 15) {
+        if (localStorage.getItem('gameLevel') < 16) {
             ItemLockerImg4.style = 'display: block'
             vampirItemImg4.style = 'display: none'
         }
