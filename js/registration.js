@@ -86,10 +86,61 @@ var person = {
 
 
 function game() {
-    //level 
+    //levels
+
+    //default levels
     if (localStorage.getItem('gameLevel') == 2) {
         enemyStartLevel += 1.25
     }
+    else if (localStorage.getItem('gameLevel') == 3) {
+        enemyStartLevel += 1.50
+    }
+    else if (localStorage.getItem('gameLevel') == 4) {
+        enemyStartLevel += 1.75
+    }
+
+    //mainer levels
+    else if (localStorage.getItem('gameLevel') == 5) {
+        enemyStartLevel += 2
+    }
+    else if (localStorage.getItem('gameLevel') == 3) {
+        enemyStartLevel += 2.25
+    }
+    else if (localStorage.getItem('gameLevel') == 4) {
+        enemyStartLevel += 2.50
+    }
+    else if (localStorage.getItem('gameLevel') == 4) {
+        enemyStartLevel += 2.75
+    }
+
+    //witch levels
+    else if (localStorage.getItem('gameLevel') == 5) {
+        enemyStartLevel += 3
+    }
+    else if (localStorage.getItem('gameLevel') == 3) {
+        enemyStartLevel += 3.25
+    }
+    else if (localStorage.getItem('gameLevel') == 4) {
+        enemyStartLevel += 3.50
+    }
+    else if (localStorage.getItem('gameLevel') == 4) {
+        enemyStartLevel += 3.75
+    }
+
+    //vampir levels
+    else if (localStorage.getItem('gameLevel') == 5) {
+        enemyStartLevel += 4
+    }
+    else if (localStorage.getItem('gameLevel') == 3) {
+        enemyStartLevel += 4.25
+    }
+    else if (localStorage.getItem('gameLevel') == 4) {
+        enemyStartLevel += 4.50
+    }
+    else if (localStorage.getItem('gameLevel') == 4) {
+        enemyStartLevel += 4.75
+    }
+
 
     //class effects
     if (person.class == 'default') {
@@ -313,7 +364,7 @@ function game() {
 
 // win
 function win() {
-    alert('You win!')
+    alert('You win!')   
         
     if (localStorage.getItem('gameLevel') < 1) {
         localStorage.gameLevel = 1;
@@ -411,6 +462,10 @@ defaultClassImg.onclick = () => {
     vampirItem.forEach(vampir => {
         vampir.style = 'display: none'
     })
+
+    // if (localStorage.getItem('gameLevel') >= 5) {
+    //     ItemLockerImg2.style = 'display: none'
+    // }
 }
 
 mainerClassImg.onclick = () => {
