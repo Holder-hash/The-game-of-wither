@@ -101,44 +101,44 @@ function game() {
 
     //mainer levels
     else if (localStorage.getItem('gameLevel') == 5) {
-        enemyStartLevel += 2
+        enemyStartLevel += 3
     }
     else if (localStorage.getItem('gameLevel') == 6) {
-        enemyStartLevel += 2.25
+        enemyStartLevel += 3.50
     }
     else if (localStorage.getItem('gameLevel') == 7) {
-        enemyStartLevel += 2.50
+        enemyStartLevel += 4.75
     }
     else if (localStorage.getItem('gameLevel') == 8) {
-        enemyStartLevel += 2.75
+        enemyStartLevel += 5
     }
 
     //witch levels
     else if (localStorage.getItem('gameLevel') == 9) {
-        enemyStartLevel += 3
+        enemyStartLevel += 9.25
     }
     else if (localStorage.getItem('gameLevel') == 10) {
-        enemyStartLevel += 3.25
+        enemyStartLevel += 10
     }
     else if (localStorage.getItem('gameLevel') == 11) {
-        enemyStartLevel += 3.50
+        enemyStartLevel += 14
     }
     else if (localStorage.getItem('gameLevel') == 12) {
-        enemyStartLevel += 3.75
+        enemyStartLevel += 9.75
     }
 
     //vampir levels
     else if (localStorage.getItem('gameLevel') == 13) {
-        enemyStartLevel += 4
+        enemyStartLevel += 5
     }
     else if (localStorage.getItem('gameLevel') == 14) {
-        enemyStartLevel += 4.25
+        enemyStartLevel += 5.25
     }
     else if (localStorage.getItem('gameLevel') == 15) {
-        enemyStartLevel += 4.50
+        enemyStartLevel += 5.50
     }
     else if (localStorage.getItem('gameLevel') == 16) {
-        enemyStartLevel += 4.75
+        enemyStartLevel += 6.75
     }
 
 
@@ -147,10 +147,10 @@ function game() {
         person.level = 3;
     }
     else if (person.class == 'mainer') {
-        person.level = 10;
+        person.level = 5;
     }
     else if (person.class == 'witch') {
-        person.level = 25;
+        person.level = 10;
     }
     else if (person.class == 'vampir') {
         person.level = 30;
@@ -181,11 +181,11 @@ function game() {
         personLevelUp = 0;
     }
     else if (person.item == 'mainerItem2') {
-        personLevelUp = 0.50;
+        personLevelUp = 0.25;
     }
     else if (person.item == 'mainerItem3') {
-        person.level = 10;
-        personLevelUp = 0.25
+        person.level = 6;
+        personLevelUp = 0.50;
     }
     else if (person.item == 'mainerItem4') {
         personSave = true
@@ -199,7 +199,7 @@ function game() {
         personLevelUp = 1;
     }
     else if (person.item == 'witchItem3') {
-        person.level = 26;
+        person.level += 5;
         personLevelUp = 0.25
     }
     else if (person.item == 'witchItem4') {
@@ -241,10 +241,19 @@ function game() {
         switch (i) {
             case 1:
                 enemyMan.pic = 'https://cdnb.artstation.com/p/assets/images/images/021/716/453/large/juan-miguel-lopez-barea-guardainfante1.jpg?1572693826'
+                if (localStorage.getItem('gameLevel') == 9) {
+                    enemyStartLevel -= 2.75;             
+                }
+                if (person.item == 'witchItem2') {
+                    enemyStartLevel -= 1;
+                }
                 break;
 
             case 2:
                 enemyMan.pic = 'https://i.pinimg.com/1200x/bb/d6/cc/bbd6ccc7dc33efe1e2cabb40d43495ca.jpg'
+                if (localStorage.getItem('gameLevel') == 9) {
+                    enemyStartLevel += 2.75;
+                }
                 break;
             
             case 3:
@@ -310,8 +319,8 @@ function game() {
 
         enemy.classList.toggle('enemy-card');
         buttons.push(enemy);
-        enemy.appendChild(enemyPic)
-        enemy.appendChild(enemyLevelText)
+        enemy.appendChild(enemyPic);
+        enemy.appendChild(enemyLevelText);
 
 
 
@@ -323,25 +332,31 @@ function game() {
                     enemyPic.src = 'https://media.istockphoto.com/id/901964114/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BD%D0%B0%D0%B4%D0%B3%D1%80%D0%BE%D0%B1%D0%B8%D0%B5-rip.jpg?s=612x612&w=0&k=20&c=a1CxXKdGhUpl4s-B0FA_T6_2_gQuZmxb1NaN-r60Ia4=';
                     person.level += (Number(value) / person.level) + personLevelUp;
                     personLevelText.innerHTML = person.level.toFixed(2);
-                    enemy.style = `cursor: not-allowed;`
+                    enemy.style = `cursor: not-allowed;`;
                     enemyNumber--;
 
                     //win
                     if (enemyNumber == 0) {
-                        win()
+                        win();
                     }
                 }
 
                 //lose
                 else if (value > person.level) {
                     if (personSave == false) {
-                        lose()
-                        location.reload()
+                        lose();
+                        location.reload();
+                    }
+                    else if (personSave == true && person.item == 'witchItem4') {
+                        alert('save');
+                        person.level += 2;
+                        personLevelText.innerHTML = person.level;
+                        personSave = false;
                     }
                     else {
                         personSave = false;
-                        alert('save')
-                    }
+                        alert('save');
+                    }   
                 }
             };
         }(enemy.lvl);
@@ -553,7 +568,7 @@ witchClassImg.onclick = () => {
         vampir.style = 'display: none'
     })
 
-        if (localStorage.getItem('gameLevel') < 11) {
+        if (localStorage.getItem('gameLevel') < 10) {
             ItemLockerImg2.style = 'display: block'
             witchItemImg2.style = 'display: none'
         }
@@ -561,7 +576,7 @@ witchClassImg.onclick = () => {
             ItemLockerImg2.style = 'display: none'
             witchItemImg2.style = 'display: block'
         }
-        if (localStorage.getItem('gameLevel') < 12) {
+        if (localStorage.getItem('gameLevel') < 11) {
             ItemLockerImg3.style = 'display: block'
             witchItemImg3.style = 'display: none'
         }
@@ -569,7 +584,7 @@ witchClassImg.onclick = () => {
             ItemLockerImg3.style = 'display: none'
             witchItemImg3.style = 'display: block'
         }
-        if (localStorage.getItem('gameLevel') < 13) {
+        if (localStorage.getItem('gameLevel') < 12) {
             ItemLockerImg4.style = 'display: block'
             witchItemImg4.style = 'display: none'
         }
@@ -600,7 +615,7 @@ vampirClassImg.onclick = () => {
         vampir.style = 'display: block'
     })
 
-        if (localStorage.getItem('gameLevel') < 11) {
+        if (localStorage.getItem('gameLevel') < 13) {
             ItemLockerImg2.style = 'display: block'
             vampirItemImg2.style = 'display: none'
         }
@@ -608,7 +623,7 @@ vampirClassImg.onclick = () => {
             ItemLockerImg2.style = 'display: none'
             vampirItemImg2.style = 'display: block'
         }
-        if (localStorage.getItem('gameLevel') < 12) {
+        if (localStorage.getItem('gameLevel') < 14) {
             ItemLockerImg3.style = 'display: block'
             vampirItemImg3.style = 'display: none'
         }
@@ -616,7 +631,7 @@ vampirClassImg.onclick = () => {
             ItemLockerImg3.style = 'display: none'
             vampirItemImg3.style = 'display: block'
         }
-        if (localStorage.getItem('gameLevel') < 13) {
+        if (localStorage.getItem('gameLevel') < 15) {
             ItemLockerImg4.style = 'display: block'
             vampirItemImg4.style = 'display: none'
         }
@@ -772,7 +787,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ClassLockerImg3.style = 'display: none';
         witchClassImg.style = 'display: block';
     }
-    if (localStorage.getItem('gameLevel') >= 14) {
+    if (localStorage.getItem('gameLevel') >= 13
+    ) {
         ClassLockerImg4.style = 'display: none';
         vampirClassImg.style = 'display: block';
     }
