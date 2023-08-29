@@ -75,6 +75,7 @@ const enemyContainArea = document.querySelector('.enemy-contain-area')
 var personLevelUp = 0;
 var personSave = false;
 var enemyStartLevel = 0;
+var enemyNumber = 9;
 
 var person = {
     'name': 'none',
@@ -85,6 +86,10 @@ var person = {
 
 
 function game() {
+    //level 
+    if (localStorage.getItem('gameLevel') == 2) {
+        enemyStartLevel += 1.25
+    }
 
     //class effects
     if (person.class == 'default') {
@@ -107,7 +112,7 @@ function game() {
 
     //item effects
 
-    //default
+    //default items
     if (person.item == 'defaultItem1') {
         personCardItemImg.src = defaultItemImg1.src
         personLevelUp = 0;
@@ -123,7 +128,7 @@ function game() {
         personSave = true
     }
 
-    //mainer
+    //mainer items
     else if (person.item == 'mainerItem1') {
         personLevelUp = 0;
     }
@@ -135,6 +140,36 @@ function game() {
         personLevelUp = 0.25
     }
     else if (person.item == 'mainerItem4') {
+        personSave = true
+    }
+
+    //witch items
+    else if (person.item == 'witchItem1') {
+        personLevelUp = 0.75;
+    }
+    else if (person.item == 'witchItem2') {
+        personLevelUp = 1;
+    }
+    else if (person.item == 'witchItem3') {
+        person.level = 26;
+        personLevelUp = 0.25
+    }
+    else if (person.item == 'witchItem4') {
+        personSave = true
+    }
+
+    //vampir items
+    else if (person.item == 'vampirItem1') {
+        personLevelUp = 0;
+    }
+    else if (person.item == 'vItem2') {
+        personLevelUp = 1;
+    }
+    else if (person.item == 'vampirItem3') {
+        person.level = 31;
+        personLevelUp = 0.25
+    }
+    else if (person.item == 'vampirItem4') {
         personSave = true
     }
 
@@ -221,7 +256,7 @@ function game() {
         padding-left: 10px;
         padding-bottom: 10px;
         `
-        
+
         enemy.lvl = enemyStartLevel + i;
         enemyLevelText.innerHTML = enemy.lvl;
 
@@ -241,9 +276,10 @@ function game() {
                     person.level += (Number(value) / person.level) + personLevelUp;
                     personLevelText.innerHTML = person.level.toFixed(2);
                     enemy.style = `cursor: not-allowed;`
+                    enemyNumber--;
 
                     //win
-                    if (enemyMan.boss == true) {
+                    if (enemyNumber == 0) {
                         win()
                     }
                 }
