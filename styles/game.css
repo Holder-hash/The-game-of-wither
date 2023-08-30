@@ -119,3 +119,11 @@
     margin-right: 10px;
     margin-bottom: 10px;
 }
+
+.enemySkillStyle {
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: none;
+}

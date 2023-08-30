@@ -71,6 +71,7 @@ const gameArea = document.querySelector('.game-area')
 var personCardName = document.querySelector('#personCardName')
 var personLevelText = document.querySelector('#personLevelText')
 const enemyContainArea = document.querySelector('.enemy-contain-area')
+const enemySkillStyle = document.querySelector('.enemySkillStyle')
 
 var personLevelUp = 0;
 var personSave = false;
@@ -242,6 +243,31 @@ function game() {
             'antiVampir': false
         }
 
+        let enemy = document.createElement('div');
+        let enemyPic = document.createElement('img');
+        let enemyLevelText = document.createElement('p');
+
+        enemy.classList.toggle('enemy-card');
+        buttons.push(enemy);
+        enemy.appendChild(enemyPic);
+
+        let enemyStats = document.createElement('div');
+        enemyStats.style = `
+        width: 90%;
+        margin: 0 auto;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;`
+
+        let enemySkill = document.createElement('div');
+        enemySkill.classList.toggle('enemySkillStyle');
+
+        enemy.appendChild(enemyStats);
+        enemyStats.appendChild(enemyLevelText);
+        enemyStats.appendChild(enemySkill);
+
+
         switch (i) {
             case 1:
                 enemyMan.pic = 'https://cdnb.artstation.com/p/assets/images/images/021/716/453/large/juan-miguel-lopez-barea-guardainfante1.jpg?1572693826'
@@ -277,23 +303,36 @@ function game() {
                 enemyMan.pic = 'https://cdna.artstation.com/p/assets/images/images/034/004/754/large/tomasz-ryger-enemy-min.jpg?1611147762'
                 if (localStorage.getItem('gameLevel') == 16) {
                     enemyStartLevel += 10
+                    enemySkill.style = `display: block;`
                 }
                 break;
 
             case 5:
                 enemyMan.pic = 'https://sm.ign.com/t/ign_in/gallery/f/frosthaven/frosthaven-enemy-artwork-and-mini-sculpts_eb9c.1080.jpg'
+                if (localStorage.getItem('gameLevel') == 16) {
+                    enemySkill.style = `display: block;`
+                }
                 break;
 
             case 6:
                 enemyMan.pic = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXS5HrBzg1bs_Tis4ykCjlKzgZtcNTnY1hVzRcMSZEcEQ4byoHOLqD5WPdYShVtas25BQ&usqp=CAU'
+                if (localStorage.getItem('gameLevel') == 16) {
+                    enemySkill.style = `display: block;`
+                }
                 break;
 
             case 7:
                 enemyMan.pic = 'https://i.pinimg.com/1200x/57/ce/4d/57ce4dc228fd823c162bbb6a2906b867.jpg'
+                if (localStorage.getItem('gameLevel') == 16) {
+                    enemySkill.style = `display: block;`
+                }
                 break;
 
             case 8:
                 enemyMan.pic = 'https://cdna.artstation.com/p/assets/images/images/005/177/014/large/shiro-artwork-monster-000.jpg?1500108164'
+                if (localStorage.getItem('gameLevel') == 16) {
+                    enemySkill.style = `display: block;`
+                }
                 break;
 
             case 9:
@@ -302,14 +341,16 @@ function game() {
                 if (localStorage.getItem('gameLevel') == 15) {
                     enemyStartLevel += 10
                 }
+                if (localStorage.getItem('gameLevel') == 16) {
+                    enemySkill.style = `display: block;`
+                }
                 break;
         
             default:
                 break;
         }
 
-        let enemy = document.createElement('div');
-        let enemyPic = document.createElement('img');
+        enemyStats.appendChild(enemySkill)
 
         enemy.style = `
         display: flex;
@@ -325,21 +366,16 @@ function game() {
         border: 1px solid black
         `
 
-        let enemyLevelText = document.createElement('p');
+
 
         enemyLevelText.style = `
         font-size: 26px;
-        padding-left: 10px;
-        padding-bottom: 10px;
         `
 
         enemy.lvl = enemyStartLevel + i;
         enemyLevelText.innerHTML = enemy.lvl;
 
-        enemy.classList.toggle('enemy-card');
-        buttons.push(enemy);
-        enemy.appendChild(enemyPic);
-        enemy.appendChild(enemyLevelText);
+
 
 
 
