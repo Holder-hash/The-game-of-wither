@@ -84,6 +84,9 @@ var person = {
     'level': 3
 }
 
+if (localStorage.getItem('gameLevel') == 16) {
+    alert('vampir level +5')
+}
 
 function game() {
     //levels
@@ -155,6 +158,9 @@ function game() {
     else if (person.class == 'vampir') {
         person.level = 20;
         enemyStartLevel -= 10;
+        if (localStorage.getItem('gameLevel') == 16) {
+            person.level = 25;
+        }
     }
 
 
@@ -273,6 +279,9 @@ function game() {
 
             case 4:
                 enemyMan.pic = 'https://cdna.artstation.com/p/assets/images/images/034/004/754/large/tomasz-ryger-enemy-min.jpg?1611147762'
+                if (localStorage.getItem('gameLevel') == 16) {
+                    enemyStartLevel += 10
+                }
                 break;
 
             case 5:
@@ -364,6 +373,13 @@ function game() {
                     else if (personSave == true && person.item == 'witchItem4') {
                         alert('save');
                         person.level += 2;
+                        personLevelText.innerHTML = person.level;
+                        personSave = false;
+                    }
+                    else if (personSave == true && person.item == 'vampirItem4') {
+                        alert('save');
+                        person.level += 10;
+                        personLevelUp += 1
                         personLevelText.innerHTML = person.level;
                         personSave = false;
                     }
