@@ -84,10 +84,6 @@ var person = {
     'level': 3
 }
 
-if (localStorage.getItem('gameLevel') == 16) {
-    alert('vampir level +5')
-}
-
 function game() {
     //levels
 
@@ -412,6 +408,9 @@ function win() {
         localStorage.gameLevel = 1;
     
         location.reload();
+    }
+    if (localStorage.getItem('gameLevel') == 15) {
+        alert('vampir level +5')
     }
     localStorage.gameLevel++;
     location.reload();
