@@ -354,6 +354,8 @@ function game() {
                 enemyMan.pic = 'https://i.pinimg.com/1200x/d2/e6/f4/d2e6f4a195ac1f4fd6aa0a0cda500d3d.jpg'
                 if (localStorage.getItem('gameLevel') == 15) {
                     enemyStartLevel += 10
+                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkill.style = `display: flex;`
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
                     enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
