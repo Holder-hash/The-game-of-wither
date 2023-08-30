@@ -263,6 +263,13 @@ function game() {
         let enemySkill = document.createElement('div');
         enemySkill.classList.toggle('enemySkillStyle');
 
+        let enemySkillImg = document.createElement('img');
+        enemySkillImg.style = `
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;`
+        enemySkill.appendChild(enemySkillImg);
+
         enemy.appendChild(enemyStats);
         enemyStats.appendChild(enemyLevelText);
         enemyStats.appendChild(enemySkill);
@@ -302,36 +309,41 @@ function game() {
             case 4:
                 enemyMan.pic = 'https://cdna.artstation.com/p/assets/images/images/034/004/754/large/tomasz-ryger-enemy-min.jpg?1611147762'
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemyStartLevel += 10
-                    enemySkill.style = `display: block;`
+                    enemyStartLevel += 10;
+                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkill.style = `display: flex;`
                 }
                 break;
 
             case 5:
                 enemyMan.pic = 'https://sm.ign.com/t/ign_in/gallery/f/frosthaven/frosthaven-enemy-artwork-and-mini-sculpts_eb9c.1080.jpg'
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkill.style = `display: block;`
+                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkill.style = `display: flex;`
                 }
                 break;
 
             case 6:
                 enemyMan.pic = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXS5HrBzg1bs_Tis4ykCjlKzgZtcNTnY1hVzRcMSZEcEQ4byoHOLqD5WPdYShVtas25BQ&usqp=CAU'
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkill.style = `display: block;`
+                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkill.style = `display: flex;`
                 }
                 break;
 
             case 7:
                 enemyMan.pic = 'https://i.pinimg.com/1200x/57/ce/4d/57ce4dc228fd823c162bbb6a2906b867.jpg'
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkill.style = `display: block;`
+                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkill.style = `display: flex;`
                 }
                 break;
 
             case 8:
                 enemyMan.pic = 'https://cdna.artstation.com/p/assets/images/images/005/177/014/large/shiro-artwork-monster-000.jpg?1500108164'
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkill.style = `display: block;`
+                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkill.style = `display: flex;`
                 }
                 break;
 
@@ -342,7 +354,8 @@ function game() {
                     enemyStartLevel += 10
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkill.style = `display: block;`
+                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkill.style = `display: flex;`
                 }
                 break;
         
