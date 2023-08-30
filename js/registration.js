@@ -309,9 +309,11 @@ function game() {
             case 4:
                 enemyMan.pic = 'https://cdna.artstation.com/p/assets/images/images/034/004/754/large/tomasz-ryger-enemy-min.jpg?1611147762'
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemyStartLevel += 10;
                     enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
                     enemySkill.style = `display: flex;`
+                }
+                if (localStorage.getItem('gameLevel') == 16 && person.class == 'vampir') {
+                    enemyStartLevel += 10;
                 }
                 break;
 
