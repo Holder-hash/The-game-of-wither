@@ -129,16 +129,16 @@ function game() {
 
     //vampir levels
     else if (localStorage.getItem('gameLevel') == 13) {
-        enemyStartLevel += 5
+        enemyStartLevel += 28
     }
     else if (localStorage.getItem('gameLevel') == 14) {
-        enemyStartLevel += 5.25
+        enemyStartLevel += 29
     }
     else if (localStorage.getItem('gameLevel') == 15) {
-        enemyStartLevel += 5.50
+        enemyStartLevel += 34
     }
     else if (localStorage.getItem('gameLevel') == 16) {
-        enemyStartLevel += 6.75
+        enemyStartLevel += 34
     }
 
 
@@ -153,7 +153,8 @@ function game() {
         person.level = 10;
     }
     else if (person.class == 'vampir') {
-        person.level = 30;
+        person.level = 20;
+        enemyStartLevel -= 10;
     }
 
 
@@ -210,12 +211,12 @@ function game() {
     else if (person.item == 'vampirItem1') {
         personLevelUp = 0;
     }
-    else if (person.item == 'vItem2') {
+    else if (person.item == 'vampirItem2') {
         personLevelUp = 1;
     }
     else if (person.item == 'vampirItem3') {
-        person.level = 31;
-        personLevelUp = 0.25
+        person.level = 25;
+        personLevelUp = 1.50
     }
     else if (person.item == 'vampirItem4') {
         personSave = true
@@ -235,7 +236,8 @@ function game() {
             'lvl': 0,
             'pic': 'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Enemy_logo.svg/1200px-Enemy_logo.svg.png',
             'destroyed': false,
-            'boss': false
+            'boss': false,
+            'antiVampir': false
         }
 
         switch (i) {
@@ -254,10 +256,19 @@ function game() {
                 if (localStorage.getItem('gameLevel') == 9) {
                     enemyStartLevel += 2.75;
                 }
+                if (localStorage.getItem('gameLevel') == 14) {
+                    enemyStartLevel += 0.25;
+                }
+                if (localStorage.getItem('gameLevel') == 15) {
+                    enemyStartLevel += 1.50;
+                }
                 break;
             
             case 3:
                 enemyMan.pic = 'https://i.pinimg.com/originals/38/fa/f2/38faf25df595e369724567982c45a1e7.jpg'
+                if (localStorage.getItem('gameLevel') == 15) {
+                    enemyStartLevel -= 1.50;
+                }
                 break;
 
             case 4:
@@ -283,6 +294,9 @@ function game() {
             case 9:
                 enemyMan.boss = true
                 enemyMan.pic = 'https://i.pinimg.com/1200x/d2/e6/f4/d2e6f4a195ac1f4fd6aa0a0cda500d3d.jpg'
+                if (localStorage.getItem('gameLevel') == 15) {
+                    enemyStartLevel += 10
+                }
                 break;
         
             default:
