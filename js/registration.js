@@ -409,7 +409,7 @@ function game() {
                     enemy.style = `cursor: not-allowed;`;
                     enemyNumber--;
 
-                    if (person.item == 'defaultItem1' || person.item == 'defaultItem2' || person.item == 'defaultItem3') {
+                    if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8 && person.item == 'defaultItem1' || person.item == 'defaultItem2' || person.item == 'defaultItem3') {
                         defaultItemWear--;
                     }
                     if (defaultItemWear <= 0) {
