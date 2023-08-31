@@ -190,7 +190,7 @@ function game() {
         personLevelUp = 0.25;
     }
     else if (person.item == 'mainerItem3') {
-        person.level = 6;
+        person.level += 1;
         personLevelUp = 0.50;
     }
     else if (person.item == 'mainerItem4') {
