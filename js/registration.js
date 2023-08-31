@@ -165,6 +165,8 @@ function game() {
     //item effects
 
     //default items
+    var defaultItemWear = 3;
+
     if (person.item == 'defaultItem1') {
         personCardItemImg.src = defaultItemImg1.src
         personLevelUp = 0;
@@ -406,6 +408,13 @@ function game() {
                     personLevelText.innerHTML = person.level.toFixed(2);
                     enemy.style = `cursor: not-allowed;`;
                     enemyNumber--;
+
+                    if (person.item == 'defaultItem1' || person.item == 'defaultItem2' || person.item == 'defaultItem3') {
+                        defaultItemWear--;
+                    }
+                    if (defaultItemWear <= 0) {
+                        personLevelUp = -1;
+                    }
 
                     //win
                     if (enemyNumber == 0) {
