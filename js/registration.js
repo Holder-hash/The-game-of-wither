@@ -904,9 +904,9 @@ vampirItemImg4.onclick = () => {
 
 
 
-//open a class img
 document.addEventListener('DOMContentLoaded', () => {
-    //mainer
+    //open a class img
+
     if (localStorage.getItem('gameLevel') >= 5) {
         ClassLockerImg2.style = 'display: none';
         mainerClassImg.style = 'display: block';
@@ -920,4 +920,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ClassLockerImg4.style = 'display: none';
         vampirClassImg.style = 'display: block';
     }
+
+    //progress bar
+    if (localStorage.getItem('gameLevel')) {
+        complitionProgressBar.value = localStorage.getItem('gameLevel');
+    }
+
 })
