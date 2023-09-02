@@ -53,6 +53,7 @@ $(document).ready(function($) {
              /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == false) {
             $('.registration-window').fadeOut()
             person.name = registrationNameInput.value
+            progressUpdate()
             game()
         }
         if (haveName == false || /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == true) {
@@ -920,10 +921,4 @@ document.addEventListener('DOMContentLoaded', () => {
         ClassLockerImg4.style = 'display: none';
         vampirClassImg.style = 'display: block';
     }
-
-    //progress bar
-    if (localStorage.getItem('gameLevel')) {
-        complitionProgressBar.value = localStorage.getItem('gameLevel');
-    }
-
 })
