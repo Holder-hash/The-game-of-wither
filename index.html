@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/language-popup.css">
     <link rel="stylesheet" href="styles/registration.css">
     <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="styles/win.css">
     <title>The game of Wither</title>
 </head>
 <body>
@@ -216,6 +217,41 @@
                 <div class="enemy-contain">
                     <div class="enemy-contain-area"></div>
                 </div>
+            </div>
+
+            <!--Win-->
+            <div class="win-window">
+
+                <div class="win-title-box">
+                    <p>Mission completed!</p>
+                </div>
+
+                <div class="win-name-box">
+                    <p id="winPersonName">H0ler</p>
+                </div>
+
+                <div class="win-person-stats-box">
+                    <div class="win-person-stats-class"></div>
+                    <div class="win-person-stats-item"></div>
+                </div>
+
+                <div class="win-time-box">
+                    <p id="winTimeText">2:32</p>
+                </div>
+
+                <div class="win-message">
+                    <p>Great job, <span id="winMessageName">name!</span></p> <p>Thank you for your service.</p>
+                </div>
+
+                <div class="win-footer-contain">
+                    <div class="win-progressBar-box">
+                        <input id="gameProgressBar" type="range" value="1" min="1" max="16">
+                    </div>
+                    <div id="winContinueBtn">
+                        <p>Continue</p>
+                    </div>
+                </div>
+
             </div>
         </main>
 

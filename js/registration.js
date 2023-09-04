@@ -53,7 +53,6 @@ $(document).ready(function($) {
              /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == false) {
             $('.registration-window').fadeOut()
             person.name = registrationNameInput.value
-            progressUpdate()
             game()
         }
         if (haveName == false || /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == true) {
@@ -87,6 +86,7 @@ var person = {
 }
 
 function game() {
+
     //levels
 
     //default levels
@@ -501,19 +501,24 @@ function game() {
 }
 
 // win
-function win() {
-    alert('You win!')   
-        
+function win() { 
+    document.querySelector('.win-window').style.display = 'flex';   
+    gameProgressBar.value = localStorage.getItem('gameLevel') 
     if (localStorage.getItem('gameLevel') < 1) {
         localStorage.gameLevel = 1;
     
-        location.reload();
+        winContinueBtn.addEventListener('click', () => {
+            location.reload();
+        })
     }
     if (localStorage.getItem('gameLevel') == 15) {
         alert('vampir level +5')
     }
     localStorage.gameLevel++;
-    location.reload();
+    winContinueBtn.addEventListener('click', () => {
+        location.reload();
+    })
+
 }
 
 // lose
