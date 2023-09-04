@@ -482,7 +482,7 @@ function game() {
                     }
                     else {
                         personSave = false;
-                        alert('save');
+                        personCardItemImg.style = 'box-shadow: 0 0 15px red';
                     }   
                 }
             };
