@@ -505,6 +505,8 @@ function game() {
 // win
 function win() { 
     document.querySelector('.win-window').style.display = 'flex';   
+    winMessageName.innerHTML = person.name
+    winPersonName.innerHTML = person.name
     gameProgressBar.value = localStorage.getItem('gameLevel') 
     if (localStorage.getItem('gameLevel') < 1) {
         localStorage.gameLevel = 1;
