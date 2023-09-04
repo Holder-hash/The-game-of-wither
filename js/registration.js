@@ -529,6 +529,8 @@ function lose() {
     document.querySelector('.lose-window').style.display = 'flex';
     setTimeout(() => {document.querySelector('.lose-window').style.opacity = '1';})
     losePersonName.innerHTML = person.name
+    losePresonClass.src = personCardClassImg.src
+    losePresonItem.src = personCardItemImg.src
     loseGameProgressBar.value = localStorage.getItem('gameLevel') 
 
     loseContinueBtn.addEventListener('click', () => {
