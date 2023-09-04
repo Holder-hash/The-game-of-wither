@@ -446,12 +446,14 @@ function game() {
                     enemy.style = `cursor: not-allowed;`;
                     enemyNumber--;
 
-                    if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8 && person.item == 'defaultItem1' || person.item == 'defaultItem2' || person.item == 'defaultItem3') {
-                        defaultItemWear--;
-                    }
-                    if (defaultItemWear <= 0) {
-                        personLevelUp = -1;
-                        personCardItemImg.style = 'box-shadow: 0 0 15px red'
+                    if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8 ) {
+                        if (person.item == 'defaultItem1' || person.item == 'defaultItem2' || person.item == 'defaultItem3') {
+                            defaultItemWear--;
+                            if (defaultItemWear <= 0) {
+                                personLevelUp = -1;
+                                personCardItemImg.style = 'box-shadow: 0 0 15px red';
+                            }
+                        }
                     }
 
                     //win
