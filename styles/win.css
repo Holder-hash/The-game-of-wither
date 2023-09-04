@@ -1,7 +1,7 @@
 .win-window {
     position: fixed;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 450px;
     background: white;
     border: 1px solid black;
     border-radius: 15px;
