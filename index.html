@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/registration.css">
     <link rel="stylesheet" href="styles/game.css">
     <link rel="stylesheet" href="styles/win.css">
+    <link rel="stylesheet" href="styles/lose.css">
     <title>The game of Wither</title>
 </head>
 <body>
@@ -227,7 +228,7 @@
                 </div>
 
                 <div class="win-name-box">
-                    <p id="winPersonName">H0ler</p>
+                    <p id="winPersonName">name</p>
                 </div>
 
                 <div class="win-person-stats-box">
@@ -245,9 +246,40 @@
 
                 <div class="win-footer-contain">
                     <div class="win-progressBar-box">
-                        <input id="gameProgressBar" type="range" value="1" min="1" max="16">
+                        <input id="winGameProgressBar" type="range" value="1" min="1" max="16">
                     </div>
                     <div id="winContinueBtn">
+                        <p>Continue</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Lose-->
+            <div class="lose-window">
+
+                <div class="lose-title-box">
+                    <p>Mission failed!</p>
+                </div>
+
+                <div class="lose-name-box">
+                    <p id="losePersonName">name</p>
+                </div>
+
+                <div class="lose-person-stats-box">
+                    <div class="lose-person-stats-class"></div>
+                    <div class="lose-person-stats-item"></div>
+                </div>
+
+                <div class="lose-message">
+                    <p>Don't be upset!</p> <p>Try changing gear.</p>
+                </div>
+
+                <div class="lose-footer-contain">
+                    <div class="lose-progressBar-box">
+                        <input id="loseGameProgressBar" type="range" value="1" min="1" max="16">
+                    </div>
+                    <div id="loseContinueBtn">
                         <p>Continue</p>
                     </div>
                 </div>
