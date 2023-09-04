@@ -466,7 +466,6 @@ function game() {
                 else if (value > person.level) {
                     if (personSave == false) {
                         lose();
-                        location.reload();
                     }
                     else if (personSave == true && person.item == 'witchItem4') {
                         alert('save');
@@ -507,7 +506,7 @@ function win() {
     document.querySelector('.win-window').style.display = 'flex';   
     winMessageName.innerHTML = person.name
     winPersonName.innerHTML = person.name
-    gameProgressBar.value = localStorage.getItem('gameLevel') 
+    winGameProgressBar.value = localStorage.getItem('gameLevel') 
     if (localStorage.getItem('gameLevel') < 1) {
         localStorage.gameLevel = 1;
     
@@ -527,7 +526,14 @@ function win() {
 
 // lose
 function lose() {
-    alert('You lose!')
+    document.querySelector('.lose-window').style.display = 'flex';
+    setTimeout(() => {document.querySelector('.lose-window').style.opacity = '1';})
+    losePersonName.innerHTML = person.name
+    loseGameProgressBar.value = localStorage.getItem('gameLevel') 
+
+    loseContinueBtn.addEventListener('click', () => {
+        location.reload();
+    })  
 }
 
 

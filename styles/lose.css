@@ -1,68 +1,62 @@
-.win-window {
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    background: white;
+.lose-window {
+    width: 400px;
+    height: 400px;
+    background-color: white;
     border: 1px solid black;
     border-radius: 15px;
-    top: 50%;
+    position: fixed;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
     display: none;
+    opacity: 0;
+    transition: .5s ease;
 }
 
-.win-title-box p {
+.lose-title-box p{
     font-size: 30px;
     margin-top: 10px;
 }
 
-.win-name-box {
+.lose-name-box {
     margin-top: 50px;
     border-bottom: 2px solid black;
     width: 200px;
 }
-.win-name-box p {
+.lose-name-box p {
     text-align: center;
     font-size: 24px;
 }
 
-.win-person-stats-box {
+.lose-person-stats-box {
     width: 110px;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
 }
-.win-person-stats-class {
+.lose-person-stats-class {
     width: 50px;
     height: 50px;
     border: 1px solid black;
     border-radius: 50%;
 }
-.win-person-stats-item {
+.lose-person-stats-item {
     width: 50px;
     height: 50px;
     border: 1px solid black;
     border-radius: 50%;
 }
 
-.win-time-box {
-    margin-top: 25px;
-}
-#winTimeText {
-    font-size: 40px;
-}
-
-.win-message {
-    margin-top: 20px;
-    font-size: 24px;
+.lose-message {
+    margin-top: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
-.win-footer-contain {
+.lose-footer-contain {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -71,21 +65,21 @@
     justify-content: space-between;
 }
 
-.win-progressBar-box {
-    width: 370px;
+.lose-progressBar-box {
+    width: 250px;
     height: inherit;
     display: flex;
     align-items: center;
     pointer-events: none;
     border-top: 1px solid black;
 }
-#winGameProgressBar {
+#loseGameProgressBar {
     margin-left: 20px;
     width: 180px;
 }
 
 
-#winContinueBtn {
+#loseContinueBtn {
     width: 150px;
     height: inherit;
     border-left: 1px solid black;
@@ -97,12 +91,12 @@
     background-color: rgb(0, 153, 0);
     cursor: pointer;
 }
-#winContinueBtn:hover {
+#loseContinueBtn:hover {
     background-color: rgb(5, 161, 5); 
 }
-#winContinueBtn:active {
+#loseContinueBtn:active {
     background-color: rgb(6, 139, 6); 
 }
-#winContinueBtn p {
+#loseContinueBtn p {
     font-size: 20px;
 }
