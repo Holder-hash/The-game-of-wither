@@ -1,5 +1,6 @@
 var haveName = false;
 var haveSignature = false;
+let time = ``;
 
 $(document).ready(function($) {
     $('#registrationNameInput').focus(() => 
@@ -84,8 +85,13 @@ var person = {
     'class': 'default',
     'level': 3
 }
-
+let updateDisplay = setInterval(() => {
+    gameTimeText.innerHTML = time;
+}, 1000);
 function game() {
+    updateDisplay;
+
+    timer();
 
     //levels
 
@@ -502,7 +508,12 @@ function game() {
 }
 
 // win
-function win() { 
+
+function win() {  
+    winTimeText.innerHTML = time;
+    gameTimeText.innerHTML = time;
+    clearInterval(updateDisplay)
+    
     document.querySelector('.win-window').style.display = 'flex';   
     winMessageName.innerHTML = person.name
     winPersonName.innerHTML = person.name
@@ -528,6 +539,7 @@ function win() {
 
 // lose
 function lose() {
+    clearInterval(updateDisplay);
     document.querySelector('.lose-window').style.display = 'flex';
     setTimeout(() => {document.querySelector('.lose-window').style.opacity = '1';})
     losePersonName.innerHTML = person.name
@@ -941,3 +953,26 @@ document.addEventListener('DOMContentLoaded', () => {
         vampirClassImg.style = 'display: block';
     }
 })
+
+// timer
+
+
+function timer() {
+    let minutes = 0;
+    let seconds = 0;
+
+    time = `${minutes}:${seconds}`
+
+    setInterval(() => {
+        for (let i = 0; i < 1; i++) {
+            seconds++ 
+            time = `${minutes}:${seconds}`
+            if (seconds == 59) {
+                seconds = -1;
+                minutes++;
+            }
+        }
+    }, 1000);
+
+    winTimeText.innerHTML = time;
+}
