@@ -52,27 +52,32 @@ $(document).ready(function($) {
 
         if (haveName == true && haveSignature == true &&
              /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == false) {
-            $('.registration-window').fadeOut()
-            person.name = registrationNameInput.value
-            game()
+            $('.registration-window').fadeOut();
+            person.name = registrationNameInput.value;
+
+            maskLeft.style.transform = 'translateX(0)';
+            maskRight.style.transform = 'translateX(0)';
+            setTimeout(() => {
+                game();
+            },1000);
         }
         if (haveName == false || /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == true) {
             $('.registration-form-name-box').toggleClass('jerking-animation-class');
-            $('.name-requirements-box span').toggleClass('name-box-validation')
+            $('.name-requirements-box span').toggleClass('name-box-validation');
         }
         if (haveSignature == false) {
-            $('.registration-form-footer-signatuer-box').toggleClass('jerking-animation-class')
+            $('.registration-form-footer-signatuer-box').toggleClass('jerking-animation-class');
         }
     })
 });	
 
 
 // game
-const gameArea = document.querySelector('.game-area')
-var personCardName = document.querySelector('#personCardName')
-var personLevelText = document.querySelector('#personLevelText')
-const enemyContainArea = document.querySelector('.enemy-contain-area')
-const enemySkillStyle = document.querySelector('.enemySkillStyle')
+const gameArea = document.querySelector('.game-area');
+var personCardName = document.querySelector('#personCardName');
+var personLevelText = document.querySelector('#personLevelText');
+const enemyContainArea = document.querySelector('.enemy-contain-area');
+const enemySkillStyle = document.querySelector('.enemySkillStyle');
 
 var personLevelUp = 0;
 var personSave = false;
@@ -89,6 +94,7 @@ let updateDisplay = setInterval(() => {
     gameTimeText.innerHTML = time;
 }, 1000);
 function game() {
+
     updateDisplay;
 
     timer();
@@ -504,6 +510,12 @@ function game() {
     buttons.forEach(button => {
         enemyContainArea.appendChild(button);
     });
+    
+    setTimeout(() => {
+        maskLeft.style.transform = 'translateX(-100%)';
+        maskRight.style.transform = 'translateX(100%)';
+    },1000)
+
 }
 
 // win
