@@ -283,13 +283,12 @@ function game() {
         enemyStats.appendChild(enemyLevelText);
         enemyStats.appendChild(enemySkill);
 
-
         switch (i) {
             case 1:
                 enemyMan.pic = 'https://cdnb.artstation.com/p/assets/images/images/021/716/453/large/juan-miguel-lopez-barea-guardainfante1.jpg?1572693826'
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
-                    enemySkill.style = `display: flex;`       
+                    enemySkill.style = `display: flex;`;
                 }
                 if (localStorage.getItem('gameLevel') == 9) {
                     enemyStartLevel -= 2.75;             

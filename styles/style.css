@@ -5,11 +5,15 @@
   html,
   body {
     height: 100%;
+    overflow-x: hidden;
   }
   .wrapper {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    width: 120%;
+    height: 120%;
+    background-size: cover;
   }
   header {
     position: fixed;
@@ -19,6 +23,15 @@
     flex: 1 0 auto;
   }
   footer {
+    position: fixed;
+    bottom: 0;
     flex: 0 0 auto;
     width: 100%;
+  }
+
+  .wrapper-defaultClass {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/Pieter_Brueghel_the_Younger_-_The_Peasant_Wedding_-_Google_Art_Project.jpg');
+  }
+  .wrapper-mainerClass {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/Pieter_Brueghel_the_Younger_-_The_Peasant_Wedding_-_Google_Art_Project.jpg');
   }
