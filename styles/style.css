@@ -11,8 +11,8 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    width: 120%;
-    height: 120%;
+    width: 110%;
+    height: 110%;
     background-size: cover;
   }
   header {
@@ -30,8 +30,14 @@
   }
 
   .wrapper-defaultClass {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/Pieter_Brueghel_the_Younger_-_The_Peasant_Wedding_-_Google_Art_Project.jpg');
+    background-image: url('../media/bg/defaultClass.jpg');
   }
   .wrapper-mainerClass {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/Pieter_Brueghel_the_Younger_-_The_Peasant_Wedding_-_Google_Art_Project.jpg');
+    background-image: url('../media/bg/mainerClass.jpg');
+  }
+  .wrapper-witcherClass {
+    background-image: url('../media/bg/witcherClass.jpg');
+  }
+  .wrapper-vampirClass {
+    background-image: url('../media/bg/vampirClass.jpg');
   }
