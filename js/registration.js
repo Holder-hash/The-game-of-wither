@@ -512,14 +512,14 @@ function game() {
 function win() {  
     winTimeText.innerHTML = time;
     gameTimeText.innerHTML = time;
-    clearInterval(updateDisplay)
+    clearInterval(updateDisplay);
     
     document.querySelector('.win-window').style.display = 'flex';   
-    winMessageName.innerHTML = person.name
-    winPersonName.innerHTML = person.name
-    winPresonClass.src = personCardClassImg.src
-    winPresonItem.src = personCardItemImg.src
-    winGameProgressBar.value = localStorage.getItem('gameLevel') 
+    winMessageName.innerHTML = person.name;
+    winPersonName.innerHTML = person.name;
+    winPresonClass.src = personCardClassImg.src;
+    winPresonItem.src = personCardItemImg.src;
+
     if (localStorage.getItem('gameLevel') < 1) {
         localStorage.gameLevel = 1;
     
@@ -528,9 +528,10 @@ function win() {
         })
     }
     if (localStorage.getItem('gameLevel') == 15) {
-        alert('vampir level +5')
+        alert('vampir level +5');
     }
     localStorage.gameLevel++;
+    winGameProgressBar.value = localStorage.getItem('gameLevel');
     winContinueBtn.addEventListener('click', () => {
         location.reload();
     })
@@ -541,11 +542,16 @@ function win() {
 function lose() {
     clearInterval(updateDisplay);
     document.querySelector('.lose-window').style.display = 'flex';
-    setTimeout(() => {document.querySelector('.lose-window').style.opacity = '1';})
-    losePersonName.innerHTML = person.name
-    losePresonClass.src = personCardClassImg.src
-    losePresonItem.src = personCardItemImg.src
-    loseGameProgressBar.value = localStorage.getItem('gameLevel') 
+    setTimeout(() => {document.querySelector('.lose-window').style.opacity = '1';});
+    losePersonName.innerHTML = person.name;
+    losePresonClass.src = personCardClassImg.src;
+    losePresonItem.src = personCardItemImg.src;
+    if (localStorage.getItem('gameLevel') == null) {
+        loseGameProgressBar.value = 1;
+    } else {
+        loseGameProgressBar.value = localStorage.getItem('gameLevel');
+    }
+
 
     loseContinueBtn.addEventListener('click', () => {
         location.reload();
