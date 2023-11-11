@@ -38,6 +38,8 @@ $(document).ready(function($) {
     canvas.addEventListener('mousemove', (e) => {
         if (mouseDown) {
             haveSignature = true;
+
+            ctx.strokeStyle = 'white'
             ctx.lineTo(e.offsetX, e.offsetY);
             ctx.stroke();
     
