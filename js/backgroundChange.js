@@ -1,5 +1,5 @@
 const documentWrapper = document.querySelector('.wrapper');
-if (localStorage.getItem('gameLevel') < 4 || localStorage.getItem('gameLevel') == null) {
+if (localStorage.getItem('gameLevel') <= 4 || localStorage.getItem('gameLevel') == null) {
     documentWrapper.classList.add('wrapper-defaultClass');
 }
 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
