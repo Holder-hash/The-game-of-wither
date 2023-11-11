@@ -8,7 +8,7 @@ else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLev
 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) {
     documentWrapper.classList.add('wrapper-witcherClass');
 }
-else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 17) {
+else if (localStorage.getItem('gameLevel') >= 13) {
     documentWrapper.classList.add('wrapper-vampirClass');
 }
 
