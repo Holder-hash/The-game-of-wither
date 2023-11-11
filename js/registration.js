@@ -282,7 +282,8 @@ function game() {
         enemySkillImg.style = `
         width: 30px;
         height: 30px;
-        border-radius: 50%;`
+        border-radius: 50%;
+        `
         enemySkill.appendChild(enemySkillImg);
 
         enemy.appendChild(enemyStats);
@@ -430,7 +431,6 @@ function game() {
         enemyPic.style = `
         width: 100%;
         height: 200px;
-        border: 1px solid black
         `
 
 
