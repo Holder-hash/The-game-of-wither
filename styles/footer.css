@@ -2,6 +2,7 @@ footer {
     height: 25px;
     background-color: rgb(194, 194, 194);
     box-shadow: 0 0 25px rgb(112, 112, 112);
+    background-image: url('../media/bg/deskBg.jpg');
 }
 
 .footer_contain {
@@ -11,4 +12,5 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: rgb(194, 194, 194);
 }

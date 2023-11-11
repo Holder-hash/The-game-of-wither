@@ -3,6 +3,7 @@ header {
     height: 60px;
     background-color: rgb(194, 194, 194);
     box-shadow: 0 0 25px rgb(112, 112, 112);
+    background-image: url('../media/bg/deskBg.jpg');
 }
 
 .header_contain {
@@ -15,7 +16,7 @@ header {
 }
 
 .header__title__box {
-    color: black;
+    color: rgb(194, 194, 194);
 }
 
 .header__tools__box {
