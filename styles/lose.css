@@ -15,7 +15,7 @@
     transition: .5s ease;
     background-image: url('../media/bg/deskBg.jpg');
     background-size: contain;
-    box-shadow: 0 0 245px rgb(22, 0, 0);
+    box-shadow: 0 0 200px rgb(22, 0, 0);
     overflow: hidden;
     color: rgb(194, 194, 194);
 }

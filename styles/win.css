@@ -14,7 +14,7 @@
     display: none;
     background-image: url('../media/bg/deskBg.jpg');
     background-size: contain;
-    box-shadow: 0 0 245px rgba(247, 247, 247, 0.356);
+    box-shadow: 0 0 200px rgba(247, 247, 247, 0.356);
     overflow: hidden;
     color: rgb(194, 194, 194);
 }
@@ -96,13 +96,11 @@
     display: flex;
     align-items: center;
     pointer-events: none;
-    border-top: 1px solid black;
 }
 #winGameProgressBar {
     margin-left: 20px;
     width: 180px;
 }
-
 
 #winContinueBtn {
     width: 150px;
