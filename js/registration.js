@@ -645,7 +645,7 @@ defaultClassImg.onclick = () => {
 
     //carousel
     noAvatar.style.display = 'none';
-    defaultCarousel.style.display = 'block';
+    defaultCarousel.style.display = 'flex';
     mainerCarousel.style.display = 'none';
     witcherCarousel.style.display = 'none';
     vampirCarousel.style.display = 'none';

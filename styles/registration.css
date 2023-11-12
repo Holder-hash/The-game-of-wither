@@ -159,6 +159,11 @@
 .person-avatar-imgBox img{
     width: 230px;
 }
+.person-avatar-imgBox div {
+    width: 100%;
+    gap: 10px;
+    transition: .3s;
+}
 
 .arrow-contain {
     margin-top: 8px;
