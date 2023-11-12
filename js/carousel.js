@@ -44,28 +44,3 @@ startBtn.onclick = () => {
     else if (carouselIndex == -480 && localStorage.getItem('heroy') == 'vampir') gamePersonAvatar.src = 'media/persons/vampir/vampir3.jpeg'
     else if (carouselIndex == -720 && localStorage.getItem('heroy') == 'vampir') gamePersonAvatar.src = 'media/persons/vampir/vampir4.jpeg'
 }
-
-// classImg.forEach(classImgItem => {
-//     classImgItem.onclick = () => {
-//         switch (localStorage.getItem('heroy')) {
-//             case 'default':
-
-//                 break;
-        
-//             case 'mainer':
-//                 console.log('mainer');
-//                 break;
-
-//             case 'witch':
-//                 console.log('witch');
-//                 break;
-
-//             case 'vampir':
-//                 console.log('vampir');
-//                 break;
-        
-//             default:
-//                 break;
-//         }
-//     }
-// })
