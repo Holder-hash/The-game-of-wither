@@ -18,5 +18,4 @@ nextArrow.addEventListener('click', () => {
     carousel.forEach(carouselItem => {
         carouselItem.style.transform = `translateX(${carouselIndex}px)`;
     })
-    console.log(carouselIndex);
 })
