@@ -19,3 +19,38 @@ nextArrow.addEventListener('click', () => {
         carouselItem.style.transform = `translateX(${carouselIndex}px)`;
     })
 })
+
+const classImg = document.querySelectorAll('.class-item');
+const gamePersonAvatar = document.getElementById('gamePersonAvatar');
+
+startBtn.onclick = () => {
+    if (carouselIndex == 0) gamePersonAvatar.src = 'media/persons/default/default1.jpeg'
+    else if (carouselIndex == -240) gamePersonAvatar.src = 'media/persons/default/default2.jpeg'
+    else if (carouselIndex == -480) gamePersonAvatar.src = 'media/persons/default/default3.jpeg'
+    else if (carouselIndex == -720) gamePersonAvatar.src = 'media/persons/default/default4.jpeg'
+}
+
+classImg.forEach(classImgItem => {
+    classImgItem.onclick = () => {
+        switch (localStorage.getItem('heroy')) {
+            case 'default':
+
+                break;
+        
+            case 'mainer':
+                console.log('mainer');
+                break;
+
+            case 'witch':
+                console.log('witch');
+                break;
+
+            case 'vampir':
+                console.log('vampir');
+                break;
+        
+            default:
+                break;
+        }
+    }
+})

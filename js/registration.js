@@ -639,8 +639,11 @@ var personCardClassImg = document.getElementById('personCardClassImg');
 
 defaultClassImg.classList.toggle('selectedShadow')
 
+localStorage.setItem('heroy', person.class);
+
 defaultClassImg.onclick = () => {
     person.class = 'default';
+    localStorage.setItem('heroy', person.class);
     personCardClassImg.src = defaultClassImg.src;
 
     //carousel
@@ -693,6 +696,7 @@ defaultClassImg.onclick = () => {
 
 mainerClassImg.onclick = () => {
     person.class = 'mainer';
+    localStorage.setItem('heroy', person.class);
     personCardClassImg.src = mainerClassImg.src;
 
         //carousel
@@ -745,6 +749,7 @@ mainerClassImg.onclick = () => {
 
 witchClassImg.onclick = () => {
     person.class = 'witch';
+    localStorage.setItem('heroy', person.class);
     personCardClassImg.src = witchClassImg.src;
     
         //carousel
@@ -797,6 +802,7 @@ witchClassImg.onclick = () => {
 
 vampirClassImg.onclick = () => {
     person.class = 'vampir';
+    localStorage.setItem('heroy', person.class);
     personCardClassImg.src = vampirClassImg.src;
 
     //carousel
