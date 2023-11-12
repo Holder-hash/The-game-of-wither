@@ -699,7 +699,7 @@ mainerClassImg.onclick = () => {
         //carousel
         noAvatar.style.display = 'none';
         defaultCarousel.style.display = 'none';
-        mainerCarousel.style.display = 'block';
+        mainerCarousel.style.display = 'flex';
         witcherCarousel.style.display = 'none';
         vampirCarousel.style.display = 'none';
 
@@ -753,7 +753,7 @@ witchClassImg.onclick = () => {
         noAvatar.style.display = 'none';
         defaultCarousel.style.display = 'none';
         mainerCarousel.style.display = 'none';
-        witcherCarousel.style.display = 'block';
+        witcherCarousel.style.display = 'flex';
         vampirCarousel.style.display = 'none';
 
     removeClassSelectorShadow();
@@ -807,7 +807,7 @@ vampirClassImg.onclick = () => {
     defaultCarousel.style.display = 'none';
     mainerCarousel.style.display = 'none';
     witcherCarousel.style.display = 'none';
-    vampirCarousel.style.display = 'block';
+    vampirCarousel.style.display = 'flex';
 
     removeClassSelectorShadow();
     vampirClassImg.classList.toggle('selectedShadow')
