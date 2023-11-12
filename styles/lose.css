@@ -2,7 +2,6 @@
     width: 400px;
     height: 400px;
     background-color: white;
-    border: 1px solid black;
     border-radius: 15px;
     position: fixed;
     left: 50%;
@@ -14,6 +13,11 @@
     display: none;
     opacity: 0;
     transition: .5s ease;
+    background-image: url('../media/bg/deskBg.jpg');
+    background-size: contain;
+    box-shadow: 0 0 245px rgb(22, 0, 0);
+    overflow: hidden;
+    color: rgb(194, 194, 194);
 }
 
 .lose-title-box p{
@@ -23,7 +27,7 @@
 
 .lose-name-box {
     margin-top: 50px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(255, 255, 255);
     width: 200px;
 }
 .lose-name-box p {
@@ -40,13 +44,11 @@
 .lose-person-stats-class {
     width: 50px;
     height: 50px;
-    border: 1px solid black;
     border-radius: 50%;
 }
 .lose-person-stats-item {
     width: 50px;
     height: 50px;
-    border: 1px solid black;
     border-radius: 50%;
 }
 
@@ -82,7 +84,9 @@
     display: flex;
     align-items: center;
     pointer-events: none;
-    border-top: 1px solid black;
+    background-image: url('../media/bg/deskBg.jpg');
+    background-size: cover;
+    box-shadow: 0 0 25px rgb(0, 0, 0);
 }
 #loseGameProgressBar {
     margin-left: 20px;
@@ -101,6 +105,7 @@
     justify-content: center;
     background-color: rgb(0, 153, 0);
     cursor: pointer;
+    color: black;
 }
 #loseContinueBtn:hover {
     background-color: rgb(5, 161, 5); 
