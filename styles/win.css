@@ -3,7 +3,6 @@
     width: 400px;
     height: 450px;
     background: white;
-    border: 1px solid black;
     border-radius: 15px;
     top: 50%;
     left: 50%;
@@ -13,6 +12,11 @@
     align-items: center;
     padding: 10px;
     display: none;
+    background-image: url('../media/bg/deskBg.jpg');
+    background-size: contain;
+    box-shadow: 0 0 245px rgba(247, 247, 247, 0.356);
+    overflow: hidden;
+    color: rgb(194, 194, 194);
 }
 
 .win-title-box p {
@@ -22,7 +26,7 @@
 
 .win-name-box {
     margin-top: 50px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(194, 194, 194);
     width: 200px;
 }
 .win-name-box p {
@@ -81,6 +85,9 @@
     height: 50px;
     display: flex;
     justify-content: space-between;
+    background-image: url('../media/bg/deskBg.jpg');
+    background-size: cover;
+    box-shadow: 0 0 25px rgb(0, 0, 0);
 }
 
 .win-progressBar-box {
