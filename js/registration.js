@@ -630,13 +630,20 @@ function removeClassSelectorShadow() {
 }
 
 // class selector
+const defaultCarousel = document.querySelector('.default-carousel');
+const mainerCarousel = document.querySelector('.mainer-carousel');
+const witcherCarousel = document.querySelector('.witcher-carousel');
+const vampirCarousel = document.querySelector('.vampir-carousel');
+
 var personCardClassImg = document.getElementById('personCardClassImg');
 
 defaultClassImg.classList.toggle('selectedShadow')
 
 defaultClassImg.onclick = () => {
     person.class = 'default';
-    personCardClassImg.src = defaultClassImg.src
+    personCardClassImg.src = defaultClassImg.src;
+
+    defaultCarousel.style.display = 'block';
 
     removeClassSelectorShadow();
     defaultClassImg.classList.toggle('selectedShadow')

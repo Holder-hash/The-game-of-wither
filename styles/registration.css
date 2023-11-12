@@ -145,6 +145,8 @@
     background-color: rgb(194, 194, 194);
     box-shadow: 0 0 25px rgb(0, 0, 0);
     background-image: url('../media/bg/deskBg.jpg');
+    display: flex;
+    flex-direction: column;
 }
 
 .person-avatar-contain {
@@ -167,6 +169,19 @@
 .arrow-contain span {
     font-size: 40px;
     cursor: pointer;
+}
+
+.default-carousel {
+    display: none;
+}
+.mainer-carousel {
+    display: none;
+}
+.witcher-carousel {
+    display: none;
+}
+.vampir-carousel {
+    display: none;
 }
 
 /* footer */
