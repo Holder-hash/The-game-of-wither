@@ -643,7 +643,12 @@ defaultClassImg.onclick = () => {
     person.class = 'default';
     personCardClassImg.src = defaultClassImg.src;
 
+    //carousel
+    noAvatar.style.display = 'none';
     defaultCarousel.style.display = 'block';
+    mainerCarousel.style.display = 'none';
+    witcherCarousel.style.display = 'none';
+    vampirCarousel.style.display = 'none';
 
     removeClassSelectorShadow();
     defaultClassImg.classList.toggle('selectedShadow')
@@ -689,7 +694,14 @@ defaultClassImg.onclick = () => {
 
 mainerClassImg.onclick = () => {
     person.class = 'mainer';
-    personCardClassImg.src = mainerClassImg.src
+    personCardClassImg.src = mainerClassImg.src;
+
+        //carousel
+        noAvatar.style.display = 'none';
+        defaultCarousel.style.display = 'none';
+        mainerCarousel.style.display = 'block';
+        witcherCarousel.style.display = 'none';
+        vampirCarousel.style.display = 'none';
 
     removeClassSelectorShadow();
     mainerClassImg.classList.toggle('selectedShadow')
@@ -735,8 +747,14 @@ mainerClassImg.onclick = () => {
 
 witchClassImg.onclick = () => {
     person.class = 'witch';
-    personCardClassImg.src = witchClassImg.src
-
+    personCardClassImg.src = witchClassImg.src;
+    
+        //carousel
+        noAvatar.style.display = 'none';
+        defaultCarousel.style.display = 'none';
+        mainerCarousel.style.display = 'none';
+        witcherCarousel.style.display = 'block';
+        vampirCarousel.style.display = 'none';
 
     removeClassSelectorShadow();
     witchClassImg.classList.toggle('selectedShadow')
@@ -782,8 +800,14 @@ witchClassImg.onclick = () => {
 
 vampirClassImg.onclick = () => {
     person.class = 'vampir';
-    personCardClassImg.src = vampirClassImg.src
+    personCardClassImg.src = vampirClassImg.src;
 
+    //carousel
+    noAvatar.style.display = 'none';
+    defaultCarousel.style.display = 'none';
+    mainerCarousel.style.display = 'none';
+    witcherCarousel.style.display = 'none';
+    vampirCarousel.style.display = 'block';
 
     removeClassSelectorShadow();
     vampirClassImg.classList.toggle('selectedShadow')
