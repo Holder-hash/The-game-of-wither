@@ -644,7 +644,6 @@ defaultClassImg.onclick = () => {
     personCardClassImg.src = defaultClassImg.src;
 
     //carousel
-    noAvatar.style.display = 'none';
     defaultCarousel.style.display = 'flex';
     mainerCarousel.style.display = 'none';
     witcherCarousel.style.display = 'none';
@@ -697,7 +696,6 @@ mainerClassImg.onclick = () => {
     personCardClassImg.src = mainerClassImg.src;
 
         //carousel
-        noAvatar.style.display = 'none';
         defaultCarousel.style.display = 'none';
         mainerCarousel.style.display = 'flex';
         witcherCarousel.style.display = 'none';
@@ -750,7 +748,6 @@ witchClassImg.onclick = () => {
     personCardClassImg.src = witchClassImg.src;
     
         //carousel
-        noAvatar.style.display = 'none';
         defaultCarousel.style.display = 'none';
         mainerCarousel.style.display = 'none';
         witcherCarousel.style.display = 'flex';
@@ -803,7 +800,6 @@ vampirClassImg.onclick = () => {
     personCardClassImg.src = vampirClassImg.src;
 
     //carousel
-    noAvatar.style.display = 'none';
     defaultCarousel.style.display = 'none';
     mainerCarousel.style.display = 'none';
     witcherCarousel.style.display = 'none';

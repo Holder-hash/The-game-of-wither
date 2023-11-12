@@ -178,7 +178,7 @@
 }
 
 .default-carousel {
-    display: none;
+    display: flex;
 }
 .mainer-carousel {
     display: none;
