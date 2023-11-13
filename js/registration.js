@@ -298,7 +298,7 @@ function game() {
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
@@ -317,7 +317,7 @@ function game() {
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
@@ -339,7 +339,7 @@ function game() {
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
@@ -355,7 +355,7 @@ function game() {
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
@@ -375,7 +375,7 @@ function game() {
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
@@ -392,7 +392,7 @@ function game() {
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
@@ -409,7 +409,7 @@ function game() {
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''                
+                else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`               
             
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
@@ -426,7 +426,7 @@ function game() {
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
@@ -444,7 +444,7 @@ function game() {
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
