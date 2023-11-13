@@ -297,7 +297,7 @@ function game() {
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
@@ -316,7 +316,7 @@ function game() {
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
@@ -338,7 +338,7 @@ function game() {
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
@@ -354,7 +354,7 @@ function game() {
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
@@ -374,7 +374,7 @@ function game() {
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
@@ -391,7 +391,7 @@ function game() {
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
@@ -408,7 +408,7 @@ function game() {
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''                
             
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
@@ -425,7 +425,7 @@ function game() {
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
@@ -443,7 +443,7 @@ function game() {
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = `media/enemy/witcher/witcher-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
