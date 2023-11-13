@@ -294,7 +294,12 @@ function game() {
 
         switch (i) {
             case 1:
-                enemyMan.pic = 'https://cdnb.artstation.com/p/assets/images/images/021/716/453/large/juan-miguel-lopez-barea-guardainfante1.jpg?1572693826'
+                //pictuers
+                if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
                     enemySkill.style = `display: flex;`;
@@ -308,7 +313,12 @@ function game() {
                 break;
 
             case 2:
-                enemyMan.pic = 'https://i.pinimg.com/1200x/bb/d6/cc/bbd6ccc7dc33efe1e2cabb40d43495ca.jpg'
+                //pictuers
+                if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
                     enemySkill.style = `display: flex;`       
@@ -325,7 +335,12 @@ function game() {
                 break;
             
             case 3:
-                enemyMan.pic = 'https://i.pinimg.com/originals/38/fa/f2/38faf25df595e369724567982c45a1e7.jpg'
+                //pictuers
+                if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
                     enemySkill.style = `display: flex;`       
@@ -336,7 +351,12 @@ function game() {
                 break;
 
             case 4:
-                enemyMan.pic = 'https://cdna.artstation.com/p/assets/images/images/034/004/754/large/tomasz-ryger-enemy-min.jpg?1611147762'
+                //pictuers
+                if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
                     enemySkill.style = `display: flex;`       
@@ -351,7 +371,12 @@ function game() {
                 break;
 
             case 5:
-                enemyMan.pic = 'https://sm.ign.com/t/ign_in/gallery/f/frosthaven/frosthaven-enemy-artwork-and-mini-sculpts_eb9c.1080.jpg'
+                //pictuers
+                if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
                     enemySkill.style = `display: flex;`       
@@ -363,7 +388,12 @@ function game() {
                 break;
 
             case 6:
-                enemyMan.pic = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXS5HrBzg1bs_Tis4ykCjlKzgZtcNTnY1hVzRcMSZEcEQ4byoHOLqD5WPdYShVtas25BQ&usqp=CAU'
+                //pictuers
+                if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
                     enemySkill.style = `display: flex;`       
@@ -375,7 +405,12 @@ function game() {
                 break;
 
             case 7:
-                enemyMan.pic = 'https://i.pinimg.com/1200x/57/ce/4d/57ce4dc228fd823c162bbb6a2906b867.jpg'
+                //pictuers
+                if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''                
+            
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
                     enemySkill.style = `display: flex;`       
@@ -387,7 +422,12 @@ function game() {
                 break;
 
             case 8:
-                enemyMan.pic = 'https://cdna.artstation.com/p/assets/images/images/005/177/014/large/shiro-artwork-monster-000.jpg?1500108164'
+                //pictuers
+                if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
                     enemySkill.style = `display: flex;`       
@@ -400,7 +440,12 @@ function game() {
 
             case 9:
                 enemyMan.boss = true
-                enemyMan.pic = 'https://i.pinimg.com/1200x/d2/e6/f4/d2e6f4a195ac1f4fd6aa0a0cda500d3d.jpg'
+                //pictuers
+                if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
+                
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
                     enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
                     enemySkill.style = `display: flex;`       
