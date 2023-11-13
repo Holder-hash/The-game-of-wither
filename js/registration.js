@@ -296,7 +296,7 @@ function game() {
             case 1:
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
                 
@@ -315,7 +315,7 @@ function game() {
             case 2:
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
                 
@@ -337,7 +337,7 @@ function game() {
             case 3:
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
 
@@ -353,7 +353,7 @@ function game() {
             case 4:
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
 
@@ -373,7 +373,7 @@ function game() {
             case 5:
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
 
@@ -390,7 +390,7 @@ function game() {
             case 6:
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
 
@@ -407,7 +407,7 @@ function game() {
             case 7:
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''                
             
@@ -424,7 +424,7 @@ function game() {
             case 8:
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
 
@@ -442,7 +442,7 @@ function game() {
                 enemyMan.boss = true
                 //pictuers
                 if (localStorage.getItem('gameLevel') <= 4) enemyMan.pic = `media/enemy/default/default-enemy${i}.png`
-                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = ''
+                else if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) enemyMan.pic = `media/enemy/mainer/mainer-enemy${i}.png`
                 else if (localStorage.getItem('gameLevel') >= 9 && localStorage.getItem('gameLevel') <= 12) enemyMan.pic = ''
                 else if (localStorage.getItem('gameLevel') >= 13 && localStorage.getItem('gameLevel') <= 16) enemyMan.pic = ''
                 
