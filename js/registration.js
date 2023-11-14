@@ -95,6 +95,11 @@ var person = {
 let updateDisplay = setInterval(() => {
     gameTimeText.innerHTML = time;
 }, 1000);
+
+if (localStorage.getItem('prestige') == null) {
+    localStorage.setItem('prestige', 1);
+}
+
 function game() {
 
     updateDisplay;
@@ -587,6 +592,13 @@ function win() {
     }
     if (localStorage.getItem('gameLevel') == 15) {
         alert('vampir level +5');
+    }
+    if (localStorage.getItem('gameLevel') >= 16) {
+        localStorage.prestige++;
+        localStorage.gameLevel = 0;
+        if (localStorage.getItem('prestige') >= 10) {
+            localStorage.prestige = 10;
+        }
     }
     localStorage.gameLevel++;
     winGameProgressBar.value = localStorage.getItem('gameLevel');
