@@ -362,7 +362,7 @@ function game() {
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 if (localStorage.getItem('gameLevel') == 16 && person.class == 'vampir') {
@@ -382,7 +382,7 @@ function game() {
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 break;
@@ -399,7 +399,7 @@ function game() {
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 break;
@@ -416,7 +416,7 @@ function game() {
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 break;
@@ -433,7 +433,7 @@ function game() {
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 break;
@@ -452,11 +452,11 @@ function game() {
                 }
                 if (localStorage.getItem('gameLevel') == 15) {
                     enemyStartLevel += 10
-                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = 'https://img2.freepng.ru/20180328/aze/kisspng-spaghetti-aglio-e-olio-garlic-clip-art-garlic-5abc0997b3f795.9384838215222726637372.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 break;
