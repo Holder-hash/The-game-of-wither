@@ -36,3 +36,12 @@
     white-space: pre-wrap;
     resize: none;
 }
+
+.terminal-close-btn {
+    position: absolute;
+    bottom: -3px;
+    left: 5px;
+    font-size: 35px;
+    color: red;
+    cursor: pointer;
+}
