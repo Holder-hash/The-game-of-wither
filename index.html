@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/game.css">
     <link rel="stylesheet" href="styles/win.css">
     <link rel="stylesheet" href="styles/lose.css">
+    <link rel="stylesheet" href="styles/terminal.css">
     <title>The game of Wither</title>
 </head>
 <body>
@@ -357,9 +358,16 @@
             </div>
         </main>
 
+        <div class="terminal-window">
+            <div class="terminal-window__inner"></div>
+        </div>
+
         <footer>     
             <div class="footer_contain">
                 <p>FreakBigDigClub&copy; | release version - 0</p>
+                <span class="material-symbols-outlined terminalBtn" id="terminalBtn">
+                    terminal
+                </span>
             </div>
 
         </footer>
@@ -373,5 +381,6 @@
     <script src="js/reset-popup.js"></script>
     <script src="js/backgroundChange.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/terminal.js"></script>
 </body>
 </html>
