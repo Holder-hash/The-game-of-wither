@@ -1,6 +1,6 @@
 .terminal-window {
     position: absolute;
-    bottom: 115px;
+    bottom: -490px;
     right: 0;
     width: 490px;
     min-height: 250px;
@@ -10,6 +10,7 @@
     background-image: url('../media/bg/deskBg.jpg');
     padding: 10px;
     overflow: hidden;
+    transition: .5s;
 }
 
 .terminal-window__inner {
@@ -43,5 +44,4 @@
     left: 5px;
     font-size: 35px;
     color: red;
-    cursor: pointer;
 }
