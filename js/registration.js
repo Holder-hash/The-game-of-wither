@@ -547,14 +547,13 @@ function game() {
                     if (personSave == false) {
                         lose();
                     }
+                    //save totem
                     else if (personSave == true && person.item == 'witchItem4') {
-                        alert('save');
                         person.level += 2;
                         personLevelText.innerHTML = person.level;
                         personSave = false;
                     }
                     else if (personSave == true && person.item == 'vampirItem4') {
-                        alert('save');
                         person.level += 10;
                         personLevelUp += 1
                         personLevelText.innerHTML = person.level;
@@ -608,7 +607,12 @@ function win() {
         })
     }
     if (localStorage.getItem('gameLevel') == 15) {
-        alert('vampir level +5');
+        document.querySelector('.win-window').style.height = '475px';
+        document.querySelector('.win-message').insertAdjacentHTML('beforeend', `
+        <p style="margin: 10px 0 20px">
+            Now the vampire is ruled by bloodlust. Vampire level increased by +5
+        </p>
+    `)
     }
     if (localStorage.getItem('gameLevel') >= 16) {
         localStorage.prestige++;
