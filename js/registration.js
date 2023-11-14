@@ -301,7 +301,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`;
                 }
                 if (localStorage.getItem('gameLevel') == 9) {
@@ -320,7 +320,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 9) {
@@ -342,7 +342,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 15) {
@@ -358,7 +358,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
@@ -378,7 +378,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
@@ -395,7 +395,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
@@ -412,7 +412,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`               
             
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
@@ -429,7 +429,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
@@ -447,7 +447,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = 'https://img.freepik.com/premium-vector/cartoon-rock-of-different-bouldesrs-stone-of-various-shapes-heap-heavy-cobbles-granite-cobblestone_202007-1696.jpg';
+                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 15) {
