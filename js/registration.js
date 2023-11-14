@@ -101,7 +101,24 @@ if (localStorage.getItem('prestige') == null) {
 }
 
 function game() {
-
+    const prestigeSpan = document.getElementById('prestigeSpan');
+    prestigeSpan.textContent = localStorage.getItem('prestige');
+    if (localStorage.getItem('prestige') <= 2) {
+        prestigeSpan.style.color = 'green';
+    }
+    else if (localStorage.getItem('prestige') >= 3 && localStorage.getItem('prestige') <= 4) {
+        prestigeSpan.style.color = 'orange';
+    }
+    else if (localStorage.getItem('prestige') >= 5 && localStorage.getItem('prestige') <= 6) {
+        prestigeSpan.style.color = 'purple';
+    }
+    else if (localStorage.getItem('prestige') >= 7 && localStorage.getItem('prestige') <= 8) {
+        prestigeSpan.style.color = 'gold';
+    }
+    else if (localStorage.getItem('prestige') >= 9 && localStorage.getItem('prestige') <= 10) {
+        prestigeSpan.style.color = 'red';
+    }
+    
     updateDisplay;
 
     timer();
