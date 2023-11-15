@@ -27,6 +27,17 @@ terminalTextarea.onkeydown= (e) => {
                 terminalStatus.style.transition = 'color .3s';
             }, 3000)
         }
+        else if (commandValue.includes('set gameLevel') && Number(getLastValue(commandValue))) {
+            localStorage.gameLevel = getLastValue(commandValue);
+            terminalStatus.style.color = 'green';
+            terminalStatusSpan.textContent = 'success!'
+            terminalStatus.style.transition = 'color 0s';
+            location.reload();
+            setTimeout(() => {
+                terminalStatus.style.color = 'rgb(194, 194, 194)';
+                terminalStatus.style.transition = 'color .3s';
+            }, 3000)
+        }
         else {
             terminalStatus.style.color = 'red';
             terminalStatusSpan.textContent = 'error!'
