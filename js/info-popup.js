@@ -31,9 +31,16 @@ const infoPopupItem = document.querySelectorAll('.info-popup__item');
 infoPopupItem.forEach(el => {
 	el.onclick = (e) => {
 		let rargetItem = e.target.closest('.info-popup__item');
+		
 		rargetItem.classList.toggle('show-item-discraption');
 		let arrow = rargetItem.querySelector('.info-arrow');
-		console.log(arrow);
 		arrow.classList.toggle('arrow-rotate');
+		
+		document.querySelectorAll('.info-popup__item').forEach(box => {
+			if (box != rargetItem) {
+				box.classList.remove('show-item-discraption');
+				box.querySelector('.info-arrow').classList.remove('arrow-rotate');
+			}
+		})
 	}
 })
