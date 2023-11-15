@@ -102,7 +102,7 @@
 }
 
 .show-item-discraption {
-	min-height: 100px !important;
+	min-height: 120px !important;
 	padding: 10px;
 	overflow: unset;
 }
@@ -112,3 +112,16 @@
 .arrow-rotate {
 	transform: rotate(90deg);
 }
+
+.info-popup__item-discraption::-webkit-scrollbar {
+	width: 5px;
+  }
+  
+  .info-popup__item-discraption::-webkit-scrollbar-track {
+	background: rgb(112, 112, 112);
+  }
+  
+  .info-popup__item-discraption::-webkit-scrollbar-thumb {  
+	background: rgb(194, 194, 194);
+	border-radius: 20px;
+  }
