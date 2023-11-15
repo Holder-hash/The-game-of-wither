@@ -1,5 +1,5 @@
 .info-popup-fade {
-	display: flex;
+	display: none;
 }
 .info-popup-fade:before {
 	content: '';
