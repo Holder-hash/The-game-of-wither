@@ -89,6 +89,7 @@
 	min-height: 30px;
 	display: flex;
 	align-items: center;
+	pointer-events: none;
 }
 
 .info-popup__item-discraption {
@@ -101,4 +102,7 @@
 .show-item-discraption {
 	min-height: 100px !important;
 	padding: 10px;
+}
+.arrow-rotate {
+	transform: rotate(90deg);
 }

@@ -26,8 +26,11 @@ $(document).ready(function($) {
 		}
 	});
 });
-const listItem = document.querySelector('.info-popup__item')
+
 document.querySelector('.info-popup__item').onclick = (e) => {
 	let rargetItem = e.target.closest('.info-popup__item');
 	rargetItem.classList.toggle('show-item-discraption');
+	let arrow = rargetItem.querySelector('.info-arrow');
+	console.log(arrow);
+	arrow.classList.toggle('arrow-rotate');
 }
