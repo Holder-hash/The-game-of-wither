@@ -82,6 +82,7 @@
 	border-radius: 10px;
 	overflow: hidden;
 	transition: .3s;
+	cursor: pointer;
 }
 .info-popup__item-title {
 	width: 100%;
@@ -90,13 +91,14 @@
 	display: flex;
 	align-items: center;
 	pointer-events: none;
+	font-size: 17px;
+	margin-bottom: 5px;
 }
 
 .info-popup__item-discraption {
 	width: 100%;
 	height: 200px;
 	padding: 0;
-	align-items: flex-start;
 }
 
 .show-item-discraption {
