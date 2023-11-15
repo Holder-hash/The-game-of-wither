@@ -22,6 +22,10 @@ terminalTextarea.onkeydown= (e) => {
             terminalStatus.style.color = 'green';
             terminalStatusSpan.textContent = 'success!'
             terminalStatus.style.transition = 'color 0s';
+            prestigeSpan.textContent = localStorage.getItem('prestige');
+            if (localStorage.autoReload == 'true') {
+                location.reload();
+            }
             setTimeout(() => {
                 terminalStatus.style.color = 'rgb(194, 194, 194)';
                 terminalStatus.style.transition = 'color .3s';
@@ -32,7 +36,39 @@ terminalTextarea.onkeydown= (e) => {
             terminalStatus.style.color = 'green';
             terminalStatusSpan.textContent = 'success!'
             terminalStatus.style.transition = 'color 0s';
+            if (localStorage.autoReload == 'true') {
+                location.reload();
+            }
+            setTimeout(() => {
+                terminalStatus.style.color = 'rgb(194, 194, 194)';
+                terminalStatus.style.transition = 'color .3s';
+            }, 3000)
+        }
+        else if (commandValue === 'location reload') {
+            terminalStatus.style.color = 'green';
+            terminalStatusSpan.textContent = 'success!'
+            terminalStatus.style.transition = 'color 0s';
             location.reload();
+            setTimeout(() => {
+                terminalStatus.style.color = 'rgb(194, 194, 194)';
+                terminalStatus.style.transition = 'color .3s';
+            }, 3000)
+        }
+        else if (commandValue.includes('auto reload') && getLastValue(commandValue) == 'off') {
+            terminalStatus.style.color = 'green';
+            terminalStatusSpan.textContent = 'success!'
+            terminalStatus.style.transition = 'color 0s';
+            localStorage.setItem('autoReload', false);
+            setTimeout(() => {
+                terminalStatus.style.color = 'rgb(194, 194, 194)';
+                terminalStatus.style.transition = 'color .3s';
+            }, 3000)
+        }
+        else if (commandValue.includes('auto reload') && getLastValue(commandValue) == 'on') {
+            terminalStatus.style.color = 'green';
+            terminalStatusSpan.textContent = 'success!'
+            terminalStatus.style.transition = 'color 0s';
+            localStorage.setItem('autoReload', true);
             setTimeout(() => {
                 terminalStatus.style.color = 'rgb(194, 194, 194)';
                 terminalStatus.style.transition = 'color .3s';
