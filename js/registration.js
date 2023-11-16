@@ -545,6 +545,7 @@ function game() {
                 //lose
                 else if (value > person.level) {
                     if (personSave == false) {
+                        person.level = 0;
                         lose();
                     }
                     //save totem
