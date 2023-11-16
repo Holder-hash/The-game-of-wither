@@ -38,6 +38,7 @@
 
 }
 .registration-form-contain {
+    position: relative;
     width: 90%;
     height: inherit;
     margin: 0 auto;
@@ -205,6 +206,8 @@
     margin-top: 170px;
     display: flex;
     align-items: flex-end;
+    right: 46px;
+    gap: 30px;
 }
 .registration-form-footer-signatuer-box {
     width: 300px;
