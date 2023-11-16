@@ -103,8 +103,8 @@ function ENGtranslate() {
 
     //lose window
     document.querySelector('.lose-title-box p').textContent = 'Mission failed!';
-    document.querySelector('.lose-message').innerHTML = "<p>Don't be upset!</p> <p>Try changing equipmentю</p>";
-    document.querySelector('.loseContinueBtn p').textContent = 'Continue';
+    document.querySelector('.lose-message').innerHTML = "<p>Don't be upset!</p> <p>Try changing equipment.</p>";
+    document.querySelector('#loseContinueBtn p').textContent = 'Continue';
 }
 
 function RUStranslate() {
@@ -161,5 +161,5 @@ function RUStranslate() {
     //lose window
     document.querySelector('.lose-title-box p').textContent = 'Миссия провалена!';
     document.querySelector('.lose-message').innerHTML = "<p>Не расстраивайтесь!</p> <p>Попробуйте сменить снаряжение.</p>";
-    document.querySelector('.loseContinueBtn p').textContent = 'Продолжить';
+    document.querySelector('#loseContinueBtn p').textContent = 'Продолжить';
 }
