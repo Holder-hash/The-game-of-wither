@@ -58,10 +58,11 @@
 
 .info-popup-links ul {
     width: 100px;
-    margin-left: 5px;
+    margin-left: 10px;
     display: flex;
     list-style: none;
     justify-content: space-between;
+	gap: 10px;
 }
 
 /*items*/
