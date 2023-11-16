@@ -20,7 +20,7 @@ resetBtn.addEventListener('click', () => {
 
 resetSendBtn.onclick = () => {
     let resetValueRegister = resetInp.value.toLowerCase();
-    if (resetValueRegister == 'yes, reset progress') {
+    if (resetValueRegister == 'yes, reset progress' || resetValueRegister == 'да, сбросить мой прогресс') {
         localStorage.gameLevel = 0;
         localStorage.prestige = 0;
         location.reload();
