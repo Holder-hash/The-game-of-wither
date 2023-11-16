@@ -91,6 +91,10 @@ function ENGtranslate() {
 
     document.querySelector('.info-popup-links p').textContent = 'Useful links: ';
     document.querySelector('.info-popup-donate-box a').textContent = 'Donation';
+
+    //reset popup
+    document.querySelector('.reset-widnow p').innerHTML = 'Are you sure you want to reset your progress? Enter below <strong>"yes, reset my progress"</strong>';
+    document.querySelector('#resetSendBtn').textContent = 'Reset progress';
 }
 
 function RUStranslate() {
@@ -134,8 +138,10 @@ function RUStranslate() {
     
     document.querySelector('.info-popup-links p').textContent = 'Полезные ссылки: ';
     document.querySelector('.info-popup-donate-box a').textContent = 'Пожертвовать';
-    document.querySelector('').textContent = '';
-    document.querySelector('').textContent = '';
+
+    //reset popup
+    document.querySelector('.reset-widnow p').innerHTML = 'Вы уверены, что хотите сбросить свой прогресс? Введите ниже <strong>"да, сбросить мой прогресс"</strong>';
+    document.querySelector('#resetSendBtn').textContent = 'Сбросить прогресс';
     document.querySelector('').textContent = '';
     document.querySelector('').textContent = '';
     document.querySelector('').textContent = '';
