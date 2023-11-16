@@ -18,12 +18,31 @@ document.addEventListener('click', (e) => {
 const engBox = document.querySelector('.english-language-box');
 const rusBox = document.querySelector('.russian-language-box');
 
+if (localStorage.getItem('language') == null) {
+    localStorage.setItem('language', 'eng');
+}
+
 engBox.onclick = () => {
+    localStorage.language = 'eng';
     engBox.style.color = 'red';
     rusBox.style.color = 'rgb(194, 194, 194)';
 }
-
 rusBox.onclick = () => {
+    localStorage.language = 'rus';
     engBox.style.color = 'rgb(194, 194, 194)';
     rusBox.style.color = 'red';
+}
+
+if (localStorage.getItem('language') == 'eng') {
+    engBox.style.color = 'red';
+    rusBox.style.color = 'rgb(194, 194, 194)';
+
+
+}
+
+if (localStorage.getItem('language') == 'rus') {
+    engBox.style.color = 'rgb(194, 194, 194)';
+    rusBox.style.color = 'red';
+
+    
 }
