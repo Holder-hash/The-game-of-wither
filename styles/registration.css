@@ -19,13 +19,18 @@
 }
 
 .registration-pictuer {
+    min-height: 550px;
+    background-position-y: -68px;
+    min-width: 495px;
+    height: inherit;
+    background-position-x: -124px;
+    background-size: 689px;
+    background-image: url('../media/register-pictuer.jpg');
+}
+/* .registration-pictuer img {
     width: 450px;
     height: inherit;
-}
-.registration-pictuer img {
-    width: 450px;
-    height: inherit;
-}
+} */
 
 .registration-form {
     width: 100%;
