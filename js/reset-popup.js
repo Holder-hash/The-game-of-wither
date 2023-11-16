@@ -1,5 +1,7 @@
 const resetBtn = document.getElementById('resetBtn');
 const resetWidnow = document.querySelector('.reset-widnow');
+const resetInp = document.getElementById('resetInp');
+const resetSendBtn = document.getElementById('resetSendBtn');
 
 resetBtn.addEventListener('click', () => {
     resetWidnow.style.display = 'flex';
@@ -15,3 +17,12 @@ resetBtn.addEventListener('click', () => {
         }
     })
 })
+
+resetSendBtn.onclick = () => {
+    let resetValueRegister = resetInp.value.toLowerCase();
+    if (resetValueRegister == 'yes, reset progress') {
+        localStorage.gameLevel = 0;
+        localStorage.prestige = 0;
+        location.reload();
+    }
+}
