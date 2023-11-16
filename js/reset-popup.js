@@ -1,10 +1,17 @@
 const resetBtn = document.getElementById('resetBtn');
+const resetWidnow = document.querySelector('.reset-widnow');
 
 resetBtn.addEventListener('click', () => {
-    let confirmReset = prompt('are you sure you want to reset your progress?\nenter below "yes, reset progress"')
-    if (confirmReset == 'yes, reset progress') {
-        localStorage.gameLevel = 0;
-        localStorage.prestige = 0;
-        location.reload();
-    }
+    resetWidnow.style.display = 'flex';
+    setTimeout(() => {
+        resetWidnow.classList.toggle('show-reset');
+    },1)
+    document.addEventListener('click', (e) => {
+        if (!e.composedPath().includes(resetWidnow) && e.target != resetBtn) {
+            resetWidnow.classList.remove('show-reset');
+            setTimeout(() => {
+                resetWidnow.style.display = 'none';
+            },300)  
+        }
+    })
 })
