@@ -95,6 +95,16 @@ function ENGtranslate() {
     //reset popup
     document.querySelector('.reset-widnow p').innerHTML = 'Are you sure you want to reset your progress? Enter below <strong>"yes, reset my progress"</strong>';
     document.querySelector('#resetSendBtn').textContent = 'Reset progress';
+
+    //win window
+    document.querySelector('.win-title-box p').textContent = 'Mission completed!';
+    document.querySelector('.win-message').innerHTML = '<p>Great job, <span id="winMessageName">name</span>!</p> <p>Thank you for your service.</p>';
+    document.querySelector('#winContinueBtn').textContent = 'Continue';
+
+    //lose window
+    document.querySelector('.lose-title-box p').textContent = 'Mission failed!';
+    document.querySelector('.lose-message').innerHTML = "<p>Don't be upset!</p> <p>Try changing equipmentю</p>";
+    document.querySelector('.loseContinueBtn p').textContent = 'Continue';
 }
 
 function RUStranslate() {
@@ -142,13 +152,14 @@ function RUStranslate() {
     //reset popup
     document.querySelector('.reset-widnow p').innerHTML = 'Вы уверены, что хотите сбросить свой прогресс? Введите ниже <strong>"да, сбросить мой прогресс"</strong>';
     document.querySelector('#resetSendBtn').textContent = 'Сбросить прогресс';
-    document.querySelector('').textContent = '';
-    document.querySelector('').textContent = '';
-    document.querySelector('').textContent = '';
-    document.querySelector('').textContent = '';
-    document.querySelector('').textContent = '';
-    document.querySelector('').textContent = '';
-    document.querySelector('').textContent = '';
-    document.querySelector('').textContent = '';
-    document.querySelector('').textContent = '';
+
+    //win window
+    document.querySelector('.win-title-box p').textContent = 'Миссия выполнена!';
+    document.querySelector('.win-message').innerHTML = '<p>Отличная работа, <span id="winMessageName">name</span>!</p> <p>Спасибо за ваши услуги.</p>';
+    document.querySelector('#winContinueBtn').textContent = 'Продолжить';
+
+    //lose window
+    document.querySelector('.lose-title-box p').textContent = 'Миссия провалена!';
+    document.querySelector('.lose-message').innerHTML = "<p>Не расстраивайтесь!</p> <p>Попробуйте сменить снаряжение.</p>";
+    document.querySelector('.loseContinueBtn p').textContent = 'Продолжить';
 }
