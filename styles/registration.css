@@ -92,6 +92,11 @@
     background: none;
     color: rgb(194, 194, 194);
 }
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset; /* Замените 'white' на ваш желаемый цвет фона */
+  }
+
 .registration-form-name-box legend{
     transform: translate(0,20px);
     transition: .5s ease;

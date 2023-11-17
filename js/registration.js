@@ -8,6 +8,13 @@ if (window.innerWidth >= 500) {
 let time = ``;
 
 $(document).ready(function($) {
+    if (localStorage.getItem('nickname')) {
+        $('.registration-form-name-box legend').css('transform', 'translate(0,0)')
+        registrationNameInput.value = localStorage.getItem('nickname', registrationNameInput.value);
+        haveName = true;
+    }
+    console.log(localStorage.getItem('nickname'));
+
     $('#registrationNameInput').focus(() => 
         $('.registration-form-name-box legend').css('transform', 'translate(0,0)')
     );
@@ -55,11 +62,14 @@ $(document).ready(function($) {
     //validation
     
     $('#startBtn').click(function() {
-
+        if (registrationNameInput.value == '') {
+            haveName = false;
+        }
         if (haveName == true && haveSignature == true &&
              /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == false) {
             $('.registration-window').fadeOut();
             person.name = registrationNameInput.value;
+            localStorage.setItem('nickname', person.name);
 
             maskLeft.style.transform = 'translateX(0)';
             maskRight.style.transform = 'translateX(0)';
