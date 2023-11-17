@@ -70,12 +70,22 @@ $(document).ready(function($) {
         if (haveName == false || /[!@#$%^&*|/+=;:]/.test(registrationNameInput.value) == true) {
             $('.registration-form-name-box').toggleClass('jerking-animation-class');
             $('.name-requirements-box span').toggleClass('name-box-validation');
+            if (window.innerWidth <= 500) {
+                document.querySelector('.reg-inp__validation-window').style.transform = 'translate(-50%)';
+            }
         }
         if (haveSignature == false) {
             $('.registration-form-footer-signatuer-box').toggleClass('jerking-animation-class');
         }
     })
 });	
+
+document.querySelector('.name-requirements-box span').onclick = () => {
+    document.querySelector('.reg-inp__validation-window').style.transform = 'translate(-50%)';
+}
+document.getElementById('regInpValidCloseBtn').onclick = () => {
+    document.querySelector('.reg-inp__validation-window').style.transform = 'translate(-50%, -100%)';
+}
 
 
 // game
