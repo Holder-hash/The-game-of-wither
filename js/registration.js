@@ -13,7 +13,6 @@ $(document).ready(function($) {
         registrationNameInput.value = localStorage.getItem('nickname', registrationNameInput.value);
         haveName = true;
     }
-    console.log(localStorage.getItem('nickname'));
 
     $('#registrationNameInput').focus(() => 
         $('.registration-form-name-box legend').css('transform', 'translate(0,0)')
