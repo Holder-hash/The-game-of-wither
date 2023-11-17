@@ -68,7 +68,7 @@
         max-height: 128px;
     }
     .person-card>.prestige-contain {
-        top: 0;
+        top: -22px;
         width: 60px;
         height: 60px;
     }
