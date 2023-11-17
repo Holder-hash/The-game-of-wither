@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Besley&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&family=Roboto:wght@500&family=Unbounded:wght@300&display=swap');
+
+@font-face {
+  font-family: "PTSerif-italic"; 
+  src: url("PTSerif-italic.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 
+
 * {
     margin: 0;
     padding: 0;
+    font-family: "PTSerif-italic"; 
   }
   html,
   body {

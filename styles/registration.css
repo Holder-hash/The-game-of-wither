@@ -58,6 +58,7 @@
     align-items: center;
 }
 .registration-form-name-box input{
+    width: 100%;
     outline: none;
     border: none;
     border-bottom: 1px solid rgb(194, 194, 194);
