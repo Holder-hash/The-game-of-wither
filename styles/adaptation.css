@@ -25,6 +25,9 @@
 }
 
 @media screen and (max-width: 500px) {
+    .registration-form-name-contain {
+        margin-top: 15px;
+    }
     .header__title__box h1 {
         font-size: 17px;
     }
