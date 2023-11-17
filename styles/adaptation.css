@@ -2,6 +2,7 @@
     .registration-window {
         width: 500px;
     }
+
     .registration-pictuer {
         display: none;
     }
@@ -90,6 +91,16 @@
 }
 
 @media screen and (max-width: 500px) {
+    .registration-form-name-contain {
+        width: 100%;
+    }
+    .registration-form-name-box {
+        width: 100%;
+    }
+    #registrationNameInput {
+        width: 100%;
+    }
+    
     .registration-form-name-contain {
         margin-top: 15px;
     }
