@@ -9,4 +9,17 @@
         right: 15px;
         gap: 10px;
     }
+    .info-popup {
+        width: 335px;
+    }
+    .reset-widnow {
+        right: 0;
+        left: 50%;
+        transform: translateX(-55%);
+    }
+    .terminal-window {
+        right: 0;
+        left: 50%;
+        transform: translateX(-55%);  
+    }
 }
