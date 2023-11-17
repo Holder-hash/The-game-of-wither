@@ -1,0 +1,12 @@
+@media screen and (max-width: 1000px) {
+    .registration-window {
+        width: 500px;
+    }
+    .registration-pictuer {
+        display: none;
+    }
+    .registration-form-footer {
+        right: 15px;
+        gap: 10px;
+    }
+}
