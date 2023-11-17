@@ -22,6 +22,58 @@
         left: 50%;
         transform: translateX(-55%);  
     }
+
+
+    /*game area*/
+    .game-area {
+        flex-direction: column-reverse;
+        width: 90%;
+        align-items: center;
+        margin: unset;
+    }
+
+    .enemy-contain-area {
+        position: absolute;
+        top: -7px;
+        overflow-y: scroll;
+        height: 42%;
+        margin-top: 66px;
+    }
+
+    .person-contain {
+        overflow-y: scroll;
+        width: 100%;
+        height: 345px;
+        z-index: 1;
+        bottom: 100px;
+        position: absolute;
+        overflow: scroll;
+    }
+
+    .person-card {
+        width: 210px;
+        max-height: 300px;
+        margin-top: 20px;
+    }
+    .person-card-img {
+        height: auto;
+    }
+    .person-card-img img {
+        min-height: unset;
+        max-height: 200px;
+    }
+    .person-card>.prestige-contain {
+        top: 0;
+        width: 60px;
+        height: 60px;
+    }
+
+    .enemy-card {
+        height: 200px;
+    }
+    .enemy-card img {
+        max-height: 160px;
+    }
 }
 
 @media screen and (max-width: 500px) {
