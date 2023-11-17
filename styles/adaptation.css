@@ -23,3 +23,77 @@
         transform: translateX(-55%);  
     }
 }
+
+@media screen and (max-width: 500px) {
+    .header__title__box h1 {
+        font-size: 17px;
+    }
+    .registration-window {
+        width: 97%;
+        padding: 20px 0;
+    }
+    .registration-form-name-contain {
+        justify-content: center;
+    }
+    .registration-form-castomize-contain {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .registration-form {
+        overflow-y: scroll;
+    }
+    .registration-form-person-settings {
+        min-width: 100%;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        text-align: center;
+        gap: 0;
+    }
+
+    .registration-form-class-box {
+        min-width: 100%;
+    }
+    .class-contain {
+        min-width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        height: 100px;
+        justify-content: center;
+    }
+    .class-item {
+        align-self: center;
+    }
+
+    .registration-form-starting-item-box {
+        min-width: 100%;
+        margin-top: 20px;
+    }
+    .starting-item-contain {
+        min-width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        height: unset;
+        justify-content: center;
+    }
+
+    .registration-form-footer {
+        position: unset;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        right: 0;
+    }
+    .registration-form-footer-signatuer-box {
+        width: 100%;
+    }
+    .registration-form-footer-start-btn {
+        width: 100%;
+    }
+    #signatureCanvas {
+        width: 100%;
+    }
+    #startBtn {
+        width: 100%;
+    }
+}
