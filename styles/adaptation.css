@@ -53,6 +53,7 @@
         bottom: 80px;
         position: absolute;
         overflow: scroll;
+        padding-bottom: 40px;
     }
 
     .person-card {
@@ -109,6 +110,10 @@
 
     .person-card-skills-box {
         width: 135px;
+    }
+
+    .timer-box {
+        display: none;
     }
 }
 
