@@ -71,10 +71,14 @@
     }
     .starting-item-contain {
         min-width: 100%;
+        height: 100px !important;
         flex-wrap: nowrap;
         overflow-x: scroll;
         height: unset;
         justify-content: center;
+    }
+    .starting-item {
+        align-self: center;
     }
 
     .registration-form-footer {
