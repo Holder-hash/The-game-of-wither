@@ -74,6 +74,15 @@
     .enemy-card img {
         max-height: 160px;
     }
+
+    .win-window {
+        width: 90%;
+        z-index: 2;
+    }
+    .lose-window {
+        width: 90%;
+        z-index: 2;
+    }
 }
 
 @media screen and (max-width: 500px) {
