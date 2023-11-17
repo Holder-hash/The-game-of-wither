@@ -23,6 +23,10 @@
         transform: translateX(-55%);  
     }
 
+    .selectedShadow {
+        box-shadow: 0 0 10px yellow;
+    }
+
 
     /*game area*/
     .game-area {
