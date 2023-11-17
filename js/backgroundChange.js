@@ -14,7 +14,9 @@ else if (localStorage.getItem('gameLevel') >= 13) {
 
 
 document.addEventListener('mousemove', (e) => {
-    let x = e.clientX / window.innerWidth * 30;
-    let y = e.clientY / window.innerWidth * 15;
-    documentWrapper.style.backgroundPosition = `-${x}px -${y}px`
+    if (window.innerWidth >= 1000) {
+        let x = e.clientX / window.innerWidth * 30;
+        let y = e.clientY / window.innerWidth * 15;
+        documentWrapper.style.backgroundPosition = `-${x}px -${y}px`;
+    }
 })
