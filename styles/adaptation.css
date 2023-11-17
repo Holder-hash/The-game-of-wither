@@ -93,6 +93,7 @@
     }
     .registration-form-footer-signatuer-box {
         width: 100%;
+        display: none;
     }
     .registration-form-footer-start-btn {
         width: 100%;

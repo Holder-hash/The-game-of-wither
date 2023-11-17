@@ -1,5 +1,10 @@
 var haveName = false;
-var haveSignature = false;
+if (window.innerWidth >= 500) {
+    var haveSignature = false;
+} else {
+    var haveSignature = true;
+}
+
 let time = ``;
 
 $(document).ready(function($) {
@@ -47,7 +52,6 @@ $(document).ready(function($) {
             ctx.moveTo(e.offsetX, e.offsetY);
         }
     });
-    
     //validation
     
     $('#startBtn').click(function() {
