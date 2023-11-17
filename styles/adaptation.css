@@ -103,4 +103,22 @@
     #startBtn {
         width: 100%;
     }
+
+    .info-popup {
+        width: 80%;
+    }
+    .info-popup-links {
+        width: 100%;
+    }
+
+    .info-popup-footer-contain {
+        flex-direction: column;
+    }
+    .terminal-window {
+        max-width: 80%;
+    }
+    .info-popup-donate-box {
+        width: 100%;
+        display: flex;
+    }
 }
