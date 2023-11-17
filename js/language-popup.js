@@ -105,6 +105,17 @@ function ENGtranslate() {
     document.querySelector('.lose-title-box p').textContent = 'Mission failed!';
     document.querySelector('.lose-message').innerHTML = "<p>Don't be upset!</p> <p>Try changing equipment.</p>";
     document.querySelector('#loseContinueBtn p').textContent = 'Continue';
+
+    //validation popup
+    document.querySelector('#regInpValidCloseBtn').textContent = 'Close';
+    document.querySelector('#regValidText').innerHTML = `
+    <span class="material-symbols-outlined" id="regValidIcon">
+        help
+    </span>
+    Your name must be 2 or more characters long,
+    contain no special characters, or be empty.
+    `;
+    document.querySelector('.reg-inp__validation-window').style.height = '80px';
 }
 
 function RUStranslate() {
@@ -162,4 +173,15 @@ function RUStranslate() {
     document.querySelector('.lose-title-box p').textContent = 'Миссия провалена!';
     document.querySelector('.lose-message').innerHTML = "<p>Не расстраивайтесь!</p> <p>Попробуйте сменить снаряжение.</p>";
     document.querySelector('#loseContinueBtn p').textContent = 'Продолжить';
+
+    //validation popup
+    document.querySelector('#regInpValidCloseBtn').textContent = 'Закрыть';
+    document.querySelector('#regValidText').innerHTML = `
+    <span class="material-symbols-outlined" id="regValidIcon">
+        help
+    </span>
+    Ваше имя должно состоять из 2 или более символов,
+    не содержать специальных символов или быть пустым.
+    `;
+    document.querySelector('.reg-inp__validation-window').style.height = '100px';
 }
