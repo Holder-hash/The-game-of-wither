@@ -199,6 +199,7 @@ function game() {
     }
     else if (localStorage.getItem('gameLevel') == 16) {
         enemyStartLevel += 34
+        vampirUpInfo.style.display = 'none';
     }
 
 
@@ -651,14 +652,14 @@ function win() {
         document.querySelector('.win-window').style.height = '510px';
         if (localStorage.language == 'eng') {
             document.querySelector('.win-message').insertAdjacentHTML('beforeend', `
-            <p style="margin: 10px 0 20px">
+            <p style="margin: 10px 0 20px" font-size: 22px;" id="vampirUpInfo">
                 Now the vampire is ruled by bloodlust. Vampire level increased by +5
             </p>
         `)
         }
         else if (localStorage.language == 'rus') {
             document.querySelector('.win-message').insertAdjacentHTML('beforeend', `
-            <p style="margin: 10px 0 20px">
+            <p style="margin: 10px 0 20px; font-size: 22px;"  font-size: 22px;" id="vampirUpInfo">
                 Теперь вампиром правит жажда крови. Уровень Вампира повышен на +5.
             </p>
         `)

@@ -100,6 +100,14 @@ function ENGtranslate() {
     document.querySelector('.win-title-box p').textContent = 'Mission completed!';
     document.querySelector('.win-message').innerHTML = '<p>Great job, <span id="winMessageName">name</span>!</p> <p>Thank you for your service.</p>';
     document.querySelector('#winContinueBtn').textContent = 'Continue';
+    if (localStorage.gameLevel == 16) {
+        document.querySelector('.win-message').innerHTML = `
+        <p>Great job, <span id="winMessageName">name</span>!</p> <p>Thank you for your service.</p>
+        <p style="margin: 10px 0 20px; font-size: 22px;" id="vampirUpInfo">
+        Now the vampire is ruled by bloodlust. Vampire level increased by +5.
+        </p>
+        `;
+    }
 
     //lose window
     document.querySelector('.lose-title-box p').textContent = 'Mission failed!';
@@ -168,6 +176,14 @@ function RUStranslate() {
     document.querySelector('.win-title-box p').textContent = 'Миссия выполнена!';
     document.querySelector('.win-message').innerHTML = '<p>Отличная работа, <span id="winMessageName">name</span>!</p> <p>Спасибо за ваши услуги.</p>';
     document.querySelector('#winContinueBtn').textContent = 'Продолжить';
+    if (localStorage.gameLevel == 16) {
+        document.querySelector('.win-message').innerHTML = `
+        <p>Отличная работа, <span id="winMessageName">fff</span>!</p> <p>Спасибо за ваши услуги.</p>
+        <p style="margin: 10px 0 20px; font-size: 22px;" id="vampirUpInfo">
+            Теперь вампиром правит жажда крови. Уровень Вампира повышен на +5.
+        </p>
+        `;
+    }
 
     //lose window
     document.querySelector('.lose-title-box p').textContent = 'Миссия провалена!';
