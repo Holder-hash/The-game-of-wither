@@ -34,10 +34,10 @@ startBtn.onclick = () => {
     else if (carouselIndex == -480 && localStorage.getItem('heroy') == 'mainer') gamePersonAvatar.src = 'media/persons/mainer/mainer3.jpeg'
     else if (carouselIndex == -720 && localStorage.getItem('heroy') == 'mainer') gamePersonAvatar.src = 'media/persons/mainer/mainer4.jpeg'
 
-    if (carouselIndex == 0 && localStorage.getItem('heroy') == 'witch') gamePersonAvatar.src = 'media/persons/witcher/witch1.jpeg'
-    else if (carouselIndex == -240 && localStorage.getItem('heroy') == 'witch') gamePersonAvatar.src = 'media/persons/witcher/witch2.jpeg'
-    else if (carouselIndex == -480 && localStorage.getItem('heroy') == 'witch') gamePersonAvatar.src = 'media/persons/witcher/witch3.jpeg'
-    else if (carouselIndex == -720 && localStorage.getItem('heroy') == 'witch') gamePersonAvatar.src = 'media/persons/witcher/witch4.jpeg'
+    if (carouselIndex == 0 && localStorage.getItem('heroy') == 'witch') gamePersonAvatar.src = 'media/persons/witcher/witcher1.jpeg'
+    else if (carouselIndex == -240 && localStorage.getItem('heroy') == 'witch') gamePersonAvatar.src = 'media/persons/witcher/witcher2.jpeg'
+    else if (carouselIndex == -480 && localStorage.getItem('heroy') == 'witch') gamePersonAvatar.src = 'media/persons/witcher/witch3er.jpeg'
+    else if (carouselIndex == -720 && localStorage.getItem('heroy') == 'witch') gamePersonAvatar.src = 'media/persons/witcher/witch4er.jpeg'
 
     if (carouselIndex == 0 && localStorage.getItem('heroy') == 'vampir') gamePersonAvatar.src = 'media/persons/vampir/vampir1.jpeg'
     else if (carouselIndex == -240 && localStorage.getItem('heroy') == 'vampir') gamePersonAvatar.src = 'media/persons/vampir/vampir2.jpeg'
