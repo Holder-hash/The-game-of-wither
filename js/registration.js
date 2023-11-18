@@ -576,12 +576,14 @@ function game() {
                         person.level += 2;
                         personLevelText.innerHTML = person.level;
                         personSave = false;
+                        personCardItemImg.style = 'box-shadow: 0 0 15px red';
                     }
                     else if (personSave == true && person.item == 'vampirItem4') {
                         person.level += 10;
                         personLevelUp += 1
                         personLevelText.innerHTML = person.level;
                         personSave = false;
+                        personCardItemImg.style = 'box-shadow: 0 0 15px red';
                     }
                     else {
                         personSave = false;
