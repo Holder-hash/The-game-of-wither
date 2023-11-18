@@ -625,6 +625,9 @@ function game() {
 }
 
 // win
+if (localStorage.getItem('gameLevel') == null) {
+    localStorage.setItem('gameLevel', 1);
+} 
 
 function win() {  
     winTimeText.innerHTML = time;
@@ -636,10 +639,10 @@ function win() {
     winPersonName.innerHTML = person.name;
     winPresonClass.src = personCardClassImg.src;
     winPresonItem.src = personCardItemImg.src;
+    winGameProgressBar.value = localStorage.getItem('gameLevel');
 
     if (localStorage.getItem('gameLevel') < 1) {
         localStorage.gameLevel = 1;
-    
         winContinueBtn.addEventListener('click', () => {
             location.reload();
         })
@@ -655,16 +658,15 @@ function win() {
     if (localStorage.getItem('gameLevel') >= 16) {
         localStorage.prestige++;
         localStorage.gameLevel = 0;
+        winGameProgressBar.value = 16;
         if (localStorage.getItem('prestige') >= 10) {
             localStorage.prestige = 10;
         }
     }
     localStorage.gameLevel++;
-    winGameProgressBar.value = localStorage.getItem('gameLevel');
     winContinueBtn.addEventListener('click', () => {
         location.reload();
     })
-
 }
 
 // lose
