@@ -10,6 +10,7 @@ let time = ``;
 let hitSound1 = new Audio();
 let hitSound2 = new Audio();
 let lastHit = new Audio();
+let totemSound = new Audio();
 
 $(document).ready(function($) {
     if (localStorage.getItem('nickname')) {
@@ -245,6 +246,7 @@ function game() {
     }
     else if (person.item == 'defaultItem4') {
         personSave = true
+        totemSound.src = '../media/sound/default/totem.mp3';
     }
 
     //mainer items
@@ -260,6 +262,7 @@ function game() {
     }
     else if (person.item == 'mainerItem4') {
         personSave = true
+        totemSound.src = '../media/sound/miner/totem.mp3';
     }
 
     //witch items
@@ -275,6 +278,7 @@ function game() {
     }
     else if (person.item == 'witchItem4') {
         personSave = true
+        totemSound.src = '../media/sound/witcher/totem.mp3';
     }
 
     //vampir items
@@ -290,6 +294,7 @@ function game() {
     }
     else if (person.item == 'vampirItem4') {
         personSave = true
+        totemSound.src = '../media/sound/vampir/totem.mp3';
     }
 
     //game process
@@ -593,6 +598,7 @@ function game() {
                     }
                     //save totem
                     else if (personSave == true && person.item == 'witchItem4') {
+                        totemSound.play();
                         person.level += 2;
                         personLevelText.innerHTML = person.level;
                         document.getElementById('personLevelText').style.textShadow = '0 0 20px white';
@@ -603,6 +609,7 @@ function game() {
                         personCardItemImg.style = 'box-shadow: 0 0 15px red';
                     }
                     else if (personSave == true && person.item == 'vampirItem4') {
+                        totemSound.play();
                         person.level += 10;
                         personLevelUp += 1
                         personLevelText.innerHTML = person.level;
@@ -614,6 +621,7 @@ function game() {
                         personCardItemImg.style = 'box-shadow: 0 0 15px red';
                     }
                     else {
+                        totemSound.play();
                         personSave = false;
                         personCardItemImg.style = 'box-shadow: 0 0 15px red';
                     }   
