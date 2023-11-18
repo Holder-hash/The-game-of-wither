@@ -346,7 +346,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`;
                 }
                 if (localStorage.getItem('gameLevel') == 9) {
@@ -365,7 +365,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 9) {
@@ -387,7 +387,7 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 15) {
@@ -403,11 +403,11 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 if (localStorage.getItem('gameLevel') == 16 && person.class == 'vampir') {
@@ -423,11 +423,11 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 break;
@@ -440,11 +440,11 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 break;
@@ -457,11 +457,11 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`               
             
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 break;
@@ -474,11 +474,11 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 break;
@@ -492,16 +492,16 @@ function game() {
                 else if (localStorage.getItem('gameLevel') >= 13) enemyMan.pic = `media/enemy/vampir/vampir-enemy${i}.jpg`
                 
                 if (localStorage.getItem('gameLevel') >= 5 && localStorage.getItem('gameLevel') <= 8) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-stone.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-stone.jpg';
                     enemySkill.style = `display: flex;`       
                 }
                 if (localStorage.getItem('gameLevel') == 15) {
                     enemyStartLevel += 10
-                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 if (localStorage.getItem('gameLevel') == 16) {
-                    enemySkillImg.src = '../media/enemy/enemy-skill-onion.jpg';
+                    enemySkillImg.src = 'media/enemy/enemy-skill-onion.jpg';
                     enemySkill.style = `display: flex;`
                 }
                 break;
@@ -543,7 +543,7 @@ function game() {
             return function() {
                 if (value <= person.level && enemyMan.destroyed == false) {
                     enemyMan.destroyed = true;
-                    enemyPic.src = '../media/png-transparent-christian-cross-symbol-truth-christianity-grave-miscellaneous-photography-cross-thumbnail.png';
+                    enemyPic.src = 'media/png-transparent-christian-cross-symbol-truth-christianity-grave-miscellaneous-photography-cross-thumbnail.png';
                     person.level += (Number(value) / person.level) + personLevelUp;
                     personLevelText.innerHTML = person.level.toFixed(2);
                     enemy.style = `cursor: not-allowed;`;
