@@ -546,6 +546,10 @@ function game() {
                     enemyPic.src = 'media/png-transparent-christian-cross-symbol-truth-christianity-grave-miscellaneous-photography-cross-thumbnail.png';
                     person.level += (Number(value) / person.level) + personLevelUp;
                     personLevelText.innerHTML = person.level.toFixed(2);
+                    document.getElementById('personLevelText').style.textShadow = '0 0 20px white';
+                    setTimeout(() => {
+                        document.getElementById('personLevelText').style.textShadow = 'none';
+                    }, 500)
                     enemy.style = `cursor: not-allowed;`;
                     enemyNumber--;
 
@@ -575,6 +579,10 @@ function game() {
                     else if (personSave == true && person.item == 'witchItem4') {
                         person.level += 2;
                         personLevelText.innerHTML = person.level;
+                        document.getElementById('personLevelText').style.textShadow = '0 0 20px white';
+                        setTimeout(() => {
+                            document.getElementById('personLevelText').style.textShadow = 'none';
+                        }, 500)
                         personSave = false;
                         personCardItemImg.style = 'box-shadow: 0 0 15px red';
                     }
@@ -582,6 +590,10 @@ function game() {
                         person.level += 10;
                         personLevelUp += 1
                         personLevelText.innerHTML = person.level;
+                        document.getElementById('personLevelText').style.textShadow = '0 0 20px white';
+                        setTimeout(() => {
+                            document.getElementById('personLevelText').style.textShadow = 'none';
+                        }, 500)
                         personSave = false;
                         personCardItemImg.style = 'box-shadow: 0 0 15px red';
                     }

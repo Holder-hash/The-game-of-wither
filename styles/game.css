@@ -108,6 +108,7 @@
 #personLevelText {
     font-size: 30px;
     font-weight: 300;
+    transition: .5s;
 }
 
 .person-card-skills-box {
