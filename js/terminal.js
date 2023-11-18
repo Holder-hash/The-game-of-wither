@@ -12,6 +12,10 @@ terminalCloseBtn.onclick = () => {
     terminalWindow.classList.toggle('terminal-open');
 }
 
+if (localStorage.getItem('autoReload') == null) {
+    localStorage.setItem('autoReload', true);
+}
+
 terminalTextarea.onkeydown= (e) => {
     if (e.keyCode === 13) {
         const commandValue = terminalTextarea.value;
