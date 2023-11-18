@@ -1,6 +1,6 @@
 const languagePopupFade = document.querySelector( '.language-popup-fade');
 const languageBtn = document.getElementById('languageBtn');
-const infoBtn = document.querySelector('#infoBtn')
+const infoBtn = document.querySelector('#infoBtn');
 
 languageBtn.onclick = () => {
     languagePopupFade.style.display = 'block';

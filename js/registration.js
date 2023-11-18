@@ -7,6 +7,10 @@ if (window.innerWidth >= 500) {
 
 let time = ``;
 
+let hitSound1 = new Audio();
+let hitSound2 = new Audio();
+let lastHit = new Audio();
+
 $(document).ready(function($) {
     if (localStorage.getItem('nickname')) {
         $('.registration-form-name-box legend').css('transform', 'translate(0,0)')
@@ -538,11 +542,22 @@ function game() {
 
 
 
-
+        //enemy hit
         enemy.onclick = function(value) {
             
             return function() {
                 if (value <= person.level && enemyMan.destroyed == false) {
+
+                    function getRandomInt(max) {
+                        return Math.floor(Math.random() * max);
+                    }
+
+                    if (getRandomInt(2) == 0) {
+                        hitSound1.play();
+                    } else {
+                        hitSound2.play();
+                    }
+
                     enemyMan.destroyed = true;
                     enemyPic.src = 'media/png-transparent-christian-cross-symbol-truth-christianity-grave-miscellaneous-photography-cross-thumbnail.png';
                     person.level += (Number(value) / person.level) + personLevelUp;
@@ -1118,20 +1133,38 @@ vampirItemImg4.onclick = () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    //open a class img
+    //open a class img and sound hit play
+
+    if (localStorage.getItem('gameLevel') >= 1) {
+        hitSound1.src = '../media/sound/default/defaultHit1.mp3';
+        hitSound2.src = '../media/sound/default/defaultHit2.mp3';
+        lastHit.src = '../media/sound/default/defaultLastHit.mp3';
+    }
 
     if (localStorage.getItem('gameLevel') >= 5) {
         ClassLockerImg2.style = 'display: none';
         mainerClassImg.style = 'display: block';
+
+        hitSound1.src = '../media/sound/miner/minerHit1.mp3';
+        hitSound2.src = '../media/sound/miner/minerHit2.mp3';
+        lastHit.src = '../media/sound/miner/minerLastHit.mp3';
     }
     if (localStorage.getItem('gameLevel') >= 9) {
         ClassLockerImg3.style = 'display: none';
         witchClassImg.style = 'display: block';
+
+        hitSound1.src = '../media/sound/witcher/witcherHit1.mp3';
+        hitSound2.src = '../media/sound/witcher/witcherHit2.mp3';
+        lastHit.src = '../media/sound/witcher/witcherLastHit.mp3';
     }
     if (localStorage.getItem('gameLevel') >= 13
     ) {
         ClassLockerImg4.style = 'display: none';
         vampirClassImg.style = 'display: block';
+
+        hitSound1.src = '../media/sound/default/defaultHit1.mp3';
+        hitSound2.src = '../media/sound/default/defaultHit2.mp3';
+        lastHit.src = '../media/sound/vampir/vampirLastHit.mp3';
     }
 })
 
