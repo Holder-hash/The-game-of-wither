@@ -648,12 +648,22 @@ function win() {
         })
     }
     if (localStorage.getItem('gameLevel') == 15) {
-        document.querySelector('.win-window').style.height = '475px';
-        document.querySelector('.win-message').insertAdjacentHTML('beforeend', `
-        <p style="margin: 10px 0 20px">
-            Now the vampire is ruled by bloodlust. Vampire level increased by +5
-        </p>
-    `)
+        document.querySelector('.win-window').style.height = '510px';
+        if (localStorage.language == 'eng') {
+            document.querySelector('.win-message').insertAdjacentHTML('beforeend', `
+            <p style="margin: 10px 0 20px">
+                Now the vampire is ruled by bloodlust. Vampire level increased by +5
+            </p>
+        `)
+        }
+        else if (localStorage.language == 'rus') {
+            document.querySelector('.win-message').insertAdjacentHTML('beforeend', `
+            <p style="margin: 10px 0 20px">
+                Теперь вампиром правит жажда крови. Уровень Вампира повышен на +5.
+            </p>
+        `)
+        }
+
     }
     if (localStorage.getItem('gameLevel') >= 16) {
         localStorage.prestige++;
