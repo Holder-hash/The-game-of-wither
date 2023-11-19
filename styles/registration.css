@@ -144,11 +144,13 @@ input:-webkit-autofill {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    user-select: none;
 }
 .class-item img{
     width: 100%;
     height: inherit;
     border-radius: 50%;
+    user-select: none;
 }
 
 .registration-form-starting-item-box {
@@ -170,11 +172,13 @@ input:-webkit-autofill {
     text-align: center;
     cursor: pointer;
     gap: 15px;
+    user-select: none;
 }
 .starting-item img {
     width: 100%;
     height: inherit;
     border-radius: 50%;
+    user-select: none;
 }
 
 /* avatar carousel */
@@ -187,6 +191,7 @@ input:-webkit-autofill {
     background-image: url('../media/bg/deskBg.jpg');
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 
 .person-avatar-contain {
@@ -214,6 +219,7 @@ input:-webkit-autofill {
 .arrow-contain span {
     font-size: 40px;
     cursor: pointer;
+    user-select: none;
     user-select: none;
 }
 

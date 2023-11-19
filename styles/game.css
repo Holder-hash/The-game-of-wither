@@ -157,6 +157,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .enemy-contain-area {
     width: 90%;
@@ -175,6 +176,7 @@
     background-image: url('../media/bg/deskBg.jpg');
     background-size: contain;
     box-shadow: 0 0 25px black;
+    user-select: none;
 }
 
 .enemySkillStyle {
