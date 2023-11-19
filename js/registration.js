@@ -11,6 +11,7 @@ let hitSound1 = new Audio();
 let hitSound2 = new Audio();
 let lastHit = new Audio();
 let totemSound = new Audio();
+let buttonSound = new Audio('../media/sound/button.mp3');
 
 $(document).ready(function($) {
     if (localStorage.getItem('nickname')) {
@@ -66,6 +67,7 @@ $(document).ready(function($) {
     //validation
     
     $('#startBtn').click(function() {
+        buttonSound.play();
         if (registrationNameInput.value == '') {
             haveName = false;
         }
@@ -699,7 +701,10 @@ function win() {
     }
     localStorage.gameLevel++;
     winContinueBtn.addEventListener('click', () => {
-        location.reload();
+        buttonSound.play();
+        setTimeout(() => {
+            location.reload();
+        },100)
     })
 }
 
@@ -719,7 +724,10 @@ function lose() {
 
 
     loseContinueBtn.addEventListener('click', () => {
-        location.reload();
+        buttonSound.play();
+        setTimeout(() => {
+            location.reload();
+        },100)
     })  
 }
 
