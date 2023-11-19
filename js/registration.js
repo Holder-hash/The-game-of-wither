@@ -14,6 +14,8 @@ let totemSound = new Audio();
 const buttonSound = new Audio('../media/sound/button.mp3');
 const winSound = new Audio('../media/sound/win.mp3') 
 const loseSound = new Audio('../media/sound/lose.mp3') 
+let menuSound = new Audio();
+let battleSound = new Audio();
 
 $(document).ready(function($) {
     if (localStorage.getItem('nickname')) {
@@ -133,6 +135,8 @@ if (localStorage.getItem('prestige') == null) {
 }
 
 function game() {
+    menuSound.pause();
+    battleSound.play();
     const prestigeSpan = document.getElementById('prestigeSpan');
     prestigeSpan.textContent = localStorage.getItem('prestige');
     if (localStorage.getItem('prestige') <= 2) {
@@ -590,6 +594,7 @@ function game() {
 
                     //win
                     if (enemyNumber == 0) {
+                        battleSound.pause();
                         winSound.play();
                         win();
                     }
@@ -599,6 +604,7 @@ function game() {
                 else if (value > person.level) {
                     if (personSave == false) {
                         person.level = 0;
+                        battleSound.pause();
                         loseSound.play();
                         lose();
                     }
@@ -1153,12 +1159,16 @@ vampirItemImg4.onclick = () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    //open a class img and sound hit play
+    //open a class img and sound play
 
     if (localStorage.getItem('gameLevel') >= 1) {
         hitSound1.src = '../media/sound/default/defaultHit1.mp3';
         hitSound2.src = '../media/sound/default/defaultHit2.mp3';
         lastHit.src = '../media/sound/default/defaultLastHit.mp3';
+        menuSound.src = '../media/sound/default/defaultMenu.mp3';
+        battleSound.src = '../media/sound/default/defaultBattle.mp3';
+
+        menuSound.play();
     }
 
     if (localStorage.getItem('gameLevel') >= 5) {
@@ -1168,6 +1178,10 @@ document.addEventListener('DOMContentLoaded', () => {
         hitSound1.src = '../media/sound/miner/minerHit1.mp3';
         hitSound2.src = '../media/sound/miner/minerHit2.mp3';
         lastHit.src = '../media/sound/miner/minerLastHit.mp3';
+        menuSound.src = '../media/sound/miner/mainerMenu.mp3';
+        battleSound.src = '../media/sound/miner/mainerBattle.mp3';
+
+        menuSound.play();
     }
     if (localStorage.getItem('gameLevel') >= 9) {
         ClassLockerImg3.style = 'display: none';
@@ -1176,6 +1190,10 @@ document.addEventListener('DOMContentLoaded', () => {
         hitSound1.src = '../media/sound/witcher/witcherHit1.mp3';
         hitSound2.src = '../media/sound/witcher/witcherHit2.mp3';
         lastHit.src = '../media/sound/witcher/witcherLastHit.mp3';
+        menuSound.src = '../media/sound/witcher/witcherMenu.mp3';
+        battleSound.src = '../media/sound/witcher/witcherBattle.mp3';
+
+        menuSound.play();
     }
     if (localStorage.getItem('gameLevel') >= 13
     ) {
@@ -1185,6 +1203,10 @@ document.addEventListener('DOMContentLoaded', () => {
         hitSound1.src = '../media/sound/default/defaultHit1.mp3';
         hitSound2.src = '../media/sound/default/defaultHit2.mp3';
         lastHit.src = '../media/sound/vampir/vampirLastHit.mp3';
+        menuSound.src = '../media/sound/vampir/vampirMenu.mp3';
+        battleSound.src = '../media/sound/vampir/vampirBattle.mp3';
+
+        menuSound.play();
     }
 })
 
