@@ -569,11 +569,17 @@ function game() {
                         return Math.floor(Math.random() * max);
                     }
 
-                    if (getRandomInt(2) == 0) {
-                        hitSound1.play();
+                    if (!enemyMan.boss) {
+                        if (getRandomInt(2) == 0) {
+                            hitSound1.play();
+                        } else {
+                            hitSound2.play();
+                        }
                     } else {
-                        hitSound2.play();
+                        lastHit.play();
                     }
+
+
 
                     enemyMan.destroyed = true;
                     enemyPic.src = 'media/png-transparent-christian-cross-symbol-truth-christianity-grave-miscellaneous-photography-cross-thumbnail.png';
