@@ -1,3 +1,7 @@
+window.onload = () => {
+    document.querySelector('.preloader').style.display = 'none';
+}
+
 var haveName = false;
 if (window.innerWidth >= 500) {
     var haveSignature = false;
