@@ -11,7 +11,9 @@ let hitSound1 = new Audio();
 let hitSound2 = new Audio();
 let lastHit = new Audio();
 let totemSound = new Audio();
-let buttonSound = new Audio('../media/sound/button.mp3');
+const buttonSound = new Audio('../media/sound/button.mp3');
+const winSound = new Audio('../media/sound/win.mp3') 
+const loseSound = new Audio('../media/sound/lose.mp3') 
 
 $(document).ready(function($) {
     if (localStorage.getItem('nickname')) {
@@ -588,6 +590,7 @@ function game() {
 
                     //win
                     if (enemyNumber == 0) {
+                        winSound.play();
                         win();
                     }
                 }
@@ -596,6 +599,7 @@ function game() {
                 else if (value > person.level) {
                     if (personSave == false) {
                         person.level = 0;
+                        loseSound.play();
                         lose();
                     }
                     //save totem
