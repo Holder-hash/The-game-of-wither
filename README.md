@@ -12,4 +12,5 @@ You can use commands like this:
 * set prestige (1-10)
 * auto reload (on/off - Automatically restart the game to apply changes. Default on)
 * location reload (Restart game)
-* ![Screenshot_3](https://github.com/Holder-hash/The-game-of-wither/assets/63481484/84b504f4-2136-429c-8ac9-794539bb4ea1)
+
+![Screenshot_3](https://github.com/Holder-hash/The-game-of-wither/assets/63481484/84b504f4-2136-429c-8ac9-794539bb4ea1)
