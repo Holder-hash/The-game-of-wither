@@ -9,10 +9,10 @@ There are 9 enemies on each level. You need to defeat them all to move to the ne
 
 try the developer terminal for tests!
 You can use commands like this:
-* __set gameLevel__ (1-16)
-* set prestige (1-10)
-* auto reload (on/off - Automatically restart the game to apply changes. Default on)
-* location reload (Restart game)
+* _set gameLevel_ (1-16)
+* _set prestige_ (1-10)
+* _auto reload_ (on/off - Automatically restart the game to apply changes. Default on)
+* _location reload_ (Restart game)
 
 ![Screenshot_3](https://github.com/Holder-hash/The-game-of-wither/assets/63481484/84b504f4-2136-429c-8ac9-794539bb4ea1)
 
