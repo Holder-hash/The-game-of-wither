@@ -9,7 +9,7 @@ There are 9 enemies on each level. You need to defeat them all to move to the ne
 
 try the developer terminal for tests!
 You can use commands like this:
-* set gameLevel (1-16)
+* __set gameLevel__ (1-16)
 * set prestige (1-10)
 * auto reload (on/off - Automatically restart the game to apply changes. Default on)
 * location reload (Restart game)
