@@ -15,3 +15,7 @@ You can use commands like this:
 * location reload (Restart game)
 
 ![Screenshot_3](https://github.com/Holder-hash/The-game-of-wither/assets/63481484/84b504f4-2136-429c-8ac9-794539bb4ea1)
+
+This open source project was created for my portfolio. By the way, after some time after I created it, I stopped development for a long time. During this time I learned a lot, but the old code remained. So, if you look under the hood, you will find a lot of legacy code there. Sorry about that..
+
+⚠️WARNING! The game is still undergoing tests, you may encounter bugs. My apologies.
